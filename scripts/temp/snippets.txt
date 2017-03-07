@@ -1,0 +1,94 @@
+7z u -tzip compressed.zip -u!update.zip -mx0 *
+
+
+            #Load categories and mods
+            $global:wotMods = @{}
+            $global:wotModCategories = @{}
+            foreach($node in $config.configuration.modifications.mod) {
+                $modName = $node.name
+                $categoryName = $node.category
+                $global:wotMods[$modName] = $node
+                [System.Collections.ArrayList]$categoryValue = $global:wotModCategories[$categoryName]
+                if(-not $categoryValue){
+                    $categoryValue = New-Object System.Collections.ArrayList
+                    
+                }
+                $index = $categoryValue.Add($modName)
+                $global:wotModCategories[$categoryName] = $categoryValue
+            }
+
+
+
+
+
+<#
+
+
+function Copy-Mod {
+    param (
+        [Parameter(Mandatory=$true)]
+        [string] $modName,
+        [Parameter(Mandatory=$true)]
+        [string] $targetPath,
+        [bool] $clearTargetFolder = $false
+    )
+
+    # Get mod configuration
+    $mod = $global:wotMods[$modName]
+    if(-not $mod){
+        Write-Error "Copy-Mod :: Unable to load configuration mod with name '$modName'"
+        return
+    }
+
+    # Prepare target folder
+    Initialize-ModDirectory $targetPath $clearTargetFolder
+
+    Write-Debug "Copy-Mod :: $modName => $targetPath"
+    foreach($content in $mod.content) {
+        Copy-ModContent $content $targetPath
+    }
+
+    return $targetPath
+}
+
+function Initialize-ModStagingDirectory {
+    param (
+        [Parameter(Mandatory=$true)]
+        [string] $modName
+    )
+
+    $stagingPath = "$($global:wotModStagingDirectory)/$modName"
+    Write-Debug "New-ModStagingDirectory :: $modName => $stagingPath "
+    return Copy-Mod $modName $stagingPath $true
+}
+
+#>
+
+
+
+function Get-ResModsPath {
+    $key = "defaultGamePath"
+    $gamePath = Get-ConfigValue $key
+    Write-Host
+    Write-Color -White "Please enter your game folder" -Gray "(Default: $gamePath)"
+    Write-Prompt
+    $path = [Console]::ReadLine()
+
+    if ($path -ne "") {
+        $gamePath = $path
+        $gamePath = $gamePath.TrimEnd('\')
+        $gamePath = $gamePath.TrimEnd('/')
+        Save-ConfigValue $key $gamePath
+    }
+
+    $targetPath = "$gamePath\res_mods\"
+    if (-not (Test-Path $targetPath)) {
+        Write-Color -Red "Invalid game path:" -Gray $gamePath
+        $targetPath = Get-ResModsPath
+    }
+    return $targetPath
+}
+
+
+The new tank search function in the garage is nice and all, but is there a way to start searching using keyboard shortcut? Having to click twice to start searching is somewhat cumbersome.
+Also, is there a way of selecting the searched tank with keyboard?

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<preset name="Mimir_Base" description="Mimir - Base Setup">
+    <!-- XVM -->
+    <mod>XVM_Base</mod>
+    <mod>XVM_Mimir_Configuration</mod>
+    <!-- USER INTERFACE -->
+    <mod>Battle_Assistant_Ignore_Obstacles</mod>
+    <mod>YasenKrasen_SessionStats_V1</mod>
+    <mod>J1mB0_s_Contour_Icon_Mod</mod>
+    <!-- FLUFF -->
+    <mod>C-H-C_Clan_Icon</mod>
+    <mod>Custom_Sixth_Sense_Icon</mod>
+    <!-- SKINS: REMOVING WGL AND PATRIOT PAINTJOBS -->
+    <mod>AMX_13_57_NoWGL</mod>
+    <mod>leKpz_M41_90mm_Milkm4n_Black</mod>
+    <mod>T26E5_P_Freedom_Fighter</mod>>
+    <mod>AMX_M4_49_Liberte_DarkGreen</mod>
+</preset>

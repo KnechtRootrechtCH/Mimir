@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<configuration>
+  <appSettings>
+    <!-- GAME SETTINGS -->
+    <add key="gameVersion" value="0.9.17.1" />
+    <add key="gamePath" value="D:\Other\World_of_Tanks" />
+    <!-- SCRIPT BASE SETTINGS -->
+    <add key="logLevel" value="0" />
+    <add key="contentPath" value="./content" />
+    <add key="presetPath" value="./presets" />
+    <add key="buildTargetPath" value="./bin" />
+    <add key="archivePath" value="./archive" />
+    <add key="stagingPath" value="./bin/_staging" />
+    <add key="resModsFolderPatern" value="{basePath}/res_mods/" />
+    <add key="modsFolderPatern" value="{basePath}/mods/{gameVersion}/" />
+    <!-- SCRIPT EXECUTION SETTINGS -->
+    <add key="convertSourcePath" value="./convert" />
+    <add key="archiveConverteddMods" value="false" />
+    <add key="quickInstallMods" value="XVM_Base;XVM_Mimir_Configuration" />
+    <add key="quickInstallModsDebug" value="XVM_Base;XVM_Mimir_Configuration;XVM_Mimir_AutoReload" />
+    <add key="quickInstsallPreset" value="Mimir_ElPolloDiabloCH" />
+  </appSettings>
+</configuration>
