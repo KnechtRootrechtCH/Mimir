@@ -107,7 +107,7 @@ function Install-Mod {
         [string] $name,
         [string] $sourcePath,
         [string] $type,
-        [string] $targetPath,
+        [string] $targetBasePath,
         [bool] $createWotmodPackage = $false
     )
     if(-not $sourcePath) {
@@ -132,13 +132,10 @@ function Install-Mod {
             $stagingPath = Get-ConfigValue "stagingPath"
             $sourcePath = New-ModPackage $sourcePath $stagingPath
             $type = "wotmod"
-            $targetPath = Get-ModsTargetPath $type
         }
     }
 
-    if(-not $targetPath) {
-        $targetPath = Get-ModsTargetPath $type
-    }
+    $targetPath = Get-ModsTargetPath $type $targetBasePath
     if(-not $targetPath) {
         Write-Error "Install-Mod :: Unable to determine target path for mod '$name'"
         return

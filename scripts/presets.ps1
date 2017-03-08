@@ -62,8 +62,7 @@ function Install-ModPreset {
         Write-Step "Installing $mod"
         $sourcePath = Get-ModSourcePath $mod
         $type = Get-ModType $sourcePath
-        $targetPath = Get-ModsTargetPath $type $basePath
-        Install-Mod $mod $sourcePath $type $targetPath $createWotmodPackages
+        Install-Mod $mod $sourcePath $type $basePath $createWotmodPackages
     }
 }
 
