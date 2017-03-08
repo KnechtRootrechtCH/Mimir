@@ -22,3 +22,4 @@ Personal World of Tanks Mod Packages
 * [Classsic's Skin Workshop](http://forum.worldoftanks.com/index.php?/topic/505250-091701-classics-skin-workshop-early-beta-of-israeli-desert-base-pack-released-1231/#topmost "Classsic's Skin Workshop")
 * [Pz58 Schmutz](https://www.reddit.com/r/WorldofTanks/comments/5tpv3z/introducing_the_pz_58_schmutz/ "Pz58 Schmutz")
 * [WoT EU Tank Skins Board](http://forum.worldoftanks.eu/index.php?/forum/91-tank-skins/ "WoT EU Tank Skins Board")
+* [Avalon304's Skin Workshop](http://forum.worldoftanks.com/index.php?/topic/508505-09171-avalon304s-skin-workshop/ "Avalon304's Skin Workshop")
