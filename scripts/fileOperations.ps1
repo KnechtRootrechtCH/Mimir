@@ -61,6 +61,13 @@ function Copy-ModContent {
         [Parameter(Mandatory=$true)]
         [string] $targetPath
     )
-    Write-Debug "Copy-ModContent :: $sourcePath => $targetPath "
-    Copy-Item $sourcePath $targetPath -Recurse -Force -ErrorAction SilentlyContinue
+    $sourceItem = Get-Item $sourcePath
+    
+    if($sourceItem.PSIsContainer) {
+        Write-Debug "Copy-ModContent :: $sourcePath/* => $targetPath"
+        Copy-Item "$sourcePath/*" $targetPath -Recurse -Force -ErrorAction SilentlyContinue
+    } else {
+        Write-Debug "Copy-ModContent :: $sourcePath => $targetPath/$($sourceItem.Name)"
+        Copy-Item $sourcePath "$targetPath/$($sourceItem.Name)" -Recurse -Force -ErrorAction SilentlyContinue
+    }
 }

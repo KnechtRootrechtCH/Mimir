@@ -8,7 +8,7 @@ Personal World of Tanks Mod Packages
 ### User Interface Modifications
 * [XVM](http://www.modxvm.com/en/download-xvm/ "XVM")
 * [Battle Assistant](http://worldof-tanks.com/tag/battle-assistant "Battle Assistant")
-* [Unofficial YasenKrasen Coloured Messages + Session Statistics](http://forum.worldoftanks.eu/index.php?/topic/583433-09170-unofficial-yasenkrasen-coloured-messages-session-statistics-eng-14122016/ "Unofficial YasenKrasen Coloured Messages + Session Statistics")
+* [YasenKrasen Coloured Messages + Session Statistics](http://forum.worldoftanks.eu/index.php?/topic/583433-09170-unofficial-yasenkrasen-coloured-messages-session-statistics-eng-14122016/ "YasenKrasen Coloured Messages + Session Statistics")
 * [J1mB0's Contour Icons](http://worldof-tanks.com/j1mb0-s-contour-icon-mod-for-world-of-tanks/ "J1mB0's Contour Icons")
 
 ### Customization

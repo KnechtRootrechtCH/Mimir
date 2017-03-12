@@ -34,16 +34,16 @@ function Get-ModsTargetPath {
             $path = Get-ConfigValue "resModsFolderPatern"
             break
         }
-        "files" {
-            $path = Get-ConfigValue "resModsFolderPatern"
-            break
-        }
         "mods" {
             $path = Get-ConfigValue "modsFolderPatern"
             break
         }
         "wotmod" {
-            $path = Get-ConfigValue "modsFolderPatern"
+            $path = Get-ConfigValue "wotmodFolderPatern"
+            break
+        }
+        "mixed" {
+            $path = "{basePath}"
             break
         }
         default {
@@ -67,12 +67,29 @@ function Get-ModType {
         Write-Error "Get-ModType :: Unable to find mod at '$modSourcePath"
     }
 
-    if($mod.PSIsContainer) {
-        return "files"
-    }
+    Write-Debug "Get-ModType :: Getting mod type for source path '$modSourcePath"
 
     if($mod.Extension -eq ".wotmod") {
         return "wotmod"
+    }
+
+    if($mod.PSIsContainer) {
+        $dir = Get-ChildItem -path $mod.FullName -Directory | Where-Object { $_.Name -eq "res_mods_content" }
+        if($dir.Count -eq 1){
+            return "mixed"
+        }
+
+        $dir = Get-ChildItem -path $mod.FullName -Directory | Where-Object { $_.Name -eq "mods_content" }
+        if($dir.Count -eq 1){
+            return "mixed"
+        }
+
+        $packages = Get-ChildItem -path $mod.FullName -File | Where-Object { $_.Extension -eq ".wotmod" }
+        if($packages.Count -gt 1){
+            return "mixed"
+        }
+
+        return "res_mods"
     }
 
     Write-Error "Get-ModType :: Unable to determine mod type for mod at '$modSourcePath"
@@ -110,6 +127,7 @@ function Install-Mod {
         [string] $targetBasePath,
         [bool] $createWotmodPackage = $false
     )
+
     if(-not $sourcePath) {
         $sourcePath = Get-ModSourcePath $name
     }
@@ -126,7 +144,7 @@ function Install-Mod {
         return
     }
 
-    if($createWotmodPackage -and $type -eq "files") {
+    if($createWotmodPackage -and $type -eq "res_mods") {
         $valid = Get-IsValidPackageSource $sourcePath
         if($valid){
             $stagingPath = Get-ConfigValue "stagingPath"
@@ -141,10 +159,33 @@ function Install-Mod {
         return
     }
 
-    if($type -eq "files"){
-        Copy-ModContent "$sourcePath/*" $targetPath
-    } else {
+    Write-Debug "Install-Mod :: '$name' -> type: $type"
+    if($type -eq "res_mods" -or $type -eq "mods" -or $type -eq "wotmod") {
+        Initialize-ModDirectory $targetPath $false
         Copy-ModContent $sourcePath $targetPath
+        return
     }
     
+    if ($type -eq "mixed") {
+        Write-Debug "Install-Mod :: Mod '$name' is a mixed mod package"
+
+        $dir = Get-ChildItem -path $sourcePath -Directory | Where-Object { $_.Name -eq "res_mods_content" }
+        if($dir.Count -eq 1){
+            Install-Mod $name $dir.FullName "res_mods" $targetBasePath
+        }
+
+        $dir = Get-ChildItem -path $sourcePath -Directory | Where-Object { $_.Name -eq "mods_content" }
+        if($dir.Count -eq 1){
+            Install-Mod $name $dir.FullName "mods" $targetBasePath
+        }
+
+        $packages = Get-ChildItem -path $sourcePath -File | Where-Object { $_.Extension -eq ".wotmod" }
+        foreach($package in $packages) { 
+            Install-Mod $name $package.FullName "wotmod" $targetBasePath
+        }
+
+        return
+    }
+    
+    Write-Error "Install-Mod ::Mmod '$name' has an invalid mod type ($type)"
 }

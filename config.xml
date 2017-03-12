@@ -12,7 +12,8 @@
     <add key="archivePath" value="./archive" />
     <add key="stagingPath" value="./bin/_staging" />
     <add key="resModsFolderPatern" value="{basePath}/res_mods/" />
-    <add key="modsFolderPatern" value="{basePath}/mods/{gameVersion}/" />
+    <add key="modsFolderPatern" value="{basePath}/mods/" />
+    <add key="wotmodFolderPatern" value="{basePath}/mods/{gameVersion}/" />
     <!-- SCRIPT EXECUTION SETTINGS -->
     <add key="convertSourcePath" value="./convert" />
     <add key="archiveConverteddMods" value="false" />
