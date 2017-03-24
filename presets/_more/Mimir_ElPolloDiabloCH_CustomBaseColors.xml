@@ -11,19 +11,18 @@
     <mod>British_Crew_Voices</mod>
     <mod>C-H-C_Clan_Icon</mod>
     <mod>Custom_Sixth_Sense_Icon</mod>
-    <!-- SKINS: CUSTOM NATION BASE COLORS -->
-    <mod>USA_DarkOlive_No_T26E5_P</mod>
-    <mod>German_BundeswehrGreen_No_Pz58</mod>
-    <mod>French_DarkGreen</mod>
     <!-- SKINS: REMOVING WGL AND PATRIOT PAINTJOBS -->
     <mod>AMX_13_57_NoWGL</mod>
     <mod>leKpz_M41_90mm_Milkm4n_Black</mod>
-    <mod>T26E5_P_Freedom_Fighter</mod>>
+    <mod>T26E4_Milkm4n</mod>
+    <mod>T26E5_P_Freedom_Fighters</mod>
     <mod>AMX_M4_49_Liberte_DarkGreen</mod>
     <!-- SKINS: CUSTOM PAINTJOBS -->
     <mod>Pz58_SwissCamo</mod>
     <mod>Pz58_Schwarzpanzer_with_Mutz</mod>
     <mod>Rhm_Skorpion_G_Milkm4n_Black</mod>
-    <mod>M46_Patton_KR_Milkm4n_Tiger</mod>
+    <mod>Object_252_Battleworn_Turret</mod>
     <mod>Type_59_Gilded</mod>
+    <!-- SKINS: COLOR SWAP -->
+    <mod>German_Bundeswehr_Green</mod>
 </preset>
