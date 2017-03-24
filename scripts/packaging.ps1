@@ -21,6 +21,7 @@ function New-ModPackage {
     $resPath = "$stagingPath/res"
     Write-Debug "New-ModPackage :: Initializing staging directory"
     Initialize-ModDirectory $stagingPath
+    Initialize-ModDirectory $resPath $false
 
     Write-Debug "New-ModPackage :: Copying data to staging directory"
     Copy-ModContent $versionFolder $resPath
