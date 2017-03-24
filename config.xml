@@ -3,7 +3,7 @@
   <appSettings>
     <!-- GAME SETTINGS -->
     <add key="gameVersion" value="0.9.17.1" />
-    <add key="gamePath" value="C:\Games\World_of_Tanks" />
+    <add key="gamePath" value="D:\Other\World_of_Tanks" />
     <!-- SCRIPT BASE SETTINGS -->
     <add key="logLevel" value="0" />
     <add key="contentPath" value="./content" />
