@@ -1,7 +1,20 @@
-""" XFW (c) www.modxvm.com 2013-2017
+"""
+This file is part of the XVM Framework project.
 
-Copyright (c) 2017 Andrey Andruschyshyn, WTFPL
-Copyright (c) 2017 XVM Team, LGPLv3
+Copyright (c) 2017 Andrey Andruschyshyn
+Copyright (c) 2017 XVM Team
+
+XVM Framework is free software: you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License as
+published by the Free Software Foundation, version 3.
+
+XVM Framework is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
 """
 
 import imp
@@ -44,7 +57,6 @@ def file_copy(vfs_path, realfs_path):
         except Exception:
             pass
 
-        realfs_file = open(realfs_path, 'wb')
         vfs_data = file_read(vfs_path)
         if vfs_data:
             with open(realfs_path, 'wb') as realfs_file:
@@ -52,7 +64,7 @@ def file_copy(vfs_path, realfs_path):
         else:
             return False
     except Exception:
-        print "[XFW][VFS] Errpr on file copy:"
+        print "[XFW/VFS][file_copy] Error on file copy:"
         traceback.print_exc()
         print "============================="
         return False
@@ -91,7 +103,7 @@ def directory_copy(vfs_path, realfs_path, recursive=True):
                 if isFile(vfs_path+'/'+key):
                     file_copy(vfs_path+'/'+key, realfs_path+'/'+key)
     except Exception:
-        print "[XFW][VFS] Error on directory copy:"
+        print "[XFW/VFS][directory_copy] Error on directory copy:"
         traceback.print_exc()
         print "================="
 
@@ -113,6 +125,6 @@ def c_extension_load(name, vfs_path, package_id='com.modxvm.xfw'):
         return None
 
     except Exception:
-        print "[XFW][VFS] Native module loading error:"
+        print "[XFW/VFS][c_extension_load] Native module loading error:"
         traceback.print_exc()
         print "============================="

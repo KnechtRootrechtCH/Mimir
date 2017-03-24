@@ -19,7 +19,7 @@
     "Ping": "Ping",
     "Online": "Prisijungęs",
     "Chance error": "Tikimybės klaida",
-    "Chance to win": "Laimėjimo tikimybė",
+    "Chance to win": "Šansas laimėti",
     "Team strength": "Komandos pajėgumas",
     "chanceLive": "Šiuo metu",
     "chanceBattleTier": "Kovos lygis",

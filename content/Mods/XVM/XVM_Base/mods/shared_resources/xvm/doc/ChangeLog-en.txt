@@ -1,4 +1,19 @@
-﻿XVM-6.5.6:
+﻿XVM-6.5.7:
+  [GENERAL]
+  * adaptation to 23.03.2017 micropatch
+
+  [CAROUSEL]
+  * rename options: "damageAvgPerMinute" -> "avgDamagePerMinute", "damageAvg" -> "avgDamage"
+  * fixed tooltips
+
+  [MINIMAP]
+  * changed "artillery" circle behavior:
+      circle radius consider vertical gun constraints
+
+  [HANGAR]
+  * added options hangar/pingServers/bgImage and hangar/onlineServers/bgImage
+
+XVM-6.5.6:
   [XFW]
   * python console shortcut was changed to Ctrl+Alt+~
 
