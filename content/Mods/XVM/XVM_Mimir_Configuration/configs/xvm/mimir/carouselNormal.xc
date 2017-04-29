@@ -52,10 +52,10 @@
       "rentInfo": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
       // Info text (Crew incomplete, Repairs required)
       // Инфо текст (Неполный экипаж, Требуется ремонт).
-      "info":     { "enabled": true, "dx": 0, "dy": -10, "alpha": 100, "scale": 1 },
+      "info":     { "enabled": true, "dx": 0, "dy": 5, "alpha": 100, "scale": 1 },
       // Info text for "Buy vehicle" and "Buy slot" slots.
       // Инфо текст для слотов "Купить машину" и "Купить слот".
-      "infoBuy":  { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
+      "infoBuy":  { "enabled": true, "dx": 0, "dy": 5, "alpha": 100, "scale": 1 },
       // Clan lock timer
       // Таймер блокировки танка
       "clanLock": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100 },
@@ -100,33 +100,68 @@
       // Средний урон
       {
         "enabled": true,
-        "x": 1, "y": 66, "width": 18, "height": 18, "alpha": "{{v.tdb?75|0}}",
-        "src": "xvm://res/icons/carousel/damage.png"
+        "x": 2, "y": 3, "width": 16, "height": 16, "alpha": "{{v.tdb?100|0}}",
+        "src": "xvm://res/icons/tooltips/roles/gunner.png"
       },
       {
         "enabled": true,
-        "x": 18, "y": 66,
-        "alpha" : 80,
+        "x": 17, "y": 1,
         "format": "<b><font face='$FieldFont' size='12' color='{{v.c_xtdb|#7d7d75}}'>{{v.tdb%d}}</font></b>",
         "shadow": ${ "def.textFieldShadow" }
       },
-      // XP left to elite
+      // Battle count
+      // Количество боёв
       {
         "enabled": true,
-        "x": 2,
-        "y": 1,
-        "align": "left",
-        "format": "<font face='$FieldFont' size='12' color='#CFCFCF'>{{v.xpToEliteLeft%'d}}</font>",
+        "x": 3, "y": 17, "width": 14, "height": 14, "alpha": "{{v.tdb?70|0}}",
+        "src": "xvm://res/icons/carousel/battles.png"
+      },
+      {
+        "enabled": true,
+        "x": 17, "y": 14,
+        "format": "<b><font face='$FieldFont' size='12' color='#7d7d75'>{{v.battles}}</font></b>",
         "shadow": ${ "def.textFieldShadow" }
       },
       // Damage rating
+      // Количество боёв
+      {
+        "enabled": true,
+        "x": 2, "y": 30, "width": 16, "height": 16, "alpha": "{{v.damageRating>50?100|0}}",
+        "src": "xvm://res/icons/tooltips/roles/commander.png"
+      },
+      {
+        "enabled": true,
+        "x": 17, "y": 27,
+        "format": "{{v.damageRating>50?<font face='$FieldFont' size='12' color='#7d7d75'>{{v.damageRating%'d~%}}</font>|}}",
+        "shadow": ${ "def.textFieldShadow" }
+      },
+      // Damage rating
+      /*
       {
         "enabled": true,
         "x": 158,
         "y": 66,
         "align": "right",
-        "alpha" : "{{v.damageRating}}",
-        "format": "{{v.damageRating>25?<font face='$FieldFont' size='12' color='#CFCFCF'>{{v.damageRating%'d~%}}</font>|}}",
+        "x": 2,
+        "y": 66,
+        "align": "left",
+        "alpha": "{{v.damageRating}}",
+        "format": "{{v.damageRating>50?<font face='$FieldFont' size='12' color='#CFCFCF'>{{v.damageRating%'d~%}}</font>|}}",
+        "shadow": ${ "def.textFieldShadow" }
+      },
+      */
+      // XP left to elite
+      {
+        /*
+        "enabled": true,
+        "x": 2,
+        "y": 64,
+        "align": "left",
+        */
+        "x": 156,
+        "y": 66,
+        "align": "right",
+        "format": "<font face='$FieldFont' size='12' color='#7d7d75'>{{v.xpToEliteLeft%'d}}</font>",
         "shadow": ${ "def.textFieldShadow" }
       }
     ]
