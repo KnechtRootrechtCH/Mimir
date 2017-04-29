@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <preset name="Mimir_Sibu999" description="Mimir - Personal Setup for Sibu999">
     <!-- XVM -->
-    <mod>XVM_Base</mod>
+    <mod>XVM_Mod</mod>
+    <mod>XVM_Base_Configuration</mod>
     <mod>XVM_Mimir_Configuration</mod>
     <!-- XVM: PERSONAL PREFERENCE -->
     <mod>XVM_Disable_Camera</mod>

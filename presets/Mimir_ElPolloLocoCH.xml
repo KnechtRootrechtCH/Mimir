@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <preset name="Mimir_ElPolloLocoCH" description="Mimir - Personal Setup for ElPolloLocoCH">
     <!-- XVM -->
-    <mod>XVM_Base</mod>
+    <mod>XVM_Mod</mod>
+    <mod>XVM_Base_Configuration</mod>
     <mod>XVM_Mimir_Configuration</mod>
     <!-- USER INTERFACE -->
     <!--<mod>YasenKrasen_SessionStats_V1</mod>-->
