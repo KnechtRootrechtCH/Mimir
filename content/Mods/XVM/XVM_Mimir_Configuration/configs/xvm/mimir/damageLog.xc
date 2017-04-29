@@ -1,7 +1,7 @@
 ﻿/**
   * Macros used in damageLog:
   * Макросы используемые в damageLog:
-
+   
     {{number}}            - line number / номер строки.
     {{dmg}}               - received damage / полученный урон.
     {{dmg-kind}}          - kind of the received damage (attack, fire, ramming, ...) / вид полученного урона (атака, пожар, таран, ...).
@@ -27,15 +27,15 @@
     {{dmg-ratio}}         - received damage in percent / полученный урон в процентах.
     {{team-dmg}}          - source of damage (ally , enemy, self damage) / источник урона (союзник, противник, урон по себе).
     {{splash-hit}}        - text when hit by splash damage from shell (HE/HESH) / текст при попадании осколков снаряда (ОФ/ХФ).
-    {{my-alive}}          - value 'alive' if my vehicle is alive, '' for dead / возвращает 'alive', если я живой, '', если не живой
-    {{reloadGun}}         - reloading time of a gun / время перезарядки орудия
+    {{my-alive}}          - value 'al' if my vehicle is alive, '' for dead / возвращает 'al', если я живой, '', если не живой
+    {{reloadGun}}         - reloading time of a gun / время перезарядки орудия 
     {{gun-caliber}}       - caliber of a gun / калибр орудия
-    {{wn8}}, {{xwn8}}, {{eff}}, {{xeff}}, {{wgr}}, {{xwgr}}, {{xte}}                - statistics macros (see macros.txt) / макросы статистика (смотрите macros_ru.txt)
-    {{c:wn8}}, {{c:xwn8}}, {{c:eff}}, {{c:xeff}}, {{c:wgr}}, {{c:xwgr}}, {{c:xte}}  - statistics macros (see macros.txt) / макросы статистика (смотрите macros_ru.txt)
+    {{wn8}}, {{xwn8}}, {{wn6}}, {{xwn6}}, {{eff}}, {{xeff}}, {{wgr}}, {{xwgr}}, {{xte}}, {{r}}                      - statistics macros (see macros.txt) / макросы статистика (смотрите macros_ru.txt)
+    {{c:wn8}}, {{c:xwn8}}, {{c:wn6}}, {{c:xwn6}}, {{c:eff}}, {{c:xeff}}, {{c:wgr}}, {{c:xwgr}}, {{c:xte}}, {{c:r}}  - statistics macros (see macros.txt) / макросы статистика (смотрите macros_ru.txt)
     {{fire-duration}}     - duration of fire ("groupDamagesFromFire" must be enabled to work) / продолжительность пожара (работает только при включенной опции "groupDamagesFromFire")
     {{diff-masses}}       - vehicles weights difference during collision / разность масс техники при столкновении
     {{nation}}            - vehicle nation / нация техники
-    {{my-blownup}}         - TO DO / возвращает 'blownup', если взорван боекомплект техники игрока, иначе пусто
+    {{my-blownup}}        - value 'blownup' if own vehicle's ammunition have been blown up, '' otherwise  / возвращает 'blownup', если взорван боекомплект техники игрока, иначе пусто
 */
 
 {
@@ -207,7 +207,7 @@
       "groupDamagesFromRamming_WorldCollision": true,
       //TO DO
       //Настройка тени
-      "shadow": {
+      "shadow": { 
         "distance": 1,
         "angle": 90,
         "color": "#000000",
@@ -217,7 +217,7 @@
         "hideObject": false,
         "inner": false,
         "knockout": false,
-        "quality": 1
+        "quality": 1 
       },
       // Damage log format.
       // Формат лога повреждений.
@@ -230,7 +230,7 @@
       // TODO
       // Формат подложки лога повреждений.
       "formatHistory": "<img height='20' width='310' src='xvm://res/icons/damageLog/{{dmg=0?no_dmg|dmg}}.png'>"
-    },
+    },    
     // TODO.
     // Альтернативный лог полученного урона.
     "logAlt": {
@@ -249,7 +249,7 @@
       // TODO
       // Формат подложки альтернативного лога полученного урона.
       "formatHistory": "<img height='20' width='310' src='xvm://res/icons/damageLog/{{dmg=0?no_dmg|dmg}}.png'>"
-    },
+    },    
     // Display the last damage (hit).
     // Отображение последнего урона (попадания).
     "lastHit": {
@@ -268,7 +268,7 @@
       "timeDisplayLastHit": 7,
       //TO DO
       //Настройка тени
-      "shadow": {
+      "shadow": { 
         "distance": 0,
         "blur": 6,
         "strength": 6,

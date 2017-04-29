@@ -46,13 +46,16 @@
       "xp":       { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
       // Vehicle name.
       // Название танка.
-      "tankName": { "enabled": false, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
+      "tankName": { "enabled": false, "dx": 0, "dy": 0, "alpha": 100, "scale": 1, "textFormat": {}, "shadow": {} },
       // Info text (Crew incomplete, Repairs required)
       // Инфо текст (Неполный экипаж, Требуется ремонт).
-      "info":     { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
+      "info":     { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1, "textFormat": {}, "shadow": {} },
+      // Info image
+      // Инфо иконка
+      "infoImg":  { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
       // Info text for "Buy vehicle" and "Buy slot" slots.
       // Инфо текст для слотов "Купить машину" и "Купить слот".
-      "infoBuy":  { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
+      "infoBuy":  { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1, "textFormat": {}, "shadow": {} },
       // Clan lock timer
       // Таймер блокировки танка
       "clanLock": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100 },
@@ -61,10 +64,16 @@
       "price":    { "enabled": true, "dx": 0, "dy": 0, "alpha": 100 },
       // Action price
       // Акционная цена
-      "actionPrice": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100 }
+      "actionPrice": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100 },
+      // Favorite vehicle mark
+      // Маркер основной техники
+      "favorite": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100 },
+      // Stats field shown on the mouse over
+      // Поле статистики, отображаемое при наведении мыши
+      "stats": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "textFormat": {}, "shadow": {} }
     },
-    // Extra cell fields (see playersPanel.xc).
-    // Дополнительные поля ячеек (см. playersPanel.xc).
+    // Extra cell fields (extended format supported, see extra-field.txt).
+    // Дополнительные поля ячеек (поддерживается расширенный формат, см. extra-field.txt).
     "extraFields": [
       // Slot background
       // Подложка слота

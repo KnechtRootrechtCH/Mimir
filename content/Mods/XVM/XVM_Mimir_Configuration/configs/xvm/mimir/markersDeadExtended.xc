@@ -215,6 +215,14 @@
       "y": -67,          // Position on the Y axis / Положение по оси Y.
       "alpha": 100       // Opacity                / Прозрачность.
     },
+    // Stun marker
+    // Маркер оглушения
+    "stunMarker": {
+      "enabled": true,   // false - disable        / не отображать.
+      "x": 0,            // Position on the X axis / Положение по оси X.
+      "y": -67,          // Position on the Y axis / Положение по оси Y.
+      "alpha": 100       // Opacity                / Прозрачность.
+    },
     // Block of text fields.
     // Блок текстовых полей.
     "textFields": [
@@ -296,6 +304,14 @@
       "x": 0,
       "y": -67,
       "alpha": 100
+    },
+    // Stun marker
+    // Маркер оглушения
+    "stunMarker": {
+      "enabled": true,   // false - disable        / не отображать.
+      "x": 0,            // Position on the X axis / Положение по оси X.
+      "y": -67,          // Position on the Y axis / Положение по оси Y.
+      "alpha": 100       // Opacity                / Прозрачность.
     },
     // Block of text fields.
     // Блок текстовых полей.
