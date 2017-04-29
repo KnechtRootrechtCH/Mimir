@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <preset name="Mimir_Sibu999" description="Mimir - Personal Setup for Sibu999">
     <!-- XVM -->
-    <mod>XVM_Mod</mod>
-    <mod>XVM_Base_Configuration</mod>
+    <mod>XVM_Base</mod>
     <mod>XVM_Mimir_Configuration</mod>
     <!-- XVM: PERSONAL PREFERENCE -->
     <mod>XVM_Disable_Camera</mod>
     <mod>XVM_NoColor_TankNames</mod>
     <!-- USER INTERFACE -->
-    <!--<mod>YasenKrasen_SessionStats_V1</mod>-->
+    <mod>YasenKrasen_SessionStats</mod>
+    <mod>YasenKrasen_SessionStats_BackgroundV4</mod>
     <!-- FLUFF -->
     <mod>C-H-C_Clan_Icon</mod>
     <!-- SKINS: REMOVING WGL AND PATRIOT PAINTJOBS -->

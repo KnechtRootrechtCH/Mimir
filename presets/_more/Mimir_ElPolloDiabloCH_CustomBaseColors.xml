@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <preset name="Minir_ElPolloDiabloCH" description="Mimir - Personal Setup for ElPolloDiabloCH with alternate nation base colors">
     <!-- XVM -->
-    <mod>XVM_Mod</mod>
-    <mod>XVM_Base_Configuration</mod>
+    <mod>XVM_Base</mod>
     <mod>XVM_Mimir_Configuration</mod>
     <mod>XVM_Mimir_AutoReload</mod>
     <!-- USER INTERFACE -->
-    <!--<mod>YasenKrasen_SessionStats_V1</mod>-->
+    <mod>YasenKrasen_SessionStats</mod>
+    <mod>YasenKrasen_SessionStats_BackgroundV4</mod>
     <!--<mod>J1mB0_s_Contour_Icon_Mod</mod>-->
     <!-- FLUFF -->
     <mod>British_Crew_Voices</mod>
