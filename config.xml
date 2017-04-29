@@ -2,7 +2,7 @@
 <configuration>
   <appSettings>
     <!-- GAME SETTINGS -->
-    <add key="gameVersion" value="0.9.17.1" />
+    <add key="gameVersion" value="0.9.18.0" />
     <add key="gamePath" value="D:\Other\World_of_Tanks" />
     <!-- SCRIPT BASE SETTINGS -->
     <add key="logLevel" value="0" />
