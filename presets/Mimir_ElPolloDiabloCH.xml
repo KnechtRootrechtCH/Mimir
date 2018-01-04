@@ -15,13 +15,13 @@
     <mod>Custom_Sixth_Sense_Icon</mod>
 
     <!-- SKINS: REMOVING WGL AND PATRIOT PAINTJOBS -->
-    <!-- <mod>AMX_13_57_NoWGL</mod> -->
-    <!-- <mod>leKpz_M41_90mm_Milkm4n_Black</mod> -->
-    <!-- <mod>T26E4_Milkm4n</mod> -->
+    <mod>AMX_13_57_NoWGL</mod>
+    <mod>leKpz-M41-90mm-Grey</mod>
+    <mod>T26E4_Milkm4n</mod>
 
     <!-- SKINS: CUSTOM PAINTJOBS -->
-    <!-- <mod>Pz58_SwissCamo</mod> -->
-    <!-- <mod>Pz58_Schwarzpanzer_with_Mutz</mod> -->
-    <!-- <mod>Rhm_Skorpion_G_Milkm4n_Black</mod> -->
-    <!-- <mod>Object_252_Battleworn_Turret</mod> -->
+    <mod>Pz58_SwissCamo</mod>
+    <mod>Pz58_Schwarzpanzer_with_Mutz</mod>
+    <mod>Rhm_Skorpion_G_Milkm4n_Black</mod>
+    <mod>Object_252_Battleworn_Turret</mod>
 </preset>
