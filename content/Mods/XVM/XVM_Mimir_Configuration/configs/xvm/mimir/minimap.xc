@@ -9,7 +9,7 @@
     "enabled": true,
     // Map image transparency.
     // Прозрачность изображения карты.
-    "mapBackgroundImageAlpha": 100,
+    "mapBackgroundImageAlpha": 80,
     // Self icon color. White pointing arrow.
     // Цвет своей иконки. Белая стрелка.
     "selfIconColor": "{{player?0xFFFFFF|{{c:system}}}}",
@@ -18,13 +18,13 @@
     "selfIconAlpha": 75,
     // Self icon scale. White pointing arrow.
     // Масштаб своей иконки. Белая стрелка.
-    "selfIconScale": 1,
+    "selfIconScale": 0.9,
     // Vehicle type icons transparency.
     // Прозрачность иконок типа техники.
     "iconAlpha": 100,
     // Vehicles icon scale. Does not affect attached geometry and textfields. Floating point allowed: 0.7, 1.4.
     // Масштаб иконки техники. Не влияет на прикрепленную к геометрию и текстовые поля. Можно дробные: 0.7, 1.4.
-    "iconScale": 1,
+    "iconScale": 0.9,
     // Camera direction green triangle transparency.
     // Прозрачность зеленого треугольника направления камеры.
     "directionTriangleAlpha": 100,
@@ -48,7 +48,7 @@
     "zoom": {
       // Zoom index value for minimap zoom key (0..5).
       // Значение масштаба миникарты при нажатии клавиши масштаба (0..5).
-      "index": 5,
+      "index": 4,
       // false - does not set zoomed minimap at display center.
       // false - не устанавливать увеличенную миникарту по центру экрана.
       "centered": false
