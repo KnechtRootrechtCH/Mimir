@@ -8,7 +8,7 @@
   "hitLog": {
     // Group hits by players name.
     // Группировать попадания по имени игрока.
-    "groupHitsByPlayer": true,
+    "groupHitsByPlayer": false,
     // Insert order: begin - insert new values to begin, end - add to end.
     // Сортировка попаданий: begin - новые значения добавляются сверху, end - снизу.
     "insertOrder": "begin",
