@@ -13,7 +13,7 @@
  *
  * Внимание! Кодировка файлов должна оставаться UTF8+BOM. В противном случае
  * вместо кириллицы в игре будут пустые глифы.
- * Для редактирования используйте Notepad++. http://goo.gl/y6iet
+ * Для редактирования используйте Notepad++. https://goo.gl/y6iet
  * В случае блокнота Windows: Сохранить как -> Кодировка: UTF.
  */
 {
@@ -21,9 +21,9 @@
   // Версия конфига. Не удаляйте и не изменяйте её без необходимости.
   "configVersion": "6.1.0",
 
-  // automatically reload config. Can reduce performance.
-  // автоматически перезагружать конфиг. Может понизить производительность.
-  "autoReloadConfig": false,
+  // Automatically reload config. Requires client restart.
+  // Автоматически перезагружать конфиг. Требует перезапуска клиента.
+  "autoReloadConfig": true,
 
   // Language used in mod
   // "auto" - automatically detect language from game client,
@@ -50,23 +50,23 @@
 
     // Config description.
     // Описание конфига.
-    "description": "ElPolloDiabloCH's personal settings for XVM",
+    "description": "Personal settings for XVM",
 
     // Address to config updates.
     // Адрес, где выкладываются обновления конфига.
-    "url": "http://www.modxvm.com/",
+    "url": "https://sites.google.com/atheos.cc/mimir/home",
 
     // Config last modified.
     // Дата последней модификации конфига.
-    "date": "29.04.2017",
+    "date": "04.01.2018",
 
     // Supported version of the game.
     // Поддерживаемая версия игры.
-    "gameVersion": "0.9.18.0",
+    "gameVersion": "0.9.21.0.1",
 
     // The minimum required version of the XVM mod.
     // Минимально необходимая версия мода XVM.
-    "modMinVersion": "6.6.5"
+    "modMinVersion": "7.3.1"
   },
 
   // Parameters for login screen.
@@ -183,5 +183,9 @@
 
   // XMQP services settings
   // Настройки сервисов XMQP
-  "xmqp": ${"xmqp.xc":"xmqp"}
+  "xmqp": ${"xmqp.xc":"xmqp"},
+
+  // Various settings for advanced users
+  // Различные настройки для продвинутых пользоватей
+  "tweaks": ${"tweaks.xc":"tweaks"}
 }

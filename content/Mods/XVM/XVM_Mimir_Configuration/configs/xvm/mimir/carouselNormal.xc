@@ -37,16 +37,16 @@
       "tankIcon": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
       // Vehicle class icon.
       // Иконка типа техники.
-      "tankType": { "enabled": true, "dx": 0, "dy": 80, "alpha": 100, "scale": 1 },
+      "tankType": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
       // Vehicle level.
       // Уровень техники
-      "level":    { "enabled": false, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
+      "level":    { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
       // Double XP icon
       // Иконка не сбитого опыта за первую победу в день.
       "xp":       { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
       // Vehicle name.
       // Название танка.
-      "tankName": { "enabled": false, "dx": 0, "dy": 0, "alpha": 100, "scale": 1, "textFormat": {}, "shadow": {} },
+      "tankName": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1, "textFormat": {}, "shadow": {} },
       // Vehicle rent info text.
       // Инфо текст аренды танка.
       "rentInfo": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1, "textFormat": {}, "shadow": {} },
@@ -78,24 +78,6 @@
     // Extra cell fields (extended format supported, see extra-field.txt).
     // Дополнительные поля ячеек (поддерживается расширенный формат, см. extra-field.txt).
     "extraFields": [
-      // Tank name
-      {
-        "enabled": true,
-        "x": 156,
-        "y": 80,
-        "align": "right",
-        "format": "<font size='12' face='$FieldFont' color='{{v.premium?#E7B622|#FFFFFF}}'>{{v.name}}</font>",
-        "shadow": { "distance": 0, "angle": 0, "color": "{{v.premium?0x642D1A|0x434343}}", "alpha": 100, "blur": 6, "strength": 3 }
-      },
-      // Tank level and battle tiers
-      {
-        "enabled": true,
-        "x": 20,
-        "y": 80,
-        "align": "left",
-        "format": "<font face='$FieldFont' size='12' color='#7d7d75'><font color='#CFCFCF'><b>{{v.rlevel}}</b></font> {{v.battletiermin}}-{{v.battletiermax}}</font>",
-        "shadow": ${ "def.textFieldShadow" }
-      },
       // Slot background
       // Подложка слота
       { "x": 1, "y": 1, "layer": "substrate", "width": 160, "height": 100, "bgColor": "0x0A0A0A" },
@@ -103,68 +85,46 @@
       // Средний урон
       {
         "enabled": true,
-        "x": 2, "y": 3, "width": 16, "height": 16, "alpha": "{{v.tdb?100|0}}",
-        "src": "xvm://res/icons/tooltips/roles/gunner.png"
+        "x": 1, "y": 28, "width": 18, "height": 18, "alpha": "{{v.tdb?|0}}",
+        "src": "xvm://res/icons/carousel/damage.png"
       },
       {
         "enabled": true,
-        "x": 17, "y": 1,
-        "format": "<b><font face='$FieldFont' size='12' color='{{v.c_xtdb|#7d7d75}}'>{{v.tdb%d}}</font></b>",
+        "x": 17, "y": 28,
+        "format": "<b><font face='$FieldFont' size='12' color='{{v.c_xtdb|#CFCFCF}}'>{{v.tdb%d}}</font></b>",
         "shadow": ${ "def.textFieldShadow" }
       },
-      // Battle count
+      // Sign of mastery
+      // Знак мастерства
+      {
+        "enabled": true,
+        "x": 1, "y": 12, "width": 23, "height": 23,
+        "src": "img://gui/maps/icons/library/proficiency/class_icons_{{v.mastery}}.png"
+      },
+      // Battles count
       // Количество боёв
       {
         "enabled": true,
-        "x": 3, "y": 17, "width": 14, "height": 14, "alpha": "{{v.tdb?70|0}}",
+        "x": 158, "y": 17, "align": "right", "width": 13, "height": 13, "alpha": "{{v.battles?|0}}",
         "src": "xvm://res/icons/carousel/battles.png"
       },
       {
         "enabled": true,
-        "x": 17, "y": 14,
-        "format": "<b><font face='$FieldFont' size='12' color='#7d7d75'>{{v.battles}}</font></b>",
+        "x": 145, "y": 14, "align": "right",
+        "format": "<b><font face='$FieldFont' size='12' color='#CFCFCF' alpha='#F0'>{{v.battles}}</font></b>",
         "shadow": ${ "def.textFieldShadow" }
       },
-      // Damage rating
-      // Количество боёв
+      // Winrate
+      // Процент побед
       {
         "enabled": true,
-        "x": 2, "y": 30, "width": 16, "height": 16, "alpha": "{{v.damageRating>50?100|0}}",
-        "src": "xvm://res/icons/tooltips/roles/commander.png"
+        "x": 158, "y": 32, "align": "right", "width": 13, "height": 13, "alpha": "{{v.winrate?|0}}",
+        "src": "xvm://res/icons/carousel/wins.png"
       },
       {
         "enabled": true,
-        "x": 17, "y": 27,
-        "format": "{{v.damageRating>50?<font face='$FieldFont' size='12' color='#7d7d75'>{{v.damageRating%'d~%}}</font>|}}",
-        "shadow": ${ "def.textFieldShadow" }
-      },
-      // Damage rating
-      /*
-      {
-        "enabled": true,
-        "x": 158,
-        "y": 66,
-        "align": "right",
-        "x": 2,
-        "y": 66,
-        "align": "left",
-        "alpha": "{{v.damageRating}}",
-        "format": "{{v.damageRating>50?<font face='$FieldFont' size='12' color='#CFCFCF'>{{v.damageRating%'d~%}}</font>|}}",
-        "shadow": ${ "def.textFieldShadow" }
-      },
-      */
-      // XP left to elite
-      {
-        /*
-        "enabled": true,
-        "x": 2,
-        "y": 64,
-        "align": "left",
-        */
-        "x": 156,
-        "y": 66,
-        "align": "right",
-        "format": "<font face='$FieldFont' size='12' color='#7d7d75'>{{v.xpToEliteLeft%'d}}</font>",
+        "x": 145, "y": 28, "align": "right",
+        "format": "<b><font face='$FieldFont' size='12' color='{{v.c_winrate|#CFCFCF}}'>{{v.winrate%2d~%}}</font></b>",
         "shadow": ${ "def.textFieldShadow" }
       }
     ]

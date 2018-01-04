@@ -33,7 +33,7 @@
     "hideBuySlot": false,
     // true - show total slots count in the "Buy vehicle" cell.
     // true - показывать общее количество слотов в ячейке "Купить машину".
-    "showTotalSlots": true,
+    "showTotalSlots": false,
     // true - show used slots count in the "Buy slot" cell.
     // true - показывать количество занятых слотов в ячейке "Купить слот".
     "showUsedSlots": true,
@@ -57,7 +57,7 @@
     },
     // Order of nations.
     // Порядок наций.
-    //"nations_order": ["ussr", "germany", "usa", "france", "uk", "china", "japan", "czech"],
+    //"nations_order": ["ussr", "germany", "usa", "china", "france", "uk", "japan", "czech", "poland", "sweden"],
     "nations_order": [],
     // Order of types of vehicles.
     // Порядок классов техники.
@@ -66,8 +66,8 @@
     // Критерии сортировки танков, доступные значения: (минус = в обратном порядке)
     // "nation", "type", "level", "-level", "maxBattleTier", "-maxBattleTier", "premium", "-premium",
     // "winRate", "-winRate", "markOfMastery", "-markOfMastery", "xtdb", "-xtdb", "xte", "-xte",
-    // "damageRating", "-damageRating", "marksOnGun", "-marksOnGun"
-    "sorting_criteria": ["type", "level", "nation"],
+    // "wtr", "-wtr", "damageRating", "-damageRating", "marksOnGun", "-marksOnGun"
+    "sorting_criteria": ["nation", "type", "level"],
     // Suppress the tooltips for tanks in carousel
     // Убрать подсказки к танкам в карусели
     "suppressCarouselTooltips": false

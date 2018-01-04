@@ -8,7 +8,7 @@
   "hitLog": {
     // Group hits by players name.
     // Группировать попадания по имени игрока.
-    "groupHitsByPlayer": false,
+    "groupHitsByPlayer": true,
     // Insert order: begin - insert new values to begin, end - add to end.
     // Сортировка попаданий: begin - новые значения добавляются сверху, end - снизу.
     "insertOrder": "begin",
@@ -18,7 +18,7 @@
     "blowupMarker": "&#x78;",
     // Default header format (before first hit). Only localization macros are allowed, see macros.txt.
     // Формат заголовка по умолчанию (до первого попадания). Допускаются только макросы перевода, см. macros.txt.
-    "defaultHeader":  "",
+    "defaultHeader":  "{{l10n:Hits}}: <font size='13'>#0</font>",
     // Hits header format, including last hit (macros allowed, see macros.txt).
     // Формат заголовка (допускаются макроподстановки, см. macros.txt).
     "formatHeader":  "{{l10n:Hits}}: <font size='13'>#{{hitlog.n}}</font> {{l10n:Total}}: <b>{{hitlog.dmg-total}}</b>  {{l10n:Last}}: <font color='{{c:dmg-kind}}'><b>{{dmg}}</b></font> <font face='xvm' size='21'>{{hitlog.dead=&#x77;?&#x29;|{{hitlog.dead=&#x78;?&#x28;}}}}</font>",

@@ -1,6 +1,6 @@
 ﻿/**
  * General parameters for minimap.
- * Общие параметры миникарты. Видео по некоторым аспектам редактирования http://www.youtube.com/watch?feature=player_embedded&v=NBJcqWuEoLo
+ * Общие параметры миникарты. Видео по некоторым аспектам редактирования https://www.youtube.com/watch?feature=player_embedded&v=NBJcqWuEoLo
  */
 {
   "minimap": {
@@ -9,19 +9,22 @@
     "enabled": true,
     // Map image transparency.
     // Прозрачность изображения карты.
-    "mapBackgroundImageAlpha": 80,
+    "mapBackgroundImageAlpha": 100,
+    // Self icon color. White pointing arrow.
+    // Цвет своей иконки. Белая стрелка.
+    "selfIconColor": "{{player?0xFFFFFF|{{c:system}}}}",
     // Self icon transparency. White pointing arrow.
     // Прозрачность своей иконки. Белая стрелка.
     "selfIconAlpha": 75,
     // Self icon scale. White pointing arrow.
     // Масштаб своей иконки. Белая стрелка.
-    "selfIconScale": 0.9,
+    "selfIconScale": 1,
     // Vehicle type icons transparency.
     // Прозрачность иконок типа техники.
     "iconAlpha": 100,
     // Vehicles icon scale. Does not affect attached geometry and textfields. Floating point allowed: 0.7, 1.4.
     // Масштаб иконки техники. Не влияет на прикрепленную к геометрию и текстовые поля. Можно дробные: 0.7, 1.4.
-    "iconScale": 0.9,
+    "iconScale": 1,
     // Camera direction green triangle transparency.
     // Прозрачность зеленого треугольника направления камеры.
     "directionTriangleAlpha": 100,
@@ -31,6 +34,9 @@
     // Show camera line after death
     // Отображать линию направления камеры после смерти
     "showDirectionLineAfterDeath": true,
+    // Show cell click animation
+    // Отображать анимацию клика по ячейке
+    "showCellClickAnimation": true,
     // Path to icon for arty aim
     // Путь к иконке для артиллерийского прицела
     "minimapAimIcon": "xvm://res/MinimapAim.png",
