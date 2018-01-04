@@ -23,7 +23,7 @@
 
   // Automatically reload config. Requires client restart.
   // Автоматически перезагружать конфиг. Требует перезапуска клиента.
-  "autoReloadConfig": true,
+  "autoReloadConfig": false,
 
   // Language used in mod
   // "auto" - automatically detect language from game client,

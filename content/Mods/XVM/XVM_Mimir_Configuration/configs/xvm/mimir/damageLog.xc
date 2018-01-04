@@ -45,13 +45,13 @@
   "damageLog": {
     // false - Disable.
     // false - отключить.
-    "enabled": true,
+    "enabled": false,
     // true - disable standard detailed damage.
     // true - отключить стандартный детальный урон.
-    "disabledDetailStats": true,
+    "disabledDetailStats": false,
     // true - disable standard summarized damage.
     // true - отключить стандартный суммарный урон.
-    "disabledSummaryStats": true,
+    "disabledSummaryStats": false,
     // Log of the received damage.
     // Лог полученного урона.
     "log": {

@@ -20,7 +20,7 @@
       // "format": "{{hitlog-header}}\n{{hitlog-body}}"
     },
     "hitlogBody": {
-      "enabled": true,
+      "enabled": false,
       "hotKeyCode": 56, "onHold": "true", "visibleOnHotKey": false,
       "updateEvent": "ON_DAMAGE_CAUSED, ON_PANEL_MODE_CHANGED",
       "x": "{{pp.mode=0?5|{{py:sum({{pp.widthLeft}},50)}}}}",
@@ -34,6 +34,7 @@
     // Индикатор общего HP команд.
     "totalHP": {
       "enabled": true,
+      "hotKeyCode": 56, "onHold": "true", "visibleOnHotKey": true,
       "updateEvent": "PY(ON_UPDATE_HP)",
       "x": 0,
       "y": 30,
@@ -60,6 +61,7 @@
     // Порог необходимый для получения достижения "Основной калибр".
     "mainGun": {
       "enabled": true,
+      "hotKeyCode": 56, "onHold": "true", "visibleOnHotKey": true,
       "updateEvent": "PY(ON_UPDATE_HP)",
       "x": 170,
       "y": 30,
@@ -71,7 +73,7 @@
     // Log of the received damage (see damageLog.xc).
     // Лог полученного урона (см. damageLog.xc).
     "damageLog": {
-      "enabled": true,
+      "enabled": false,
       "updateEvent": "PY(ON_HIT)",
       "x": "{{py:xvm.damageLog.dLog_x}}",
       "y": "{{py:xvm.damageLog.dLog_y}}",
@@ -154,7 +156,7 @@
       "format": "ПОЖАР"
     },
     "totalEfficiency": {
-      "enabled": true,
+      "enabled": false,
       "updateEvent": "PY(ON_TOTAL_EFFICIENCY), ON_PANEL_MODE_CHANGED",
       "x": "{{pp.mode=0?5|{{py:sum({{pp.widthLeft}},50)}}}}",
       "y": "{{pp.mode=0?65|35}}",
