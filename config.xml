@@ -2,8 +2,8 @@
 <configuration>
   <appSettings>
     <!-- GAME SETTINGS -->
-    <add key="gameVersion" value="0.9.18.0" />
-    <add key="gamePath" value="D:\Other\World_of_Tanks" />
+    <add key="gameVersion" value="0.9.21.0.2" />
+    <add key="gamePath" value="D:\Games\World_of_Tanks" />
     <!-- SCRIPT BASE SETTINGS -->
     <add key="logLevel" value="0" />
     <add key="contentPath" value="./content" />
@@ -19,6 +19,6 @@
     <add key="archiveConverteddMods" value="false" />
     <add key="quickInstallMods" value="XVM_Base;XVM_Mimir_Configuration" />
     <add key="quickInstallModsDebug" value="XVM_Base;XVM_Mimir_Configuration;XVM_Mimir_AutoReload" />
-    <add key="quickInstsallPreset" value="Mimir_ElPolloDiabloCH_CustomBaseColors" />
+    <add key="quickInstsallPreset" value="Mimir_ElPolloDiabloCH" />
   </appSettings>
 </configuration>
