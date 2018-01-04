@@ -6,7 +6,7 @@
   "camera": {
     // false - disable camera settings.
     // false - отключить настройки камеры.
-    "enabled": false,
+    "enabled": true,
     // true - disable red flash when enemy hit your tank.
     // true - отключить красную вспышку когда враг попадает по вам.
     "noFlashBang": false,
@@ -18,7 +18,7 @@
     "arcade": {
       // Camera distance range: [min, max], default - [2, 25]
       // Отдаление камеры: [мин, макс], по умолчанию - [2, 25]
-      "distRange": [2, 25],
+      "distRange": [2, 100],
       // Start distance (null for default behavior - saved state from the last battle)
       // Начальная дистанция (null для поведения по умолчанию - сохраненная позиция из последнего боя)
       "startDist": null,
@@ -34,7 +34,7 @@
     "postmortem": {
       // Camera distance range: [min, max], default - [2, 25]
       // Отдаление камеры: [мин, макс], по умолчанию - [2, 25]
-      "distRange": [2, 25],
+      "distRange": [2, 200],
       // Start distance (null for default behavior - maximum distance)
       // Начальная дистанция (null для поведения по умолчанию - максимальная дистанция)
       "startDist": null,
@@ -50,7 +50,7 @@
     "strategic": {
       // Camera distance range: [min, max], default - [40, 100]
       // Отдаление камеры: [мин, макс], по умолчанию - [40, 100]
-      "distRange": [40, 100],
+      "distRange": [40, 200],
       // false - disable the shot recoil effect (for the enabled dynamic camera option)
       // false - выключить эффект отдачи от выстрела (для включенной опции динамической камеры)
       "shotRecoilEffect": true
@@ -62,7 +62,7 @@
       // Default: [ 2, 4, 8 ]. It's possible to use a greater number of values.
       // Список значений кратности для снайперского режима
       // По умолчанию: [ 2, 4, 8 ]. Можно использовать большее количество значений.
-      "zooms": [2, 4, 8],
+      "zooms": [2, 4, 8, 16, 24, 32],
       // Start zoom value (null for default behavior - last used state)
       // Начальное значение кратности (null для поведения по умолчанию - последнее использовавшееся значение)
       "startZoom": null,
