@@ -9,8 +9,8 @@
     <mod>XVM_NoColor_TankNames</mod>
 
     <!-- USER INTERFACE -->
-    <!-- <mod>YasenKrasen_SessionStats</mod> -->
-    <!-- <mod>YasenKrasen_SessionStats_BackgroundV4</mod> -->
+    <mod>YasenKrasen_SessionStats</mod>
+    <mod>YasenKrasen_SessionStats_Backgrounds_V1</mod>
 
     <!-- FLUFF -->
     <mod>C-H-C_Clan_Icon</mod>
