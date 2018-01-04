@@ -33,7 +33,7 @@ def sign():
     if panel.total_hp_sign == '<':
         return '&lt;'
     elif panel.total_hp_sign == '>':
-        return '&gt;';
+        return '&gt;'
     elif panel.total_hp_sign is None:
         return ''
     else:
@@ -53,11 +53,13 @@ def update_hp(vehicleID, hp):
 # night_dragon_on <http://www.koreanrandom.com/forum/user/14897-night-dragon-on/>
 # ktulho <http://www.koreanrandom.com/forum/user/17624-ktulho/>
 
+import traceback
 import BigWorld
 from CurrentVehicle import g_currentVehicle
 from gui.Scaleform.daapi.view.lobby.hangar.Hangar import Hangar
-from gui.shared import g_itemsCache
-import traceback
+from helpers import dependency
+from skeletons.gui.game_control import IBootcampController
+from skeletons.gui.shared import IItemsCache
 
 playerAvgDamage = None
 
@@ -65,8 +67,11 @@ playerAvgDamage = None
 @registerEvent(Hangar, '_Hangar__updateParams')
 def Hangar__updateParams(self):
     try:
+        if dependency.instance(IBootcampController).isInBootcamp():
+            return
         global playerAvgDamage
-        playerAvgDamage = g_itemsCache.items.getVehicleDossier(g_currentVehicle.item.intCD).getRandomStats().getAvgDamage()
+        itemsCache = dependency.instance(IItemsCache)
+        playerAvgDamage = itemsCache.items.getVehicleDossier(g_currentVehicle.item.intCD).getRandomStats().getAvgDamage()
         return playerAvgDamage
     except:
         err(traceback.format_exc())
@@ -108,7 +113,7 @@ class PlayerDamages(object):
         for r in results:
             vehicleID = r & 4294967295L
             flags = r >> 32 & 4294967295L
-            if playerAvatar.team == arenaVehicles[vehicleID]['team'] and playerAvatar.playerVehicleID != vehicleID:
+            if playerAvatar.team == arenaVehicles[vehicleID]['team'] and playerAvatar.playerVehicleID != vehicleID and arenaVehicles[vehicleID]['isAlive']:
                 if flags & (VHF.IS_ANY_DAMAGE_MASK | VHF.ATTACK_IS_DIRECT_PROJECTILE):
                     self.teamHits = False
 

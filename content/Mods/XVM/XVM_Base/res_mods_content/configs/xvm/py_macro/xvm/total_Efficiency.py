@@ -38,6 +38,9 @@ totalStun = 0
 numberStuns = 0
 isStuns = None
 numberDamagedVehicles = []
+hitAlly = False
+burst = 1
+allyVehicles = []
 
 
 ribbonTypes = {
@@ -81,7 +84,7 @@ def ArenaDataProvider_updateVehicleStats(self, vID, vStats):
 
 @registerEvent(PlayerAvatar, 'showShotResults')
 def PlayerAvatar_showShotResults(self, results):
-    global numberHits, numberStuns, numberDamagedVehicles
+    global numberHits, numberStuns, numberDamagedVehicles, hitAlly
     b = False
     for r in results:
         vehID = (r & 4294967295L)
@@ -101,6 +104,11 @@ def PlayerAvatar_showShotResults(self, results):
                 if vehID not in numberDamagedVehicles:
                     numberDamagedVehicles.append(vehID)
                     b = True
+            if not hitAlly and (flags & (VHF.IS_ANY_DAMAGE_MASK | VHF.ATTACK_IS_DIRECT_PROJECTILE)):
+                if vehID in allyVehicles:
+                    vehicleDesc = self.arena.vehicles.get(vehID)
+                    hitAlly = vehicleDesc['isAlive']
+                    b = True
     if b:
         as_event('ON_TOTAL_EFFICIENCY')
 
@@ -110,7 +118,7 @@ def ShowShooting_start(self, data, burstCount):
     global numberShotsDealt
     vehicle = data['entity']
     if vehicle is not None and vehicle.isPlayerVehicle and vehicle.isAlive():
-        numberShotsDealt += 1
+        numberShotsDealt += burst
         as_event('ON_TOTAL_EFFICIENCY')
 
 
@@ -178,9 +186,10 @@ def _addRibbon(self, ribbonID, ribbonType='', leftFieldStr='', vehName='', vehTy
             as_event('ON_TOTAL_EFFICIENCY')
 
 
-@registerEvent(BattleRibbonsPanel, 'onHide')
-def _onHide(self, ribbonType):
+@overrideMethod(BattleRibbonsPanel, 'onHide')
+def _onHide(base, self, ribbonID):
     global ribbonTypes
+    ribbonType = self._BattleRibbonsPanel__ribbonsAggregator.getRibbon(ribbonID).getType()
     if player is not None:
         if hasattr(player.inputHandler.ctrl, 'curVehicleID'):
             vId = player.inputHandler.ctrl.curVehicleID
@@ -190,6 +199,7 @@ def _onHide(self, ribbonType):
         if player.playerVehicleID == v:
             if ribbonType in ['spotted', 'kill', 'teamKill', 'crits']:
                 ribbonTypes[ribbonType][0] = ribbonTypes[ribbonType][1]
+    base(self, ribbonID)
 
 
 @registerEvent(Vehicle, 'onHealthChanged')
@@ -216,17 +226,20 @@ def onHealthChanged(self, newHealth, attackerID, attackReasonID):
 
 @registerEvent(Vehicle, 'onEnterWorld')
 def onEnterWorld(self, prereqs):
-    global player, isPlayerInSquad, isStuns
-    player = BigWorld.player()
+    global player, isPlayerInSquad, isStuns, vehiclesHealth, allyVehicles
+    if player is None:
+        player = BigWorld.player()
     if self.publicInfo['team'] != player.team:
-        global vehiclesHealth
         vehiclesHealth[self.id] = self.health
+    else:
+        allyVehicles.append(self.id)
     if self.isPlayerVehicle:
-        global maxHealth, vehCD
+        global maxHealth, vehCD, burst
         isPlayerInSquad = player.guiSessionProvider.getArenaDP().isSquadMan(player.playerVehicleID)
         vehCD = self.typeDescriptor.type.compactDescr
+        burst = self.typeDescriptor.gun.burst[0]
         maxHealth = self.health
-        isStuns = 'st' if 'stunDuration' in self.typeDescriptor.shot['shell'] else None
+        isStuns = 'st' if self.typeDescriptor.shot.shell.hasStun else None
 
 
 @registerEvent(PlayerAvatar, '_PlayerAvatar__destroyGUI')
@@ -234,7 +247,7 @@ def destroyGUI(self):
     global vehiclesHealth, totalDamage, totalAssist, totalBlocked, damageReceived, damagesSquad, detection, isPlayerInSquad
     global ribbonTypes, numberHitsBlocked, player, numberHitsDealt, old_totalDamage, damage, numberShotsDealt, totalStun
     global numberDamagesDealt, numberShotsReceived, numberHitsReceived, numberHits, fragsSquad, fragsSquad_dict, isStuns
-    global numberStuns, numberDamagedVehicles
+    global numberStuns, numberDamagedVehicles, hitAlly, allyVehicles, burst
     vehiclesHealth = {}
     totalDamage = 0
     damage = 0
@@ -258,7 +271,10 @@ def destroyGUI(self):
     totalStun = 0
     numberStuns = 0
     isStuns = None
+    hitAlly = False
+    burst = 1
     numberDamagedVehicles = []
+    allyVehicles = []
     ribbonTypes = {
         'armor': 0,
         'damage': 0,

@@ -22,20 +22,12 @@
     "Ping": "Пинг",
     "Online": "Онлайн",
 
-    // Win chance
-    "Chance error": "Ошибка расчета шансов",
-    "Chance to win": "Шансы на победу",
-    "Team strength": "Силы команд",
-    "chanceLive": "Для живых",
-    "chanceBattleTier": "Уровень боя",
-
     // Hitlog
     "shot": "атака",
     "fire": "пожар",
     "ramming": "таран",
     "world_collision": "падение",
     "death_zone": "death zone",
-    "drowning": "drowning",
 
     "Hits": "Пробитий",
     "Total": "Всего",
@@ -51,9 +43,28 @@
     "avgDamage": "Средний урон",
     "mainGun": "Основной калибр",
 
+    // Devices
+    "engine": "двигатель",
+    "ammo_bay": "боеукладка",
+    "fuel_tank": "топливный бак",
+    "radio": "радиостанция",
+    "left_track": "левая гусеница",
+    "right_track": "правая гусеница",
+    "gun": "орудие",
+    "turret_rotator": "вращение башни",
+    "surveying_device": "приборы наблюдения",
+    
+    // Tankmen
+    "commander": "командир экипажа",
+    "driver": "механик-водитель",
+    "radioman": "радист",
+    "gunner": "наводчик",
+    "loader": "заряжающий",    
+    
     // DamageLog:
     "sec": "сек",
     "reloaded": "перезарядился",
+    "drowning": "затоплен",
     // Shell kind (macro {{type-shell}})
     "armor_piercing": "ББ",
     "high_explosive": "ОФ",
@@ -69,7 +80,6 @@
     "turret": "башня",
     "hull": "корпус",
     "chassis": "шасси",
-    "gun": "орудие",
 
     // BattleResults
     "Hit percent": "Процент попаданий",
@@ -89,7 +99,7 @@
     "General stats": "Общая статистика",
     "Summary": "Общие результаты",
     "Avg level": "Средний уровень",
-    "WN6": "WN6",
+    "WTR": "WTR",
     "WN8": "WN8",
     "EFF": "РЭ",
     "WGR": "ЛРИ",
@@ -141,7 +151,7 @@
     "shootingRadius": "Дальность стрельбы",
     "pitchLimitsSide": "Углы вертикальной наводки сбоку (град)",
     "pitchLimitsRear": "Углы вертикальной наводки сзади (град)",
-    "terrainResistance": "Сопротивление грунтов",
+    "terrainResistance": "Сопротивление грунтов (тверд./средн./мягк.)",
     "gravity": "Гравитация",
     "shellSpeed": "Скорость снаряда",
     "general": "Общие",
@@ -170,6 +180,7 @@
     "china": "Китай",
     "japan": "Япония",
     "czech": "Чехословакия",
+    "poland": "Польша",
     "sweden": "Швеция",
     
     // Vehicle type
@@ -229,7 +240,7 @@
     "Used slots": "Занято слотов",
 
     // Profile
-    "profile/xvm_xte_tooltip": "<b><font color='#FDF4CE' size='16'>xTE</font></b>\nЭффективность по танку\nПодробная информация на <font color='#FDF4CE'>www.modxvm.com/ratings/</font>",
+    "profile/xvm_xte_tooltip": "<b><font color='#FDF4CE' size='16'>xTE</font></b>\nЭффективность по танку\nПодробная информация на <font color='#FDF4CE'>https://modxvm.com/ratings/</font>",
     "profile/xvm_xte_extended_tooltip": "<textformat tabstops='[20, 85, 140]'>{{l10n:profile/xvm_xte_tooltip}}\n\nЭталонные значения:\n\t\tурон\tфраги\n\tТекущие:\t<font color='#FDF4CE' size='14'>{0}</font>\t<font color='#FDF4CE' size='14'>{1}</font>\n\tСредние:\t<font color='#FDF4CE' size='14'>{2}</font>\t<font color='#FDF4CE' size='14'>{3}</font>\n\tТоповые:\t<font color='#FDF4CE' size='14'>{4}</font>\t<font color='#FDF4CE' size='14'>{5}</font>",
 
     // Comments
@@ -255,6 +266,10 @@
     // Config loading
     "XVM config reloaded": "Конфиг XVM перезагружен",
     "Config file xvm.xc was not found, using the built-in config": "Файл конфигурации xvm.xc не найден, используем встроенную конфигурацию",
-    "Error loading XVM config": "Ошибка загрузки конфига XVM"
+    "Error loading XVM config": "Ошибка загрузки конфига XVM",
+
+    //Bootcamp workaround
+    "bootcamp_workaround_title": "Предупреждение",
+    "bootcamp_workaround_message": "В настоящий момент модификация XVM не совместима с режимом «учебный полигон».\n\nДля входа в режим «учебный полигон» необходимо перезапустить клиент World of Tanks в безопасном режиме, при использовании которого не происходит загрузка модификаций.\n\nВы хотите перезапустить игру без модификаций прямо сейчас?"
   }
 }

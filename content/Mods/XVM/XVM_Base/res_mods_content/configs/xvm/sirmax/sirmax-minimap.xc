@@ -2,6 +2,7 @@
   "minimap": {
     //"enabled": false,
     //"mapBackgroundImageAlpha": 50,
+    //"selfIconColor": "{{player?0x0000FF|0x0000FF}}",
     //"selfIconAlpha": 70,
     //"selfIconScale": 0.5,
     //"iconAlpha": 10,
@@ -9,6 +10,7 @@
     "directionTriangleAlpha": 0,
     "directionLineAlpha": 0,
     //"showDirectionLineAfterDeath": false,
+    //"showCellClickAnimation": false,
     "minimapAimIcon": "cfg://sirmax/img/MinimapAim.png",
     "minimapAimIconScale": 100,
     //"zoom": { "index": 5, "centered": true },
@@ -30,6 +32,7 @@
     "directionTriangleAlpha": 50,
     "directionLineAlpha": 50,
     "showDirectionLineAfterDeath": false,
+    //"showCellClickAnimation": false,
     "minimapAimIcon": "cfg://sirmax/img/MinimapAim2.png",
     "minimapAimIconScale": 200,
     "zoom": { "index": 5, "centered": true },

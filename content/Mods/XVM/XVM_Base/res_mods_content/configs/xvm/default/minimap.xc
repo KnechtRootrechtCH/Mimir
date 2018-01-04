@@ -1,6 +1,6 @@
 ﻿/**
  * General parameters for minimap.
- * Общие параметры миникарты. Видео по некоторым аспектам редактирования http://www.youtube.com/watch?feature=player_embedded&v=NBJcqWuEoLo
+ * Общие параметры миникарты. Видео по некоторым аспектам редактирования https://www.youtube.com/watch?feature=player_embedded&v=NBJcqWuEoLo
  */
 {
   "minimap": {
@@ -10,6 +10,9 @@
     // Map image transparency.
     // Прозрачность изображения карты.
     "mapBackgroundImageAlpha": 100,
+    // Self icon color. White pointing arrow.
+    // Цвет своей иконки. Белая стрелка.
+    "selfIconColor": "{{player?0xFFFFFF|{{c:system}}}}",
     // Self icon transparency. White pointing arrow.
     // Прозрачность своей иконки. Белая стрелка.
     "selfIconAlpha": 75,
@@ -31,6 +34,9 @@
     // Show camera line after death
     // Отображать линию направления камеры после смерти
     "showDirectionLineAfterDeath": true,
+    // Show cell click animation
+    // Отображать анимацию клика по ячейке
+    "showCellClickAnimation": true,
     // Path to icon for arty aim
     // Путь к иконке для артиллерийского прицела
     "minimapAimIcon": "xvm://res/MinimapAim.png",

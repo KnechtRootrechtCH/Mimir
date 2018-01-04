@@ -49,7 +49,7 @@ Legend:
 ├───────────────────┼───┼───┼───┼───┼───┼───┼─────────────────────────────────────────────────
 │ "visibleOnHotKey" │ X │ X │ X │ X │ X │ X │ true - поле отображается при нажатии горячей клавиши; false - наоборот (по-умолчанию: true)
 ├───────────────────┼───┼───┼───┼───┼───┼───┼─────────────────────────────────────────────────
-│ "flags"           │   │   │   │   │   │ X │ флаг видимости поля:
+│ "flags"           │   │   │   │ X │   │   │ флаг видимости поля:
 │                   │   │   │   │   │   │   │ "flags": [ "player", "ally", "squadman", "enemy", "teamKiller", "neverSeen", "lost", "spotted", "alive", "dead" ],
 │                   │   │   │   │   │   │   │
 │                   │   │   │   │   │   │   │ если не указаны "ally", "squadman", "player", "enemy", "teamKiller", то они не используются.
@@ -70,7 +70,7 @@ Legend:
 │                   │   │   │   │   │   │   │   "substrate": поместить поле под всеми полями (для ушей значение X зависит от ширины ушей)
 │                   │   │   │   │   │   │   │   "bottom": поместить поле под всеми стандартными полями (для ушей значение X не зависит от ширины ушей)
 │                   │   │   │   │   │   │   │   "normal": поместить поле над "bottom" (для ушей над иконкой танка, но под стандартными текстовыми полями)
-│                   │   │   │   │   │   │   │   "top": поместить поле над всеми полями 
+│                   │   │   │   │   │   │   │   "top": поместить поле над всеми полями
 ├───────────────────┼───┼───┼───┼───┼───┼───┼─────────────────────────────────────────────────
 │ "src"             │ X │ X │ X │ X │ X │ X │ отображение изображения ("xvm://res/contour/{{vehiclename}}.png")
 ├───────────────────┼───┼───┼───┼───┼───┼───┼─────────────────────────────────────────────────
@@ -89,7 +89,7 @@ Legend:
 │                   │   │   │   │   │   │   │   "knockout"   - применяет эффект выбивки (true), который фактически делает заливку объекта прозрачной и выявляет цвет фона документа. Значение по умолчанию — false (без выбивки).
 │                   │   │   │   │   │   │   │   "quality"    - заданное число применений фильтра. Значение по умолчанию — 1 (однократное применение фильтра). Можно использовать дополнительные числовые значения до 15 для получения разнообразных эффектов, более высокие значения выполняются ДОЛЬШЕ.
 │                   │   │   │   │   │   │   │
-│                   │   │   │   │   │   │   │ http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/filters/DropShadowFilter.html
+│                   │   │   │   │   │   │   │ https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/filters/DropShadowFilter.html
 ├───────────────────┼───┼───┼───┼───┼───┼───┼─────────────────────────────────────────────────
 │ "textFormat"      │ X │ X │ X │ X │ X │ X │ применяет глобальный стиль HTML в "format"; обратите внимание, что определенные атрибуты шрифта в "format" переопределяют "textFormat"
 │                   │   │   │   │   │   │   │ стандартный стиль поля, значение по умолчанию:
@@ -109,7 +109,7 @@ Legend:
 │                   │   │   │   │   │   │   │   "marginLeft"  - отступ слева, аналогично (<textformat lefMargin='XX'>...</textformat>) (по-умолчанию: 0)
 │                   │   │   │   │   │   │   │   "marginRight" - отступ справа, аналогично (<textformat rightMargin='XX'>...</textformat>) (по-умолчанию: 0)
 │                   │   │   │   │   │   │   │
-│                   │   │   │   │   │   │   │ http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/text/TextFormat.html
+│                   │   │   │   │   │   │   │ https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/text/TextFormat.html
 ├───────────────────┼───┼───┼───┼───┼───┼───┼─────────────────────────────────────────────────
 │ "format"          │ X │ X │ X │ X │ X │ X │ отображаемые данные в текстовых полях (доступно использование HTML и макросов) (по-умолчанию: "")
 ├───────────────────┼───┼───┼───┼───┼───┼───┼─────────────────────────────────────────────────
@@ -119,6 +119,7 @@ Legend:
 │                   │   │   │   │   │   │   │ доступные события:
 │                   │   │   │   │   │   │   │   ON_BATTLE_STATE_CHANGED
 │                   │   │   │   │   │   │   │   ON_PLAYERS_HP_CHANGED
+│                   │   │   │   │   │   │   │   ON_MY_HP_CHANGED
 │                   │   │   │   │   │   │   │   ON_VEHICLE_DESTROYED
 │                   │   │   │   │   │   │   │   ON_CURRENT_VEHICLE_DESTROYED
 │                   │   │   │   │   │   │   │   ON_MODULE_CRITICAL
@@ -129,6 +130,7 @@ Legend:
 │                   │   │   │   │   │   │   │   ON_TARGET_IN                 - aim at the vehicle
 │                   │   │   │   │   │   │   │   ON_TARGET_OUT                - aim not at the vehicle
 │                   │   │   │   │   │   │   │   ON_PANEL_MODE_CHANGED
+│                   │   │   │   │   │   │   │   ON_MY_STAT_LOADED            - own stat loading complete
 │                   │   │   │   │   │   │   │   ON_EVERY_FRAME               * can reduce performance
 │                   │   │   │   │   │   │   │   ON_EVERY_SECOND              * can reduce performance
 │                   │   │   │   │   │   │   │   PY(event_name)               - event from python, sent by as_event(event_name)
