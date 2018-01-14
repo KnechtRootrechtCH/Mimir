@@ -21,7 +21,7 @@
 
     <!-- SKINS: CUSTOM PAINTJOBS -->
     <mod>Pz58_SwissCamo</mod>
-    <mod>Pz58_Schwarzpanzer_with_Mutz</mod>
+    <!-- <mod>Pz58_Schwarzpanzer_with_Mutz</mod> -->
     <mod>Rhm_Skorpion_G_Milkm4n_Black</mod>
     <mod>Object_252_Battleworn_Turret</mod>
 </preset>
