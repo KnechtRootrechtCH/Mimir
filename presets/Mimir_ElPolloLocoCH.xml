@@ -16,9 +16,12 @@
     <!-- SKINS: REMOVING WGL AND PATRIOT PAINTJOBS -->
     <mod>AMX_13_57_NoWGL</mod>
     <mod>leKpz-M41-90mm-Grey</mod>
+    <!-- <mod>T26E4_Milkm4n</mod> -->
     <mod>T26E5_P_Freedom_Fighters</mod>>
+    <mod>AMX_M4_49_Liberte_DarkGreen</mod>
 
     <!-- SKINS: CUSTOM PAINTJOBS -->
+    <mod>Pz58_SwissCamo</mod>
     <mod>Pz58_Schwarzpanzer_with_Mutz</mod>
-    <mod>Object_252_Battleworn_Turret</mod>
+    <!-- <mod>Object_252_Battleworn_Turret</mod> -->
 </preset>
