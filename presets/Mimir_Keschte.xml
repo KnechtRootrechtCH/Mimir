@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<preset name="Mimir_Keschte" description="Mimir - Personal Setup for Keschte">
+    <!-- XVM -->
+    <mod>XVM_Base</mod>
+    <mod>XVM_Mimir_Configuration</mod>
+
+    <!-- USER INTERFACE -->
+    <mod>YasenKrasen_Core</mod>
+    <mod>YasenKrasen_Beta</mod>
+    <!-- <mod>J1mB0_s_Contour_Icon_Mod</mod> -->
+
+    <!-- FLUFF -->
+    <mod>C-H-C_Clan_Icon</mod>
+    <mod>Custom_Sixth_Sense_Icon</mod>
+</preset>
