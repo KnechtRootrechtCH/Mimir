@@ -122,7 +122,7 @@
       "textFormat": {
         "font": "$FieldFont",         //   название
         "size": 13,                   //   размер
-        "color": "0xCCCCCC",                //   цвет (допускается использование динамического цвета, см. macros.txt)
+        "color": null,                //   цвет (допускается использование динамического цвета, см. macros.txt)
         "bold": false,                //   обычный (false) или жирный (true)
         "italic": false               //   обычный (false) или курсив (true)
       },
@@ -188,7 +188,7 @@
       "textFormat": {
         "font": "xvm",
         "size": 17,
-        "color": "{{c:r|#999999}}",
+        "color": "{{c:xr|#999999}}",
         "bold": false,
         "italic": false
       },
@@ -208,8 +208,8 @@
     "xmqpEvent": {
       "name": "xmqp event",           //  название текстового поля, ни на что не влияет
       "enabled": true,                //  false - не отображать
-      "x": -50,
-      "y": -25,
+      "x": 0,                         //  положение по оси X
+      "y": "{{battletype?-73|{{squad?-73|-58}}}}",  //  положение по оси Y
       "alpha": 100,                   //  прозрачность (допускается использование динамической прозрачности, см. macros.txt)
       "align": "center",              //  выравнивание текста (left, center, right)
       // Font options.
@@ -242,9 +242,9 @@
       "name": "position",             //  название текстового поля, ни на что не влияет
       "enabled": true,                //  false - не отображать
       "x": 0,                         //  положение по оси X
-      "y": 8,                       //  положение по оси Y
+      "y": -51,                       //  положение по оси Y
       "alpha": 100,                   //  прозрачность (допускается использование динамической прозрачности, см. macros.txt)
-      "align": "center",
+      "align": "center",              //  выравнивание текста (left, center, right)
       "textFormat": {                 //  параметры шрифта
         "font": "$FieldFont",         //  название
         "size": 13,                   //  размер
@@ -385,8 +385,8 @@
       "y": -67,          // Position on the Y axis / Положение по оси Y.
       "alpha": 100       // Opacity                / Прозрачность.
     },
-    // Block of text fields.
-    // Блок текстовых полей.
+    // Block of text fields (extended format supported, see extra-field.txt).
+    // Блок текстовых полей (поддерживается расширенный формат, см. extra-field.txt).
     "textFields": [
       ${ "def.topTankers" },
       ${ "def.tankName" },
@@ -476,13 +476,13 @@
     // Stun marker
     // Маркер оглушения
     "stunMarker": {
-      "enabled": true,   // false - disable        / не отображать.
-      "x": 0,            // Position on the X axis / Положение по оси X.
-      "y": -67,          // Position on the Y axis / Положение по оси Y.
-      "alpha": 100       // Opacity                / Прозрачность.
+      "enabled": true,
+      "x": 0,
+      "y": -67,
+      "alpha": 100
     },
-    // Block of text fields.
-    // Блок текстовых полей.
+    // Block of text fields (extended format supported, see extra-field.txt).
+    // Блок текстовых полей (поддерживается расширенный формат, см. extra-field.txt).
     "textFields": [
       ${ "def.topTankers" },
       ${ "def.tankName" },

@@ -48,7 +48,7 @@
     "zoom": {
       // Zoom index value for minimap zoom key (0..5).
       // Значение масштаба миникарты при нажатии клавиши масштаба (0..5).
-      "index": 4,
+      "index": 5,
       // false - does not set zoomed minimap at display center.
       // false - не устанавливать увеличенную миникарту по центру экрана.
       "centered": false

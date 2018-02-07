@@ -15,7 +15,7 @@
     "minimapDrawLineThickness": 1,
     // Color for minimap drawings (null for user colors)
     // Цвет для рисования по миникарте (null для пользовательских цветов)
-    "minimapDrawColor": "{{c:r}}",
+    "minimapDrawColor": "{{c:xr}}",
     // Opacity of the minimap drawings
     // Прозрачность рисования по миникарте
     "minimapDrawAlpha": 80

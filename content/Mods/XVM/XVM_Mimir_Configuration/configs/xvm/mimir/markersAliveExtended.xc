@@ -86,12 +86,12 @@
     // Text field with the name of the player.
     // Текстовое поле с именем игрока.
     "playerName": {
-      "name": "Player name",
-      "enabled": true,
-      "x": 0,
-      "y": -36,
-      "alpha": 100,
-      "align": "center",
+      "name": "Player name",          // название текстового поля, ни на что не влияет
+      "enabled": true,                // false - не отображать
+      "x": 0,                         // положение по оси X
+      "y": -36,                       // положение по оси Y
+      "alpha": 100,                   // прозрачность (допускается использование динамической прозрачности, см. macros.txt)
+      "align": "center",              //   выравнивание текста (left, center, right)
       // Font options.
       // Параметры шрифта.
       "textFormat": {
@@ -248,10 +248,10 @@
         "angle": 45,
         "color": "0x000000",
         "alpha": 100,
-        "blur": 2,
-        "strength": 1
+        "blur": 6,
+        "strength": 2
       },
-      "format": "&#x115;"
+      "format": "{{r}}"
     }
   },
   // Настройки для союзников.
@@ -362,8 +362,8 @@
       "y": -67,          // Position on the Y axis / Положение по оси Y.
       "alpha": 100       // Opacity                / Прозрачность.
     },
-    // Block of text fields.
-    // Блок текстовых полей.
+    // Block of text fields (extended format supported, see extra-field.txt).
+    // Блок текстовых полей (поддерживается расширенный формат, см. extra-field.txt).
     "textFields": [
       ${ "def.playerName" },
       ${ "def.playerStats" },
@@ -451,13 +451,13 @@
     // Stun marker
     // Маркер оглушения
     "stunMarker": {
-      "enabled": true,   // false - disable        / не отображать.
-      "x": 0,            // Position on the X axis / Положение по оси X.
-      "y": -67,          // Position on the Y axis / Положение по оси Y.
-      "alpha": 100       // Opacity                / Прозрачность.
+      "enabled": true,
+      "x": 0,
+      "y": -67,
+      "alpha": 100
     },
-    // Block of text fields.
-    // Блок текстовых полей.
+    // Block of text fields (extended format supported, see extra-field.txt).
+    // Блок текстовых полей (поддерживается расширенный формат, см. extra-field.txt).
     "textFields": [
       ${ "def.playerName" },
       ${ "def.playerStats" },
