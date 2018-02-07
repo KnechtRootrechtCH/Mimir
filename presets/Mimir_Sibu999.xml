@@ -6,7 +6,6 @@
 
     <!-- XVM: PERSONAL PREFERENCE -->
     <mod>XVM_Disable_Camera</mod>
-    <mod>XVM_NoColor_TankNames</mod>
 
     <!-- USER INTERFACE -->
     <mod>YasenKrasen_SessionStats</mod>
