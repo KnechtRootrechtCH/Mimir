@@ -2,8 +2,8 @@
 <configuration>
   <appSettings>
     <!-- GAME SETTINGS -->
-    <add key="gameVersion" value="0.9.21.0.3" />
     <add key="gamePath" value="D:\Wargaming\World_of_Tanks" />
+    <add key="gameVersion" value="0.9.22.0" />
     <!-- SCRIPT BASE SETTINGS -->
     <add key="logLevel" value="0" />
     <add key="contentPath" value="./content" />
