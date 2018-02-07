@@ -5,8 +5,8 @@
     <mod>XVM_Mimir_Configuration</mod>
 
     <!-- USER INTERFACE -->
-    <mod>YasenKrasen_SessionStats</mod>
-    <mod>YasenKrasen_SessionStats_Backgrounds_V1</mod>
+    <mod>YasenKrasen_Core</mod>
+    <mod>YasenKrasen_Backgrounds_V1</mod>
     <mod>J1mB0_s_Contour_Icon_Mod</mod>
 
     <!-- FLUFF -->
