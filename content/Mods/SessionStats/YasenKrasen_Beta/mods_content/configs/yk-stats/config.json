@@ -117,9 +117,9 @@
         "<textformat tabstops='[90,110,165]'><font size='12' color='#929292'>Win rate:<tab>{{Battles.png}}<tab><b><font color='{{g:avgWinRate}}'>{{avgWinRate:1f}}%</font><tab>(<font color='{{c:davgWinRate}}'>{{davgWinRate:+1f}}%</font>)</b></font></textformat>",
         "<textformat tabstops='[90,165]'><font size='12' color='#929292'>EFF/WN8:<tab><b><font color='{{g:EFF}}'>{{EFF:d}}</font> (<font color='{{c:dEFF}}'>{{dEFF:+1f}}</font>)<tab><font color='{{g:WN8}}'>{{WN8:d}}</font> (<font color='{{c:dWN8}}'>{{dWN8:+1f}}</font>)</b></font></textformat>"
     ],
-    "enableResearchWatchdog": false,
+    "enableResearchWatchdog": true,
     "researchWatchdog": {
-        "useFreeXp": false,
+        "useFreeXp": true,
         "warnUsingAlertBox": false,
         "notifyOfLockedModules": true,
         "maxCharsPerItem": 25,
