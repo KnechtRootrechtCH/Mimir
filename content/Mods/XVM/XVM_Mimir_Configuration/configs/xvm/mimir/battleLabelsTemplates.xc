@@ -34,7 +34,6 @@
     // Индикатор общего HP команд.
     "totalHP": {
       "enabled": true,
-      "hotKeyCode": 56, "onHold": "true", "visibleOnHotKey": true,
       "updateEvent": "PY(ON_UPDATE_HP)",
       "x": 0,
       "y": 30,
@@ -61,7 +60,6 @@
     // Порог необходимый для получения достижения "Основной калибр".
     "mainGun": {
       "enabled": true,
-      "hotKeyCode": 56, "onHold": "true", "visibleOnHotKey": true,
       "updateEvent": "PY(ON_UPDATE_HP)",
       "x": 170,
       "y": 30,
