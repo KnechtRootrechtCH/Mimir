@@ -5,7 +5,8 @@
     <mod>XVM_Mimir_Configuration</mod>
 
     <!-- USER INTERFACE -->
-    <!-- <mod>YasenKrasen_Core</mod> -->
+    <mod>YasenKrasen_Core</mod>
+    <mod>YasenKrasen_Beta</mod>
     <!-- <mod>J1mB0s_Contour_Icons</mod> -->
 
     <!-- FLUFF -->

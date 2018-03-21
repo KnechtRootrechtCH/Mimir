@@ -8,8 +8,8 @@
     <mod>XVM_Disable_Camera</mod>
 
     <!-- USER INTERFACE -->
-    <!-- <mod>YasenKrasen_Core</mod> -->
-    <!-- <mod>YasenKrasen_Beta</mod> -->
+    <mod>YasenKrasen_Core</mod>
+    <mod>YasenKrasen_Beta</mod>
 
     <!-- FLUFF -->
     <mod>C-H-C_Clan_Icon</mod>
