@@ -149,6 +149,7 @@
     "czech": "Československo",
     "poland": "Polsko",
     "sweden": "Švédsko",
+    "italy": "",
     "HT": "Těžký tank",
     "MT": "Střední tank",
     "LT": "Lehký tank",

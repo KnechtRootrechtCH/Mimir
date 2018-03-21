@@ -10,6 +10,7 @@ import helpers
 import nations
 from CurrentVehicle import g_currentVehicle
 from gui import ClientHangarSpace
+from gui.hangar_camera_manager import HangarCameraManager
 from gui.shared import g_eventBus
 from gui.prb_control.entities.base.actions_validator import CurrentVehicleActionsValidator
 from gui.prb_control.items import ValidationResult
@@ -37,9 +38,9 @@ cfg_hangar_hangarType = None
 cfg_hangar_barracksShowFlags = True
 cfg_hangar_barracksShowSkills = True
 cfg_hangar_blockVehicleIfLowAmmo = False
-cfg_hangar_camera_minDistance = 6.5
+cfg_hangar_camera_minDistance = 4
 cfg_hangar_camera_maxDistance = 12
-cfg_hangar_camera_startDistance = 11
+cfg_hangar_camera_startDistance = 10
 cfg_hangar_camera_zoomSensitivity = 1
 
 #####################################################################
@@ -63,13 +64,13 @@ def onConfigLoaded(self, e=None):
     cfg_hangar_blockVehicleIfLowAmmo = config.get('hangar/blockVehicleIfLowAmmo', False)
 
     global cfg_hangar_camera_minDistance
-    cfg_hangar_camera_minDistance = config.get('hangar/camera/minDistance', 6.5)
+    cfg_hangar_camera_minDistance = config.get('hangar/camera/minDistance', 4)
 
     global cfg_hangar_camera_maxDistance
     cfg_hangar_camera_maxDistance = config.get('hangar/camera/maxDistance', 12)
 
     global cfg_hangar_camera_startDistance
-    cfg_hangar_camera_startDistance = config.get('hangar/camera/startDistance', 11)
+    cfg_hangar_camera_startDistance = config.get('hangar/camera/startDistance', 10)
 
     global cfg_hangar_camera_zoomSensitivity
     cfg_hangar_camera_zoomSensitivity = config.get('hangar/camera/zoomSensitivity', 1)
@@ -179,8 +180,14 @@ def i18n_makeString(base, key, *args, **kwargs):
 
 
 # handle hangar/hangarType option
-@overrideMethod(ClientHangarSpace, 'getSpaceType')
-def getSpaceType(base, isPremium):
+@overrideMethod(ClientHangarSpace, '_getHangarPath')
+def _ClientHangarSpace_getHangarPath(base, isPremium, isPremIGR):
+    if cfg_hangar_hangarType is not None:
+        isPremium = cfg_hangar_hangarType == 'premium'
+    return base(isPremium, isPremIGR)
+
+@overrideMethod(ClientHangarSpace, '_getHangarType')
+def _ClientHangarSpace_getHangarType(base, isPremium):
     if cfg_hangar_hangarType is not None:
         isPremium = cfg_hangar_hangarType == 'premium'
     return base(isPremium)
@@ -195,8 +202,8 @@ def _ClientHangarSpace_loadConfig(base, cfg, xml, defaultCfg = None):
     # increase pitch angles
     cfg['cam_pitch_constr'] = (-89, 5)
 
-@overrideMethod(ClientHangarSpace.ClientHangarSpace, 'updateCameraByMouseMove')
-def _ClientHangarSpace_updateCameraByMouseMove(base, self, dx, dy, dz):
+@overrideMethod(HangarCameraManager, '_HangarCameraManager__updateCameraByMouseMove')
+def _HangarCameraManager_updateCameraByMouseMove(base, self, dx, dy, dz):
     dz *= cfg_hangar_camera_zoomSensitivity
     base(self, dx, dy, dz)
 
