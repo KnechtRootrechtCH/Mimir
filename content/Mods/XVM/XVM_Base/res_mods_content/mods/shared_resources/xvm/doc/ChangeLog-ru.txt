@@ -1,9 +1,12 @@
-﻿XVM-7.5.0-dev:
+﻿XVM-7.5.0:
   [ОБЩЕЕ]
   * World of Tanks 1.0
 
   [ЗВУКИ]
   * новая опция "sounds"/"xvm_gunReloaded" - озвучка окончания перезарядки орудия.
+
+  [АНГАР]
+  * удалена опция "hangar/hangarType" и секция "hangar/camera"
     
   [МАКРОСЫ НА PYTHON]
   * damageLog: добавлен макрос {{hitTime}}
