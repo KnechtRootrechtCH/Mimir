@@ -36,12 +36,12 @@
         // false - no shadow
         // false - без тени
         "enabled": true,
-        "distance": 1,                  // (in pixels)     / offset distance / дистанция смещения
+        "distance": 0,                  // (in pixels)     / offset distance / дистанция смещения
         "angle": 45,                    // (0.0 .. 360.0)  / offset angle    / угол смещения
         "color": "0x000000",            // "0xXXXXXX"      / color           / цвет
         "alpha": 100,                   // (0 .. 100)      / opacity         / прозрачность
         "blur": 3,                      // (0.0 .. 255.0)  / blur            / размытие
-        "strength": 3                   // (0.0 .. 255.0)  / intensity       / интенсивность
+        "strength": 1                   // (0.0 .. 255.0)  / intensity       / интенсивность
       },
       // Rising speed of displayed damage (float up speed).
       // Время отображения отлетающего урона.
