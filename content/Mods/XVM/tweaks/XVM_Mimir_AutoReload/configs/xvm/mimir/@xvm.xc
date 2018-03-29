@@ -16,7 +16,7 @@
  * Для редактирования используйте Notepad++. https://goo.gl/y6iet
  * В случае блокнота Windows: Сохранить как -> Кодировка: UTF.
  */
- {
+{
   // Version of the config. Do not remove or change it unnecessarily.
   // Версия конфига. Не удаляйте и не изменяйте её без необходимости.
   "configVersion": "6.1.0",
@@ -58,15 +58,15 @@
 
     // Config last modified.
     // Дата последней модификации конфига.
-    "date": "07.02.2018",
+    "date": "23.03.2018",
 
     // Supported version of the game.
     // Поддерживаемая версия игры.
-    "gameVersion": "0.9.22",
+    "gameVersion": "1.0.0",
 
     // The minimum required version of the XVM mod.
     // Минимально необходимая версия мода XVM.
-    "modMinVersion": "7.4.0"
+    "modMinVersion": "7.5.0"
   },
 
   // Parameters for login screen.
