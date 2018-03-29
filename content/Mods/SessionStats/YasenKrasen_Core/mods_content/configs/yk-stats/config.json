@@ -10,7 +10,7 @@
     "battleType": [1],
     "onlineReloadConfig": false,
     "clientReloadReset": false,
-    "dailyAutoReset": false,
+    "dailyAutoReset": true,
     "dailyAutoResetHour": 6,
     "icon": "",
     "statBackground": "img://gui/maps/icons/library/YasenKrasen/BG/BG_stats{{c:WN8}}.png",
