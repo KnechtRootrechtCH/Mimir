@@ -8,6 +8,7 @@
     <mod>YasenKrasen_Core</mod>
     <mod>YasenKrasen_Beta</mod>
     <mod>Grabaahs_Contour_Icons</mod>
+    <!-- <mod>ReplayManager</mod> -->
 
     <!-- FLUFF -->
     <!-- <mod>British_Crew_Voices</mod> -->
@@ -17,8 +18,8 @@
     <!-- SKINS: REMOVING WGL AND PATRIOT PAINTJOBS -->
     <mod>Miruku_AMX1357GF_Remodel</mod>
     <mod>Miruku_leKpzM4190_Remodel</mod>
-    <mod>T26E5_P_Freedom_Fighters</mod>>
-    <mod>AMX_M4_49_Liberte_DarkGreen</mod>
+    <!-- <mod>T26E5_P_Freedom_Fighters</mod>> -->
+    <!-- <mod>AMX_M4_49_Liberte_DarkGreen</mod> -->
 
     <!-- SKINS: CUSTOM PAINTJOBS -->
     <mod>Pz58_SwissCamo</mod>
