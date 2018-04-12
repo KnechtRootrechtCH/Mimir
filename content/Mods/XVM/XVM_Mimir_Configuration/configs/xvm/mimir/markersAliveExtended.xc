@@ -56,33 +56,6 @@
       // Текст при взрыве боеукладки (см. описание макросов в macros.txt).
       "blowupMessage": "{{l10n:blownUp}}\n{{dmg}}"
     },
-    // Text field with the name of the tank.
-    // Текстовое поле с названием танка.
-    "tankName": {
-      "name": "Tank name",
-      "enabled": true,
-      "x": 0,
-      "y": -36,
-      "alpha": 100,
-      "align": "center",
-      "textFormat": {
-        "font": "$FieldFont",
-        "size": 13,
-        "color": null,
-        "bold": true,
-        "italic": false
-      },
-      "shadow": {
-        "enabled": true,
-        "distance": 0,
-        "angle": 45,
-        "color": "0x000000",
-        "alpha": 100,
-        "blur": 4,
-        "strength": 4
-      },
-      "format": "{{vehicle}}{{turret}}"
-    },
     // Text field with the name of the player.
     // Текстовое поле с именем игрока.
     "playerName": {
@@ -90,7 +63,7 @@
       "enabled": true,                // false - не отображать
       "x": 0,                         // положение по оси X
       "y": -36,                       // положение по оси Y
-      "alpha": 100,                   // прозрачность (допускается использование динамической прозрачности, см. macros.txt)
+      "alpha": 80,                   // прозрачность (допускается использование динамической прозрачности, см. macros.txt)
       "align": "center",              //   выравнивание текста (left, center, right)
       // Font options.
       // Параметры шрифта.
@@ -107,101 +80,18 @@
         // false - no shadow
         // false - без тени
         "enabled": true,
-        "distance": 0,                //   дистанция смещения
-        "angle": 45,                  //   угол смещения
-        "color": "0x000000",          //   цвет
-        "alpha": 100,                 //   прозрачность
-        "blur": 4,                    //   размытие
-        "strength": 4                 //   интенсивность
+        "distance": 0,
+        "angle": 45,
+        "color": "0x000000",
+        "alpha": 100,
+        "blur": 4,
+        "strength": 4
       },
       "format": "{{nick}}"            //   формат текста. См. описание макросов в macros.txt
     },
-    "platoon": {
-      "name": "platoon",                //  название текстового поля, ни на что не влияет
-      "enabled": true,                //  false - не отображать
-      "x": 0,                        //  положение по оси X
-      "y": "-52",   //  положение по оси Y
-      "alpha": 25,                   //  прозрачность (допускается использование динамической прозрачности, см. macros.txt)
-      "format": "<img src='cfg://mimir/img/platoon/{{squad-num?{{squad?|{{tk?tk|{{ally?al|en}}}}}}{{squad?none|{{squad-num}}}}|none}}.png' width='17' height='20'>"  //  формат текста. См. описание макросов в macros.txt
-    },
-    "playerStats": {
-      "name": "Player stats",
-      "visible": true,
-      "x": 0,
-      "y": -47,
-      "alpha": 80,
-      "align": "center",
-      "textFormat": {
-        "font": "$FieldFont",
-        "size": 11,
-        "color": "{{c:r}}",
-        "bold": true,
-        "italic": false
-      },
-      "shadow": {
-        "enabled": true,
-        "distance": 0,
-        "angle": 45,
-        "color": "0x000000",
-        "alpha": 100,
-        "blur": 4,
-        "strength": 3
-      },
-      "format": "{{r|----}}"
-    },    
-    "tankInfo": {
-      "name": "Tank info",
-      "visible": true,
-      "x": 0,
-      "y": -4,
-      "alpha": 80,
-      "align": "center",
-      "textFormat": {
-        "font": "$FieldFont",
-        "size": 11,
-        "color": "{{c:vtype}}",
-        "bold": true,
-        "italic": false
-      },
-      "shadow": {
-        "enabled": true,
-        "distance": 0,
-        "angle": 45,
-        "color": "0x000000",
-        "alpha": 100,
-        "blur": 4,
-        "strength": 3
-      },
-      "format": "{{rlevel}} {{vtype}}"
-    },
-    "tankStats": {
-      "name": "Tank info",
-      "visible": true,
-      "x": 0,
-      "y": -4,
-      "alpha": 80,
-      "align": "center",
-      "textFormat": {
-        "font": "$FieldFont",
-        "size": 11,
-        "color": "{{c:xte}}",
-        "bold": true,
-        "italic": false
-      },
-      "shadow": {
-        "enabled": true,
-        "distance": 0,
-        "angle": 45,
-        "color": "0x000000",
-        "alpha": 100,
-        "blur": 4,
-        "strength": 3
-      },
-      "format": "{{t-rating%2d~%}} / {{t-battles|--}}"
-    },
     // Text field with the percentage of remaining health.
     // Текстовое поле с процентом оставшегося здоровья.
-    "tankHp": {
+    "hpPercent": {
       "name": "Percent of HP",
       "enabled": true,
       "x": 0,
@@ -222,23 +112,23 @@
         "color": "0x000000",
         "alpha": 100,
         "blur": 4,
-        "strength": 2
+        "strength": 1
       },
-      "format": "{{hp}}"
+      "format": "{{hp-ratio}}% / {{hp-max}}"
     },
     // Text field with rating.
     // Текстовое поле с рейтингом.
     "rating": {
       "name": "Rating",
       "enabled": true,
-      "x": -32,
-      "y": -21,
-      "alpha": "{{xvm-stat?100|0}}",
-      "align": "right",
+      "x": 0,
+      "y": -51,
+      "alpha": 100,
+      "align": "center",
       "textFormat": {
-        "font": "xvm",
-        "size": 17,
-        "color": "{{c:r|#999999}}",
+        "font": "$FieldFont",
+        "size": 13,
+        "color": "{{c:xr}}",
         "bold": false,
         "italic": false
       },
@@ -260,7 +150,7 @@
     // Иконка типа танка (ТТ/СТ/ЛТ/ПТ/Арта).
     "vehicleIcon": {
       // false - disable / не отображать
-      "enabled": false,
+      "enabled": true,
       // true - show speaker even if enabled=false
       // true - показывать спикер, даже если enabled=false
       "showSpeaker": false,
@@ -366,10 +256,7 @@
     // Блок текстовых полей (поддерживается расширенный формат, см. extra-field.txt).
     "textFields": [
       ${ "def.playerName" },
-      ${ "def.playerStats" },
-      ${ "def.tankHp" },
-      ${ "def.platoon" },
-      ${ "def.tankStats" },
+      ${ "def.hpPercent" },
       ${ "def.rating" }
     ]
   },
@@ -378,7 +265,7 @@
     // Type of vehicle icon (HT/MT/LT/TD/Arty).
     // Иконка типа танка (ТТ/СТ/ЛТ/ПТ/Арта).
     "vehicleIcon": {
-      "enabled": false,
+      "enabled": true,
       "showSpeaker": false,
       "x": 0,
       "y": -16,
@@ -460,10 +347,7 @@
     // Блок текстовых полей (поддерживается расширенный формат, см. extra-field.txt).
     "textFields": [
       ${ "def.playerName" },
-      ${ "def.playerStats" },
-      ${ "def.tankHp" },
-      ${ "def.platoon" },
-      ${ "def.tankStats" },
+      ${ "def.hpPercent" },
       ${ "def.rating" }
     ]
   }

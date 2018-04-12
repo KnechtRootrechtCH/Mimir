@@ -1,6 +1,6 @@
 ﻿/**
- * Options for dead with Alt markers.
- * Настройки маркеров для трупов с Alt.
+ * Options for dead without Alt markers.
+ * Настройки маркеров для трупов без Alt.
  */
 {
   // Definitions
@@ -30,6 +30,8 @@
         "bold": false,                  // True - bold    / Жирный.
         "italic": false                 // True - italic  / Курсив.
       },
+      // Shadow options.
+      // Параметры тени.
       "shadow": {
         // false - no shadow
         // false - без тени
@@ -53,66 +55,6 @@
       // Text for ammo rack explosion (see description of macros in the macros.txt).
       // Текст при взрыве боеукладки (см. описание макросов в macros.txt).
       "blowupMessage": "{{l10n:blownUp}}\n{{dmg}}"
-    },
-    // Text field with the name of the player.
-    // Текстовое поле с именем игрока.
-    "playerName": {
-      "name": "Player name",          // название текстового поля, ни на что не влияет
-      "enabled": true,                // false - не отображать
-      "x": 0,                         // положение по оси X
-      "y": -36,                       // положение по оси Y
-      "alpha": 100,                   // прозрачность (допускается использование динамической прозрачности, см. macros.txt)
-      "align": "center",              //   выравнивание текста (left, center, right)
-      // Font options.
-      // Параметры шрифта.
-      "textFormat": {
-        "font": "$FieldFont",         //   название
-        "size": 13,                   //   размер
-        "color": null,                //   цвет (допускается использование динамического цвета, см. macros.txt)
-        "bold": false,                //   обычный (false) или жирный (true)
-        "italic": false               //   обычный (false) или курсив (true)
-      },
-      // Shadow options.
-      // Параметры тени.
-      "shadow": {
-        // false - no shadow
-        // false - без тени
-        "enabled": true,
-        "distance": 0,                //   дистанция смещения
-        "angle": 45,                  //   угол смещения
-        "color": "0x000000",          //   цвет
-        "alpha": 100,                 //   прозрачность
-        "blur": 6,                    //   размытие
-        "strength": 2                 //   интенсивность
-      },
-      "format": "{{nick}}"            //   формат текста. См. описание макросов в macros.txt
-    },
-    // Text field with the name of the tank.
-    // Текстовое поле с названием танка.
-    "tankName": {
-      "name": "Tank name",            // название текстового поля, ни на что не влияет
-      "enabled": true,                // false - не отображать
-      "x": 0,                         // положение по оси X
-      "y": -20,                       // положение по оси Y
-      "alpha": 80,                    // прозрачность (допускается использование динамической прозрачности, см. macros.txt)
-      "align": "center",              // выравнивание текста (left, center, right)
-      "textFormat": {                 // параметры шрифта
-        "font": "$FieldFont",         //   название
-        "size": 13,                   //   размер
-        "color": null,                //   цвет (допускается использование динамического цвета, см. macros.txt)
-        "bold": false,                //   обычный (false) или жирный (true)
-        "italic": false               //   обычный (false) или курсив (true)
-      },
-      "shadow": {                     // параметры тени
-        "enabled": true,              //   false - без тени
-        "distance": 0,                //   дистанция смещения
-        "angle": 45,                  //   угол смещения
-        "color": "0x000000",          //   цвет
-        "alpha": 100,                 //   прозрачность
-        "blur": 6,                    //   размытие
-        "strength": 2                 //   интенсивность
-      },
-      "format": "{{vehicle}}"         // формат текста. См. описание макросов в macros.txt
     }
   },
   // Настройки для союзников.
@@ -225,10 +167,7 @@
     },
     // Block of text fields (extended format supported, see extra-field.txt).
     // Блок текстовых полей (поддерживается расширенный формат, см. extra-field.txt).
-    "textFields": [
-      ${ "def.tankName" },
-      ${ "def.playerName" }
-    ]
+    "textFields": []
   },
   // Настройки для противников.
   "enemy": {
@@ -315,9 +254,6 @@
     },
     // Block of text fields (extended format supported, see extra-field.txt).
     // Блок текстовых полей (поддерживается расширенный формат, см. extra-field.txt).
-    "textFields": [
-      ${ "def.tankName" },
-      ${ "def.playerName" }
-    ]
+    "textFields": []
   }
 }
