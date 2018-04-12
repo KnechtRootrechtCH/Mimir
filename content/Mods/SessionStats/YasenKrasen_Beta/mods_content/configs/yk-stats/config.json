@@ -12,7 +12,7 @@
     "battleType": [1],
     "onlineReloadConfig": false,
     "clientReloadReset": false,
-    "dailyAutoReset": false,
+    "dailyAutoReset": true,
     "dailyAutoResetHour": 6,
     "fastCache": true,
     "icon": "",
