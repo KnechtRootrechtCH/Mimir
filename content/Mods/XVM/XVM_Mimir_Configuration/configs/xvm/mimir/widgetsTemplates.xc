@@ -53,7 +53,7 @@
     ]
   },
   "statistics": {
-    "enabled": true,
+    "enabled": false,
     "layer": "normal",
     "type": "extrafield",
     "formats": [
