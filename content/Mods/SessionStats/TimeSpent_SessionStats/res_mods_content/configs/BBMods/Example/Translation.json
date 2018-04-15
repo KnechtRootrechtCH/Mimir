@@ -1,0 +1,14 @@
+{
+	"Translation": {
+		"txt:ByTankTitle": {"ru": "Статистика танка", "en": "Statistics of the tank", "cs": "Statistika vozidla"},
+		"txt:ByTankBattle": {"ru": "Количество боев / побед", "en": "The number of battles / wins", "cs": "Počet bitev / vítězství"},
+		"txt:ByTankWinr": {"ru": "% побед за сессию / по акаунту", "en": "% wins per session / account", "cs": "% vítězství na session / účet"},
+		"txt:ByTankDr": {"ru": "% отметки на стволе", "en": "% of the mark on the gun", "cs": "% značky na děle"},
+		"txt:ByTankDmg": {"ru": "Средний урон за сессию / по акаунту", "en": "Average damage per session / account", "cs": "Průměrné poškození za session / účet"},
+		"txt:ByTankXP": {"ru": "Средний опыт за сессию / по акаунту", "en": "Average experience per session / account", "cs": "Průměrné zkušenosti za session / účet"},
+		"txt:ByTankMaxKill": {"ru": "Фрагов за бой. Максимально / в среднем", "en": "Frags per battle. Maximum / average", "cs": "Zničeno za bitvu. Maximum / průměr"},
+		"txt:ByTankMax": {"ru": "Максимальный урон / опыт", "en": "Maximum damage", "cs": "Maximální poškození"},
+		"txt:ByTankTime": {"ru": "Время проведенное в боях за сессию", "en": "The time spent in combat per session", "cs": "Čas strávený v bitvách za session"},
+		"txt:ByTankBL": {"ru": "Средний уровень боя", "en": "The average level of combat", "cs": "Průměrný Tier bitev"}
+	}
+}
