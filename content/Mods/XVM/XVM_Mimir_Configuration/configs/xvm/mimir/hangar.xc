@@ -104,18 +104,15 @@
       // Смещение по оси Y
       "offsetY": 0
     },
-    // true - Use credits instead of gold as default currency for ammo and equipment
-    // true - Использовать кредиты, а не золото как валюту по умолчанию для снарядов и снаряжения
-    "defaultBoughtForCredits": true,
-    // true - Enable removable equipment auto return (Camouflage net, Stereoscope, Toolbox)
-    // true - Включить автовозврат съемного оборудования (Маскировочная сеть, Стереотруба, Ящик с инструментами)
+    // true - enable removable equipment auto return (Camouflage net, Stereoscope, Toolbox)
+    // true - включить автовозврат съемного оборудования (Маскировочная сеть, Стереотруба, Ящик с инструментами)
     "enableEquipAutoReturn": true,
-    // true - Make vehicle not ready for battle if low ammo
-    // true - Сделать машину не готовой к битве если мало снарядов
+    // true - make vehicle not ready for battle if low ammo
+    // true - сделать машину не готовой к битве если мало снарядов
     "blockVehicleIfLowAmmo": true,
     // Below this percentage, ammo is low. (0 - 100)
     // Ниже этого процента, снарядов считается мало. (0 - 100)
-    "lowAmmoPercentage": 80,
+    "lowAmmoPercentage": 50,
     // Behavior of the system channel notifications button on new notifications:
     //   none - do nothing
     //   blink - blink button
