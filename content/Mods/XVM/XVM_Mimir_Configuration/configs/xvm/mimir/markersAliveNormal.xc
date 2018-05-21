@@ -277,6 +277,7 @@
       "format": "<img src='{{top_tankers_emblem}}' width='16' height='16'>"
     }
   },
+  // Settings for allies.
   // Настройки для союзников.
   "ally": {
     // Type of vehicle icon (HT/MT/LT/TD/Arty).
@@ -304,6 +305,7 @@
       // Смещение по оси Y (?)
       "offsetY": 0
     },
+    // Health indicator.
     // Индикатор здоровья.
     "healthBar": {
       "enabled": true,                  //   false - не отображать
@@ -314,16 +316,19 @@
       "lcolor": null,                   //   цвет дополнительный (для градиента)
       "width": 70,                      //   ширина полосы здоровья
       "height": 12,                     //   высота полосы здоровья
+      // Substrate and frame parameters.
       // Параметры подложки и рамки.
       "border": {
         "alpha": 35,                    //     прозрачность
         "color": "0x000000",            //     цвет
         "size": 1                       //     размер рамки
       },
+      // Parameters of the remaining health.
       // Параметры оставшегося здоровья.
       "fill": {
         "alpha": 50                     //     прозрачность
       },
+      // Decreasing HP animation parameters.
       // Параметры анимации отнимаемого здоровья.
       "damage": {
         "alpha": 100,                   //     прозрачность
@@ -406,6 +411,7 @@
       ${ "def.xmqpEvent" }
     ]
   },
+  // Settings for enemies.
   // Настройки для противников.
   "enemy": {
     // Type of vehicle icon (HT/MT/LT/TD/Arty).
@@ -420,6 +426,7 @@
       "offsetX": 0,
       "offsetY": 0
     },
+    // Health indicator.
     // Индикатор здоровья.
     "healthBar": {
       "enabled": true,
