@@ -1,10 +1,55 @@
-﻿XVM-7.6.1:
+﻿XVM-7.6.4:
+  [GENERAL]
+  * World of Tanks 1.0.2
+
+  [HANGAR]
+  * added section "hangar"/"notificationCounter" - show/hide notifications counters in the main menu
+  * added option "hangar"/"showCreateSquadButton" - show "Create squad" button
+
+  [BATTLE]
+  * added options in the "playersPanel" modes sections:
+      "rankBadgeAlpha" - transparency of the rank badge
+
+XVM-7.6.3:
+  [HANGAR]
+  * added option "hangar"/"restoreBattleType" - restore selected battle type on switching to another server
+  * added option in "hangar"/"pingServers" and "hangar"/"onlineServers":
+      "currentServerFormat" - html format for current server
+  * removed option in "hangar"/"pingServers" and "hangar"/"onlineServers":
+      "markCurrentServer" - replaced with "currentServerFormat"
+  * added option "login"/"disabledServers" - do not show the specified servers in the servers list
+
+  [MISC]
+  * fixed display of tooltips in battle
+  * added option "tooltips"/"hideTooltips" - list of tooltips to hide
+  * added option "tooltips"/"logLocalization" - log all localization keys to the xvm.log file
+
+XVM-7.6.2:
+  [GENERAL]
+  * World of Tanks 1.0.1.1 nanopatch 2
+  * changed structure of the settings cache files, need to re-configure the filters and tanks in reserve.
+
+  [XFW]
+  * implemented WoT functions offset cache.
+  * improved Python/C compatibility
+
+  [MISC]
+  * fixes in hangar filters
+  * disabled tooltip in players panel
+
+XVM-7.6.1:
   [GENERAL]
   * World of Tanks 1.0.1.1
 
   [PYTHON MACROS]
   * damageLog: disabled panel in the frontline mode
   * damageLog: fix macros {{costShell}} and {{c:costShell}}
+
+  [MISC]
+  * fixed old replays playback
+  * fixed repair modules timer position
+  * player profile: fixed xTE column
+  * implemented HTTP-proxy support through environment variable XVM_HTTP_PROXY=http://[login:password@]domain.com:3128
 
 XVM-7.6.0:
   [GENERAL]
