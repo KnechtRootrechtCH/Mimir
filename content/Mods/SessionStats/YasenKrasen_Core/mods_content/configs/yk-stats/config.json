@@ -1,19 +1,25 @@
 {
-    "showStatForBattle": true,
-    "debugBattleResultMessage": false,
-    "checkForUpdate": true,
-    "updateExpectedTankValues": true,
-    "updateInfoExpectedTankValues": true,
-    "urlForExpectedTankValues": "https://static.modxvm.com/wn8-data-exp/json/wn8exp.json",
-    "showPopUp": true,
-    "thousandSeparator": " ",
-    "battleType": [1],
     "onlineReloadConfig": false,
+    "checkForUpdate": true,
+    "thousandSeparator": " ",
+    "showPopUp": true,
+    "battleType": [1],
     "clientReloadReset": false,
-    "dailyAutoReset": false,
+    "dailyAutoReset": true,
     "dailyAutoResetHour": 6,
-    "icon": "",
-    "statBackground": "img://gui/maps/icons/library/YasenKrasen/BG/BG_stats{{c:WN8}}.png",
+    "statsIcon": "",
+    "statsBackground": "img://gui/maps/icons/library/YasenKrasen/BG/BG_stats{{c:WN8}}.png",
+    "statsInfo": {
+        "enable": false,
+        "format": [
+            "Text, images and userMacros are supported."
+        ]
+    },
+    "updateExpectedTankValues": {
+        "enable": true,
+        "notify": true,
+        "expUrl": "https://static.modxvm.com/wn8-data-exp/json/wn8exp.json"
+    },
     "battleStatPatterns": [
         {
             "pattern": "Text you want to replace",
@@ -30,31 +36,69 @@
         "The ammunition on",
         "repaired successfully"
     ],
-    "battleStatText": [
-        "<textformat tabstops='[70,135]'><font size='8'>\n\n</font>",
-        "{{autoRepair}}",
-        "{{autoLoad}}",
-        "{{autoEquip}}",
-        "{{totalBattle}}</textformat>"
-    ],
-    "overwriteBattleResultBgIcon": false,
-    "bgIconDefeat": "img://gui/maps/icons/library/BgBattleResultIconDefeat-1.png",
-    "bgIconDraw": "img://gui/maps/icons/library/BgBattleResultIconDraw-1.png",
-    "bgIconWin": "img://gui/maps/icons/library/BgBattleResultIconVictory-1.png",
-    "enableBattleEndedMessage": true,
-    "battleEndedMessageDefeat": "<img src='img://gui/maps/icons/library/YasenKrasen/splitdefeat.png' width='283' height='1' align='baseline' vspace='0'>\n<img src='img://gui/maps/icons/library/YasenKrasen/resultdefeat.png' width='16' height='16' align='baseline' vspace='-4'> <font color='#929292'><font color='#F02828'>Defeat!</font> <font color='#A3966E'>{{map}}</font> - <font color='#C5AB5D'>{{vehicle-long}}</font></font>\n<img src='img://gui/maps/icons/library/YasenKrasen/xp.png' width='16' height='16' align='baseline' vspace='-3'><font color='#A0CFFF'><b>{{xp}}</b></font><tab><img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'><font color='{{c:color}}'><b>{{credits}}</b></font><tab><img src='img://gui/maps/icons/vehicle/small/{{vehicle-raw}}.png' width='72' height='18' align='baseline' vspace='-3'>\n<img src='img://gui/maps/icons/library/YasenKrasen/splitdefeat.png' width='283' height='1' align='baseline' vspace='0'>",
-    "battleEndedMessageDraw": "<img src='img://gui/maps/icons/library/YasenKrasen/splitdraw.png' width='283' height='1' align='baseline' vspace='0'>\n<img src='img://gui/maps/icons/library/YasenKrasen/resultdraw.png' width='16' height='16' align='baseline' vspace='-4'> <font color='#929292'><font color='#FFCC00'>Draw!</font> <font color='#A3966E'>{{map}}</font> - <font color='#C5AB5D'>{{vehicle-long}}</font></font>\n<img src='img://gui/maps/icons/library/YasenKrasen/xp.png' width='16' height='16' align='baseline' vspace='-3'><font color='#A0CFFF'><b>{{xp}}</b></font><tab><img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'><font color='{{c:color}}'><b>{{credits}}</b></font><tab><img src='img://gui/maps/icons/vehicle/small/{{vehicle-raw}}.png' width='72' height='18' align='baseline' vspace='-3'>\n<img src='img://gui/maps/icons/library/YasenKrasen/splitdraw.png' width='283' height='1' align='baseline' vspace='0'>",
-    "battleEndedMessageWin": "<img src='img://gui/maps/icons/library/YasenKrasen/splitwin.png' width='283' height='1' align='baseline' vspace='0'>\n<img src='img://gui/maps/icons/library/YasenKrasen/resultwin.png' width='16' height='16' align='baseline' vspace='-4'> <font color='#929292'><font color='#66CC66'>Victory!</font> <font color='#A3966E'>{{map}}</font> - <font color='#C5AB5D'>{{vehicle-long}}</font></font>\n<img src='img://gui/maps/icons/library/YasenKrasen/xp.png' width='16' height='16' align='baseline' vspace='-3'><font color='#A0CFFF'><b>{{xp}}</b></font><tab><img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'><font color='{{c:color}}'><b>{{credits}}</b></font><tab><img src='img://gui/maps/icons/vehicle/small/{{vehicle-raw}}.png' width='72' height='18' align='baseline' vspace='-3'>\n<img src='img://gui/maps/icons/library/YasenKrasen/splitwin.png' width='283' height='1' align='baseline' vspace='0'>",
-    "buttonGeneral": "<img src='img://gui/maps/icons/library/YasenKrasen/btn_general_off.png' width='71' height='30' align='baseline' vspace='0'>",
-    "buttonTank": "<img src='img://gui/maps/icons/library/YasenKrasen/btn_tank_off.png' width='71' height='30' align='baseline' vspace='0'>",
-    "buttonReset": "<img src='img://gui/maps/icons/library/YasenKrasen/btn_reset.png' width='71' height='30' align='baseline' vspace='0'>",
-    "enableByTank": true,
-    "byTankTitle": "<textformat leading='-4' tabstops='[78,120,192]'><font size='13' color='#FFCC66'>Тank<tab>Wins<tab>AvgDmg<tab>WN8</font></textformat>\n{{Line2.png}}",
-    "byTankStats": "<textformat leading='-4' tabstops='[76,122,177]'><font size='12' color='#929292'><font color='#FFE6B3'>{{vehicle-short}}</font><tab><b><font face='Consolas' color='{{g:avgWinRate}}'>{{winsCount:2}}</font>/<font face='Consolas' color='{{g:avgWinRate}}'>{{battlesCount}}</font><tab><font face='Consolas' color='#FFFFFF'>{{avgDamage:6}}</font><tab><font face='Consolas' color='{{g:WN8}}'>{{WN8:6}}</font></b></font></textformat>",
-    "byTankButton": "\n\n<p align='left'>{{buttonGeneral}}{{buttonTankOn}}{{buttonReset}}</p>",
-    "sortReverse": true,
-    "sortMacro": "WN8",
-    "template": [
+    "battleResultsWindow": {
+        "enable": true,
+        "format": "<textformat tabstops='[285,385]'>{{arenaType}} - {{arenaGuiType}}<tab>EFF: <font color='{{g:EFF}}'>{{EFF}}</font> (<font color='{{g:EFF}}'>{{XEFF}}</font>)<tab>WN8: <font color='{{g:WN8}}'>{{WN8}}</font> (<font color='{{g:WN8}}'>{{XWN8}}</font>)</textformat></b>"
+    },
+    "battleResultsMessage": {
+        "debug": false,
+        "enable": true,
+        "format": [
+            "<textformat tabstops='[70,135]'><font size='8'>\n\n</font>",
+            "{{autoRepair}}",
+            "{{autoLoad}}",
+            "{{autoEquip}}",
+            "{{totalBattle}}</textformat>"
+        ],
+        "replaceBgIcon": {
+            "enable": false,
+            "defeat": "img://gui/maps/icons/library/BgBattleResultIconDefeat-1.png",
+            "draw": "img://gui/maps/icons/library/BgBattleResultIconDraw-1.png",
+            "victory": "img://gui/maps/icons/library/BgBattleResultIconVictory-1.png"
+        }
+    },
+    "battleEndedMessage": {
+        "enable": true,
+        "defeat": [
+            "<img src='img://gui/maps/icons/library/YasenKrasen/splitdefeat.png' width='283' height='1' align='baseline' vspace='0'>",
+            "<img src='img://gui/maps/icons/library/YasenKrasen/resultdefeat.png' width='16' height='16' align='baseline' vspace='-4'> <font color='#929292'><font color='#F02828'>Defeat!</font> <font color='#A3966E'>{{map}}</font> - <font color='#C5AB5D'>{{vehicle-long}}</font></font><tab><img src='img://gui/maps/icons/vehicle/small/{{vehicle-raw}}.png' width='72' height='18' align='baseline' vspace='-3'>",
+            "<img src='img://gui/maps/icons/library/YasenKrasen/xp.png' width='16' height='16' align='baseline' vspace='-3'><font color='#A0CFFF'><b>{{xp}}</b></font><tab><img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'><font color='{{c:color}}'><b>{{credits}}</b></font><tab><img src='img://gui/maps/icons/library/YasenKrasen/crystal.png' width='15' height='15' align='baseline' vspace='-7'><font color='#A0CFFF'><b> {{crystal}}</b></font>",
+            "<img src='img://gui/maps/icons/library/YasenKrasen/splitdefeat.png' width='283' height='1' align='baseline' vspace='0'>"
+        ],
+        "draw": [
+            "<img src='img://gui/maps/icons/library/YasenKrasen/splitdraw.png' width='283' height='1' align='baseline' vspace='0'>",
+            "<img src='img://gui/maps/icons/library/YasenKrasen/resultdraw.png' width='16' height='16' align='baseline' vspace='-4'> <font color='#929292'><font color='#FFCC00'>Draw!</font> <font color='#A3966E'>{{map}}</font> - <font color='#C5AB5D'>{{vehicle-long}}</font></font><tab><img src='img://gui/maps/icons/vehicle/small/{{vehicle-raw}}.png' width='72' height='18' align='baseline' vspace='-3'>",
+            "<img src='img://gui/maps/icons/library/YasenKrasen/xp.png' width='16' height='16' align='baseline' vspace='-3'><font color='#A0CFFF'><b>{{xp}}</b></font><tab><img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'><font color='{{c:color}}'><b>{{credits}}</b></font><tab><img src='img://gui/maps/icons/library/YasenKrasen/crystal.png' width='15' height='15' align='baseline' vspace='-7'><font color='#A0CFFF'><b> {{crystal}}</b></font>",
+            "<img src='img://gui/maps/icons/library/YasenKrasen/splitdraw.png' width='283' height='1' align='baseline' vspace='0'>"
+        ],
+        "victory": [
+            "<img src='img://gui/maps/icons/library/YasenKrasen/splitwin.png' width='283' height='1' align='baseline' vspace='0'>",
+            "<img src='img://gui/maps/icons/library/YasenKrasen/resultwin.png' width='16' height='16' align='baseline' vspace='-4'> <font color='#929292'><font color='#66CC66'>Victory!</font> <font color='#A3966E'>{{map}}</font> - <font color='#C5AB5D'>{{vehicle-long}}</font></font><tab><img src='img://gui/maps/icons/vehicle/small/{{vehicle-raw}}.png' width='72' height='18' align='baseline' vspace='-3'>",
+            "<img src='img://gui/maps/icons/library/YasenKrasen/xp.png' width='16' height='16' align='baseline' vspace='-3'><font color='#A0CFFF'><b>{{xp}}</b></font><tab><img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'><font color='{{c:color}}'><b>{{credits}}</b></font><tab><img src='img://gui/maps/icons/library/YasenKrasen/crystal.png' width='15' height='15' align='baseline' vspace='-7'><font color='#A0CFFF'><b> {{crystal}}</b></font>",
+            "<img src='img://gui/maps/icons/library/YasenKrasen/splitwin.png' width='283' height='1' align='baseline' vspace='0'>"
+        ]
+    },
+    "buttons": {
+        "stats": "<img src='img://gui/maps/icons/library/YasenKrasen/btn_stats.png' width='71' height='30' align='baseline' vspace='0'>",
+        "tanks": "<img src='img://gui/maps/icons/library/YasenKrasen/btn_tanks.png' width='71' height='30' align='baseline' vspace='0'>",
+        "reset": "<img src='img://gui/maps/icons/library/YasenKrasen/btn_reset.png' width='71' height='30' align='baseline' vspace='0'>"
+    },
+    "statsByTank": {
+        "enable": true,
+        "sortByMacro": "WN8",
+        "sortReverse": true,
+        "header": [
+            "<textformat leading='-4' tabstops='[78,120,192]'><font size='13' color='#FFCC66'>Тank<tab>Wins<tab>AvgDmg<tab>WN8</font></textformat>",
+            "{{Line2.png}}"
+        ],
+        "byTank": [
+            "<textformat leading='-4' tabstops='[76,122,177]'><font size='12' color='#929292'><font color='#FFE6B3'>{{vehicle-short}}</font><tab><b><font face='Consolas' color='{{g:avgWinRate}}'>{{winsCount:2}}</font>/<font face='Consolas' color='{{g:avgWinRate}}'>{{battlesCount}}</font><tab><font face='Consolas' color='#FFFFFF'>{{avgDamage:6}}</font><tab><font face='Consolas' color='{{g:WN8}}'>{{WN8:6}}</font></b></font></textformat>"
+        ],
+        "fotter": [
+            "\n\n<p align='left'>{{buttonStats}}{{buttonTanksOn}}{{buttonReset}}</p>"
+        ]
+    },
+    "statsTemplate": [
         "<textformat tabstops='[90,110,165]'><font size='13' color='#AE6E2D'>Battle finances:</font>",
         "{{Line.png}}",
         "<font size='12' color='#CDC673'>Gross income:<tab>{{Credits.png}}<tab><font color='#FFFFFF'>{{grossCredits}}</font></font>",
@@ -78,7 +122,7 @@
         "<font size='12' color='#929292'>Defence:<tab>{{Defence.png}}<tab><b><font color='#FFFFFF'>{{totalDef}}</font><tab>(<font color='#FFFFFF'>{{avgDef:1f}}</font>)</b></font>",
         "<font size='12' color='#929292'>Capture:<tab>{{Capture.png}}<tab><b><font color='#FFFFFF'>{{totalCap}}</font><tab>(<font color='#FFFFFF'>{{avgCap:1f}}</font>)</b></font>\n",
         "<font size='12' color='#929292'>Efficiency/WN8:<tab><b><font color='{{g:EFF}}'>{{EFF}}</font> (<font color='{{g:EFF}}'>{{XEFF}}</font>)<tab><tab><font color='{{g:WN8}}'>{{WN8}}</font> (<font color='{{g:WN8}}'>{{XWN8}}</font>)</b></font></textformat>",
-        "\n<p align='left'>{{buttonGeneralOn}}{{buttonTank}}{{buttonReset}}</p>"
+        "\n<p align='left'>{{buttonStatsOn}}{{buttonTanks}}{{buttonReset}}</p>"
     ],
     "userMacros": {
         "autoRepair": "<font size='12' color='#CDC673'>Repairs:</font><tab><font size='12' color='#FFFFFF'>-{{autoRepairCost}}</font> <img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'>\n",
@@ -105,8 +149,8 @@
         "Defence.png": "<img src='img://gui/maps/icons/library/YasenKrasen/defence.png' width='13' height='13' align='baseline' vspace='-4'>",
         "Capture.png": "<img src='img://gui/maps/icons/library/YasenKrasen/capture.png' width='13' height='13' align='baseline' vspace='-4'>",
         "Done.png": "<img src='img://gui/maps/icons/library/YasenKrasen/done.png' width='13' height='13' align='baseline' vspace='-2'>",
-        "buttonGeneralOn": "<a href='event'><img src='img://gui/maps/icons/library/YasenKrasen/btn_general_on.png' width='71' height='30' align='baseline' vspace='0'></a>",
-        "buttonTankOn": "<a href='event'><img src='img://gui/maps/icons/library/YasenKrasen/btn_tank_on.png' width='71' height='30' align='baseline' vspace='0'></a>"
+        "buttonStatsOn": "<a href='event'><img src='img://gui/maps/icons/library/YasenKrasen/btn_stats_on.png' width='71' height='30' align='baseline' vspace='0'></a>",
+        "buttonTanksOn": "<a href='event'><img src='img://gui/maps/icons/library/YasenKrasen/btn_tanks_on.png' width='71' height='30' align='baseline' vspace='0'></a>"
     },
     "gradient": {
         "EFF": [

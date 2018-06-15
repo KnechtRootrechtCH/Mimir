@@ -116,11 +116,26 @@
     WN8                      WN8 rating
     XWN8                     WN8 rating in XVM scale (0-100)
 
-    buttonGeneral            Button switch to general statistics
-    buttonTank               Button switch to by Tank statistics
+  Button macros for "statsTemplate" & "statsByTank" section:
+    buttonStats              Button switch to general statistics
+    buttonTanks              Button switch to by Tank statistics
     buttonReset              Button to reset statistics
 
-   Type of battle for "battleType" section:
+  Macros for "battleResultsWindow" section:
+    arenaType                Map name
+    arenaGuiType             Battle type
+
+  Macros for "battleEndedMessage" section:
+    credits                  Credits received from battle
+    crystal                  Bonds received from battle
+    map                      Translated map name (Live Oaks)
+    map-raw                  Original map system name (44_north_america)
+    vehicle-long             Translated long vehicle name (M18 Hellcat)
+    vehicle-raw              Original vehicle system name (usa-M18_Hellcat)
+    vehicle-short            Translated short vehicle name (Hellcat)
+    xp                       Xp received from battle
+
+  Type of battle for "battleType" section:
      0 UNKNOWN               Unknown Battle
      1 REGULAR               Random Battle
      2 TRAINING              Team Training
@@ -153,6 +168,7 @@
    Decimal places and right alignment of macros
     :d                       Macro without decimal ({{deathsRate:d}} will be displayed '63')
     :1f                      Macro with one decimal ({{deathsRate:1f}} will be displayed '63.4')
+    :2f                      Macro with two decimal ({{deathsRate:2f}} will be displayed '63.40')
     :1-20                    Align macro to the right with a fixed width 1-20 ({{netCredits:6}} will be displayed ' 1 540')
     :1-20.1f                 Align macro to the right with a fixed width 1-20 and one decimal ({{netCredits:10.1f}} will be displayed '   1 540.0')
     :1-20.2f                 Align macro to the right with a fixed width 1-20 and two decimal ({{netCredits:10.2f}} will be displayed '  1 540.00')
