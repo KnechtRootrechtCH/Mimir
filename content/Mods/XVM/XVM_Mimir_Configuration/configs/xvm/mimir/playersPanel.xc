@@ -176,8 +176,8 @@
       // true - disable platoon icons
       // true - убрать отображение иконок взвода
       "removeSquadIcon": false,
-      // transparency of the squad icon
-      // прозрачность иконки взвода
+      // Transparency of the squad icon
+      // Прозрачность иконки взвода
       "squadIconAlpha": 100,
       // Offset of X value for vehicle icon.
       // Смещение координаты X для иконки танка.
@@ -187,8 +187,8 @@
       // Смещение координаты X для уровня танка.
       "vehicleLevelXOffsetLeft": 0,
       "vehicleLevelXOffsetRight": 0,
-      // transparency of vehicle level
-      // прозрачность уровня танка
+      // Transparency of vehicle level
+      // Прозрачность уровня танка
       "vehicleLevelAlpha": 100,
       // Offset of X value for frags column.
       // Смещение координаты X для поля фрагов.
@@ -212,6 +212,9 @@
       // Width of the rank badge column. Default is 24.
       // Ширина поля бейджа ранга. По умолчанию: 24.
       "rankBadgeWidth": 24,
+      // Transparency of the rank badge
+      // Прозрачность бейджа ранга
+      "rankBadgeAlpha": "{{alive?100|70}}",
       // Offset of X value for player name column.
       // Смещение координаты X для поля имени игрока.
       "nickXOffsetLeft": 0,
@@ -282,15 +285,15 @@
       // Available names: "frags", "badge", "nick", "vehicle".
       // Отображаемые стандартные поля в данном режиме, и их порядок.
       // Допустимые названия: "frags", "badge", "nick", "vehicle".
-      "standardFields": [ "frags", "nick" ],
+      "standardFields": [ "frags", "badge", "nick" ],
       // Width of area for switching to "large" mode on mouse over
       // Ширина области переключения в режим "large" при наведении мыши
       "expandAreaWidth": 230,
       // true - disable platoon icons
       // true - убрать отображение иконок взвода
       "removeSquadIcon": false,
-      // transparency of the squad icon
-      // прозрачность иконки взвода
+      // Transparency of the squad icon
+      // Прозрачность иконки взвода
       "squadIconAlpha": 100,
       // Offset of X value for vehicle icon.
       // Смещение координаты X для иконки танка.
@@ -300,8 +303,8 @@
       // Смещение координаты X для уровня танка.
       "vehicleLevelXOffsetLeft": 0,
       "vehicleLevelXOffsetRight": 0,
-      // transparency of vehicle level
-      // прозрачность уровня танка
+      // Transparency of vehicle level
+      // Прозрачность уровня танка
       "vehicleLevelAlpha": 100,
       // Offset of X value for frags column.
       // Смещение координаты X для поля фрагов.
@@ -325,6 +328,9 @@
       // Width of the rank badge column. Default is 24.
       // Ширина поля бейджа ранга. По умолчанию: 24.
       "rankBadgeWidth": 24,
+      // Transparency of the rank badge
+      // Прозрачность бейджа ранга
+      "rankBadgeAlpha": "{{alive?100|70}}",
       // Offset of X value for player name column.
       // Смещение координаты X для поля имени игрока.
       "nickXOffsetLeft": 0,
@@ -393,15 +399,15 @@
       // Available names: "frags", "badge", "nick", "vehicle".
       // Отображаемые стандартные поля в данном режиме, и их порядок.
       // Допустимые названия: "frags", "badge", "nick", "vehicle".
-      "standardFields": [ "frags", "badge", "nick" ],
+      "standardFields": [ "frags", "vehicle" ],
       // Width of area for switching to "large" mode on mouse over
       // Ширина области переключения в режим "large" при наведении мыши
       "expandAreaWidth": 230,
       // true - disable platoon icons
       // true - убрать отображение иконок взвода
       "removeSquadIcon": false,
-      // transparency of the squad icon
-      // прозрачность иконки взвода
+      // Transparency of the squad icon
+      // Прозрачность иконки взвода
       "squadIconAlpha": 100,
       // Offset of X value for vehicle icon.
       // Смещение координаты X для иконки танка.
@@ -411,8 +417,8 @@
       // Смещение координаты X для уровня танка.
       "vehicleLevelXOffsetLeft": 0,
       "vehicleLevelXOffsetRight": 0,
-      // transparency of vehicle level
-      // прозрачность уровня танка
+      // Transparency of vehicle level
+      // Прозрачность уровня танка
       "vehicleLevelAlpha": 100,
       // Offset of X value for frags column.
       // Смещение координаты X для поля фрагов.
@@ -436,6 +442,9 @@
       // Width of the rank badge column. Default is 24.
       // Ширина поля бейджа ранга. По умолчанию: 24.
       "rankBadgeWidth": 24,
+      // Transparency of the rank badge
+      // Прозрачность бейджа ранга
+      "rankBadgeAlpha": "{{alive?100|70}}",
       // Offset of X value for player name column.
       // Смещение координаты X для поля имени игрока.
       "nickXOffsetLeft": 0,
@@ -508,8 +517,8 @@
       // true - disable platoon icons
       // true - убрать отображение иконок взвода
       "removeSquadIcon": false,
-      // transparency of the squad icon
-      // прозрачность иконки взвода
+      // Transparency of the squad icon
+      // Прозрачность иконки взвода
       "squadIconAlpha": 100,
       // Offset of X value for vehicle icon.
       // Смещение координаты X для иконки танка.
@@ -519,8 +528,8 @@
       // Смещение координаты X для уровня танка.
       "vehicleLevelXOffsetLeft": 0,
       "vehicleLevelXOffsetRight": 0,
-      // transparency of vehicle level
-      // прозрачность уровня танка
+      // Transparency of vehicle level
+      // Прозрачность уровня танка
       "vehicleLevelAlpha": 100,
       // Offset of X value for frags column.
       // Смещение координаты X для поля фрагов.
@@ -544,6 +553,9 @@
       // Width of the rank badge column. Default is 24.
       // Ширина поля бейджа ранга. По умолчанию: 24.
       "rankBadgeWidth": 24,
+      // Transparency of the rank badge
+      // Прозрачность бейджа ранга
+      "rankBadgeAlpha": "{{alive?100|70}}",
       // Offset of X value for player name column.
       // Смещение координаты X для поля имени игрока.
       "nickXOffsetLeft": 0,
