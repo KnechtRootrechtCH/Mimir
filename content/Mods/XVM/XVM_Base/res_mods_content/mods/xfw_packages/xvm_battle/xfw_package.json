@@ -3,7 +3,7 @@
     "name": "XVM Battle",
     "description": "XVM Battle module",
 
-    "version": "7.6.4-dev.8442",
+    "version": "7.6.4-dev.8443",
     "dependencies": ["com.modxvm.xvm", "com.modxvm.xvm.autologin"],
 
     "url": "https://modxvm.com/",

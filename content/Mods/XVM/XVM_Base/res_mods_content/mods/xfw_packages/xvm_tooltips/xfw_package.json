@@ -3,7 +3,7 @@
     "name": "XVM Tooltips",
     "description": "XVM Tooltips module",
 
-    "version": "7.6.4-dev.8442",
+    "version": "7.6.4-dev.8443",
     "dependencies": ["com.modxvm.xvm", "com.modxvm.xvm.techtree"],
 
     "url": "https://modxvm.com/",

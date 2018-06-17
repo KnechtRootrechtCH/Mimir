@@ -3,7 +3,7 @@
     "name": "XVM Squad",
     "description": "XVM Squad module",
 
-    "version": "7.6.4-dev.8442",
+    "version": "7.6.4-dev.8443",
     "dependencies": ["com.modxvm.xvm", "com.modxvm.xvm.sounds"],
 
     "url": "https://modxvm.com/",
