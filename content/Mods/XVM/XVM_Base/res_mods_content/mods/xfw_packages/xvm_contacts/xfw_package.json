@@ -3,7 +3,7 @@
     "name": "XVM Contacts",
     "description": "XVM Contacts",
 
-    "version": "7.6.4-dev.8443",
+    "version": "7.6.5.8480",
     "dependencies": ["com.modxvm.xvm", "com.modxvm.xvm.battleresults"],
 
     "url": "https://modxvm.com/",

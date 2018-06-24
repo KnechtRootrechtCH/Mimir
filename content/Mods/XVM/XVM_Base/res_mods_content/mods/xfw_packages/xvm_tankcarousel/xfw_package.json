@@ -3,7 +3,7 @@
     "name": "XVM Tankcarousel",
     "description": "XVM Tankcarousel module",
 
-    "version": "7.6.4-dev.8443",
+    "version": "7.6.5.8480",
     "dependencies": ["com.modxvm.xvm", "com.modxvm.xvm.squad"],
 
     "url": "https://modxvm.com/",
