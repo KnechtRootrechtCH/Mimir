@@ -5,7 +5,7 @@
     "showPopUp": true,
     "battleType": [1],
     "clientReloadReset": false,
-    "dailyAutoReset": true,
+    "dailyAutoReset": false,
     "dailyAutoResetHour": 6,
     "statsIcon": "",
     "statsBackground": "img://gui/maps/icons/library/YasenKrasen/BG/BG_stats{{c:WN8}}.png",
@@ -94,7 +94,7 @@
         "byTank": [
             "<textformat leading='-4' tabstops='[76,122,177]'><font size='12' color='#929292'><font color='#FFE6B3'>{{vehicle-short}}</font><tab><b><font face='Consolas' color='{{g:avgWinRate}}'>{{winsCount:2}}</font>/<font face='Consolas' color='{{g:avgWinRate}}'>{{battlesCount}}</font><tab><font face='Consolas' color='#FFFFFF'>{{avgDamage:6}}</font><tab><font face='Consolas' color='{{g:WN8}}'>{{WN8:6}}</font></b></font></textformat>"
         ],
-        "fotter": [
+        "footer": [
             "\n\n<p align='left'>{{buttonStats}}{{buttonTanksOn}}{{buttonReset}}</p>"
         ]
     },
@@ -128,7 +128,7 @@
         "autoRepair": "<font size='12' color='#CDC673'>Repairs:</font><tab><font size='12' color='#FFFFFF'>-{{autoRepairCost}}</font> <img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'>\n",
         "autoLoad": "<font size='12' color='#CDC673'>Ammunition:</font><tab><font size='12' color='#FFFFFF'>-{{autoLoadCost}}</font> <img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'>\n",
         "autoEquip": "<font size='12' color='#CDC673'>Consumables:</font><tab><font size='12' color='#FFFFFF'>-{{autoEquipCost}}</font> <img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'>\n",
-        "totalBattle": "<font size='12' color='#CDC673'><b>Total:<tab><font size='12' color='{{c:netCredits}}'>{{netCredits}}</font> <img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'><tab>WN8: <font size='12' color='{{g:WN8}}'>{{WN8}} <font size='12' color='#929292'>(</font><font size='12' color='{{g:WN8}}'>{{XWN8}}</font><font size='12' color='#929292'>)</font></b></font>",
+        "totalBattle": "<font size='12' color='#CDC673'><b>Total:<tab><font size='12' color='{{c:netCredits}}'>{{netCredits}}</font> <img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'><tab>WN8: <font size='12' color='{{g:WN8}}'>{{WN8}}</font> <font size='12' color='#929292'>(</font><font size='12' color='{{g:WN8}}'>{{XWN8}}</font><font size='12' color='#929292'>)</font></b></font>",
         "Line.png": "<img src='img://gui/maps/icons/library/YasenKrasen/line.png' width='220' height='3' align='baseline' vspace='4'>",
         "Line2.png": "<img src='img://gui/maps/icons/library/YasenKrasen/line2.png' width='220' height='3' align='baseline' vspace='4'>",
         "Line3.png": "<img src='img://gui/maps/icons/library/YasenKrasen/line3.png' width='220' height='6' align='baseline' vspace='4'>",
