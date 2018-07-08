@@ -188,7 +188,7 @@
     "NoMasterTooltipBody": "Εμφάνιση / απόκρυψη οχημάτων χωρίς σήμα \"Ace Tanker\".",
     "ReserveFilter": "Απόθεμα",
     "ReserveFilterTooltipHeader": "Απόθεμα",
-    "ReserveFilterTooltipBody": "",
+    "ReserveFilterTooltipBody": "Εμφάνιση/απόκρυψη κανονικών (μη Premium) οχημάτων.",
     "check_reserve_menu": "Ορισμός ως αποθεματικό",
     "uncheck_reserve_menu": "Κατάργηση ετικέτας αποθεματικό",
     "reserve_confirm_title": "Απόκρυψη άρματος",
