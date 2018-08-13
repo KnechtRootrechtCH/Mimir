@@ -56,6 +56,8 @@
     hitsRate                 Number of hits in percent                                             totalHits / totalShots * 100
     map                      Translated map name (Live Oaks)
     map-raw                  Original map system name (44_north_america)
+    moe                      Current Marks of Excellence percentage
+    moeDifference            Difference between MoE % before battle/session and current MoE %
     netCredits               Credits received from battles (services deducted)
     netGold                  Gold received from battles (ammunition & consumables deducted)
     place                    Place in last battle
@@ -109,12 +111,12 @@
     BR                       vBAddict Battle Rating
     EFF                      Efficiency rating
     XEFF                     Efficiency rating in XVM scale (0-100)
-    WN6                      WN6 rating
-    XWN6                     WN6 rating in XVM scale (0-100)
-    WN7                      WN7 rating
-    XWN7                     WN7 rating in XVM scale (0-100)
     WN8                      WN8 rating
     XWN8                     WN8 rating in XVM scale (0-100)
+
+    davgWinRate              Delta of average wins in percent
+    dEFF                     Delta of Efficiency rating
+    dWN8                     Delta of WN8 rating
 
   Button macros for "statsTemplate" & "statsByTank" section:
     buttonStats              Button switch to general statistics
@@ -122,8 +124,7 @@
     buttonReset              Button to reset statistics
 
   Macros for "battleResultsWindow" section:
-    arenaType                Map name
-    arenaGuiType             Battle type
+    arenaStr                 Map and battle type
 
   Macros for "battleEndedMessage" section:
     credits                  Credits received from battle
@@ -134,6 +135,9 @@
     vehicle-raw              Original vehicle system name (usa-M18_Hellcat)
     vehicle-short            Translated short vehicle name (Hellcat)
     xp                       Xp received from battle
+
+  Localization macro for configuration file:
+    l10n                     localizated text
 
   Type of battle for "battleType" section:
      0 UNKNOWN               Unknown Battle
@@ -169,6 +173,8 @@
     :d                       Macro without decimal ({{deathsRate:d}} will be displayed '63')
     :1f                      Macro with one decimal ({{deathsRate:1f}} will be displayed '63.4')
     :2f                      Macro with two decimal ({{deathsRate:2f}} will be displayed '63.40')
+    :+1f                     Adds + on positive value with one decimal ({{moeDifference:+1f}} will be displayed '+1.0')
+    :+2f                     Adds + on positive value with two decimal ({{moeDifference:+2f}} will be displayed '+1.00')
     :1-20                    Align macro to the right with a fixed width 1-20 ({{netCredits:6}} will be displayed ' 1 540')
     :1-20.1f                 Align macro to the right with a fixed width 1-20 and one decimal ({{netCredits:10.1f}} will be displayed '   1 540.0')
     :1-20.2f                 Align macro to the right with a fixed width 1-20 and two decimal ({{netCredits:10.2f}} will be displayed '  1 540.00')
