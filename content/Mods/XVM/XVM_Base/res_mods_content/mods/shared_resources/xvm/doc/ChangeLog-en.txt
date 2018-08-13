@@ -1,4 +1,34 @@
-﻿XVM-7.6.7:
+﻿XVM-7.6.11:
+  [GENERAL]
+  * fix incompability with unbound-based UI windows (e.g. new ingame store)
+
+XVM-7.6.10:
+  [GENERAL]
+  * World of Tanks 1.0.2.4
+
+XVM-7.6.9:
+  [GENERAL]
+  * World of Tanks 1.0.2.3
+
+XVM-7.6.8:
+  [CRASHES]
+  * fixed compatibility with MacOS
+  * fixed compatibility with Windows XP
+  * fixed compatibility with Wargaming Error Monitor
+  * improved crashfix #2
+
+  [XFW]
+  * fixed xfw_package.json/dependencies_optional option behavior 
+  * added version info for binary files (.pyd)
+
+  [BATTLE]
+  * added displaying of the fractional part of the magnification.
+
+  [PYTHON MACROS]
+  * damageLog: various bugs fixed
+  * totalEfficiency: various bugs fixed
+
+XVM-7.6.7:
   [GENERAL]
   * World of Tanks 1.0.2.2
   * added semi-automatic crash reporting
@@ -14,9 +44,9 @@
   [INSTALLER]
   * removed Microsoft C++ Runtime from archive (it is available for download on modxvm.com)
 
-XVM-7.6.6-dev:
-  [HANGAR]
-  * fixed widgets disappearing after battle
+XVM-7.6.6:
+  [OTHER]
+  * skip version due to technical reasons
 
 XVM-7.6.5:
   [INSTALLER]
