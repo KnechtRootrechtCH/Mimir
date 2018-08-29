@@ -48,7 +48,12 @@
     "battleResultsWindow": {
         "enable": true,
         "format": {
-            "1": "<textformat tabstops='[220,308,370]'>{{arenaStr}}<font size='12'><tab>WN8: <font color='{{g:WN8}}'>{{WN8:d}}</font> (<font color='{{g:WN8}}'>{{XWN8}}</font>)<tab>CMB: <font color='#FFCC66'>{{totalCombined}}</font><tab>MoE: <font color='{{g:moe}}'>{{moe}}%</font> (<font color='{{c:moeDifference}}'>{{moeDifference:+2f}}%</font>)</font></textformat>"
+            "1":
+                "<textformat tabstops='[220,308,370]'>{{arenaStr}}<font size='12'><tab>WN8: <font color='{{g:WN8}}'>{{WN8:d}}</font> (<font color='{{g:WN8}}'>{{XWN8}}</font>)<tab>CMD: <font color='#FFCC66'>{{totalDmgMoe}}</font><tab>MoE: <font color='{{g:moe}}'>{{moe}}%</font> (<font color='{{c:moeDifference}}'>{{moeDifference:+2f}}%</font>)</font></textformat>",
+            "7":
+                "<textformat tabstops='[254,326,430]'>{{arenaStr}}<font size='12'><tab>CMB: <font color='#FFCC66'>{{totalDmgCombined}}</font><tab>WGR: <font color='{{g:WGR}}'>{{WGR}}</font> <font color='#929292'>(<font color='{{c:wgrDifference}}'>{{wgrDifference:+d}}</font>)</font><tab>XWGR: <font color='{{g:WGR}}'>{{XWGR}}</font></font></textformat>",
+            "0,2,4,5,9,13,14,15,20,21,22,24,25,26,27":
+                "<textformat tabstops='[255,368,440]'>{{arenaStr}}<font size='12'><tab>Net Credits: <font color='{{c:netCredits}}'>{{netCredits}}</font><tab>CMB: <font color='#FFCC66'>{{totalDmgCombined}}</font><tab>Place: <font color='#FFFFFF'>{{place}}</font></font></textformat>"
         }
     },
     "battleResultsMessage": {
@@ -63,8 +68,8 @@
         ],
         "replaceBgIcon": {
             "enable": false,
-            "defeat": "img://gui/maps/icons/library/BgBattleResultIconDefeat-1.png",
-            "draw": "img://gui/maps/icons/library/BgBattleResultIconDraw-1.png",
+            "defeat":  "img://gui/maps/icons/library/BgBattleResultIconDefeat-1.png",
+            "draw":    "img://gui/maps/icons/library/BgBattleResultIconDraw-1.png",
             "victory": "img://gui/maps/icons/library/BgBattleResultIconVictory-1.png"
         }
     },
@@ -74,21 +79,21 @@
             "<img src='img://gui/maps/icons/library/YasenKrasen/splitdefeat.png' width='283' height='1' align='baseline' vspace='0'>",
             "<textformat tabstops='[20,95]'><img src='img://gui/maps/icons/library/YasenKrasen/resultdefeat.png' width='16' height='16' align='baseline' vspace='-4'><tab><font color='#F02828'>{{l10n:Defeat!}}</font><tab><font color='#A3966E'>{{map}}</font></textformat>",
             "<textformat tabstops='[20,95]'> <tab><img src='img://gui/maps/icons/vehicle/small/{{vehicle-raw}}.png' width='64' height='16' align='baseline' vspace='-3'><tab><font color='#C5AB5D'>{{vehicle-long}}</font></textformat>",
-            "<textformat tabstops='[20,95,175]'> <tab><img src='img://gui/maps/icons/library/YasenKrasen/xp.png' width='16' height='16' align='baseline' vspace='-3'><font color='#A0CFFF'><b>{{xp}}</b></font><tab><img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'><font color='{{c:color}}'><b>{{credits}}</b></font><tab><img src='img://gui/maps/icons/library/YasenKrasen/crystal.png' width='15' height='15' align='baseline' vspace='-7'><font color='#A0CFFF'><b> {{crystal}}</b></font></textformat>",
+            "<textformat tabstops='[20,95,175]'> <tab><img src='img://gui/maps/icons/library/YasenKrasen/xp.png' width='16' height='16' align='baseline' vspace='-3'><b><font color='#A0CFFF'>{{xp}}</font><tab><img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'><font color='{{c:netCredits}}'>{{netCredits}}</font><tab><img src='img://gui/maps/icons/library/YasenKrasen/crystal.png' width='15' height='15' align='baseline' vspace='-7'> <font color='#A0CFFF'>{{crystal}}</font></b></textformat>",
             "<img src='img://gui/maps/icons/library/YasenKrasen/splitdefeat.png' width='283' height='1' align='baseline' vspace='0'>"
         ],
         "draw": [
             "<img src='img://gui/maps/icons/library/YasenKrasen/splitdraw.png' width='283' height='1' align='baseline' vspace='0'>",
             "<textformat tabstops='[20,95]'><img src='img://gui/maps/icons/library/YasenKrasen/resultdraw.png' width='16' height='16' align='baseline' vspace='-4'><tab><font color='#FFCC00'>{{l10n:Draw!}}</font><tab><font color='#A3966E'>{{map}}</font></textformat>",
             "<textformat tabstops='[20,95]'> <tab><img src='img://gui/maps/icons/vehicle/small/{{vehicle-raw}}.png' width='64' height='16' align='baseline' vspace='-3'><tab><font color='#C5AB5D'>{{vehicle-long}}</font></textformat>",
-            "<textformat tabstops='[20,95,175]'> <tab><img src='img://gui/maps/icons/library/YasenKrasen/xp.png' width='16' height='16' align='baseline' vspace='-3'><font color='#A0CFFF'><b>{{xp}}</b></font><tab><img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'><font color='{{c:color}}'><b>{{credits}}</b></font><tab><img src='img://gui/maps/icons/library/YasenKrasen/crystal.png' width='15' height='15' align='baseline' vspace='-7'><font color='#A0CFFF'><b> {{crystal}}</b></font></textformat>",
+            "<textformat tabstops='[20,95,175]'> <tab><img src='img://gui/maps/icons/library/YasenKrasen/xp.png' width='16' height='16' align='baseline' vspace='-3'><b><font color='#A0CFFF'>{{xp}}</font><tab><img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'><font color='{{c:netCredits}}'>{{netCredits}}</font><tab><img src='img://gui/maps/icons/library/YasenKrasen/crystal.png' width='15' height='15' align='baseline' vspace='-7'> <font color='#A0CFFF'>{{crystal}}</font></b></textformat>",
             "<img src='img://gui/maps/icons/library/YasenKrasen/splitdraw.png' width='283' height='1' align='baseline' vspace='0'>"
         ],
         "victory": [
             "<img src='img://gui/maps/icons/library/YasenKrasen/splitwin.png' width='283' height='1' align='baseline' vspace='0'>",
             "<textformat tabstops='[20,95]'><img src='img://gui/maps/icons/library/YasenKrasen/resultwin.png' width='16' height='16' align='baseline' vspace='-4'><tab><font color='#66CC66'>{{l10n:Victory!}}</font><tab><font color='#A3966E'>{{map}}</font></textformat>",
             "<textformat tabstops='[20,95]'> <tab><img src='img://gui/maps/icons/vehicle/small/{{vehicle-raw}}.png' width='64' height='16' align='baseline' vspace='-3'><tab><font color='#C5AB5D'>{{vehicle-long}}</font></textformat>",
-            "<textformat tabstops='[20,95,175]'> <tab><img src='img://gui/maps/icons/library/YasenKrasen/xp.png' width='16' height='16' align='baseline' vspace='-3'><font color='#A0CFFF'><b>{{xp}}</b></font><tab><img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'><font color='{{c:color}}'><b>{{credits}}</b></font><tab><img src='img://gui/maps/icons/library/YasenKrasen/crystal.png' width='15' height='15' align='baseline' vspace='-7'><font color='#A0CFFF'><b> {{crystal}}</b></font></textformat>",
+            "<textformat tabstops='[20,95,175]'> <tab><img src='img://gui/maps/icons/library/YasenKrasen/xp.png' width='16' height='16' align='baseline' vspace='-3'><b><font color='#A0CFFF'>{{xp}}</font><tab><img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'><font color='{{c:netCredits}}'>{{netCredits}}</font><tab><img src='img://gui/maps/icons/library/YasenKrasen/crystal.png' width='15' height='15' align='baseline' vspace='-7'> <font color='#A0CFFF'>{{crystal}}</font></b></textformat>",
             "<img src='img://gui/maps/icons/library/YasenKrasen/splitwin.png' width='283' height='1' align='baseline' vspace='0'>"
         ]
     },
@@ -103,12 +108,12 @@
         "sortByMacro": "WN8",
         "sortReverse": true,
         "header": [
-            "<textformat leading='-4' {{l10n:tabstops='[79,122,193]'}}><font size='12' color='#FFCC66'><b>{{l10n:Tank}}<tab>{{l10n:Wins}}<tab>{{l10n:AvgDmg}}<tab>WN8</b></font></textformat>",
+            "<textformat leading='-4' {{l10n:tabstops='[79,122,193]'}}><b><font size='12' color='#FFCC66'>{{l10n:Tank}}<tab>{{l10n:Wins}}<tab>{{l10n:AvgDmg}}<tab>WN8</font></b></textformat>",
             "{{Line2.png}}"
         ],
         "byTank": [
-            "<textformat leading='-6' tabstops='[76,122,177]'><font size='12' color='#929292'><font color='#FFE6B3'>{{vehicle-short}}</font><tab><b><font face='Consolas' color='{{g:avgWinRate}}'>{{winsCount:2}}</font>/<font face='Consolas' color='{{g:avgWinRate}}'>{{battlesCount}}</font><tab><font face='Consolas' color='#FFFFFF'>{{avgDamage:6}}</font><tab><font face='Consolas' color='{{g:WN8}}'>{{WN8:6}}</font></b></font></textformat>",
-            "<textformat leading='-3' tabstops='[52,117]'> <tab><font size='9' color='#FFCC66'>CMB: <b><font face='Consolas' size='10' color='#FFFFFF'>{{avgCombined:6}}</font></b><tab>MoE: <b><font face='Consolas' size='10' color='{{g:moe}}'>{{moe:6.2f}}%</font> <font size='10' color='#929292'>(<font face='Consolas' size='10' color='{{c:moeDifference}}'>{{moeDifference:+2f}}%</font>)</font></b></font></textformat>"
+            "<textformat leading='-6' tabstops='[76,122,177]'><font size='12' color='#929292'><font color='#FFE6B3'>{{vehicle-short}}</font><tab><b><font face='Consolas' color='{{g:avgWinRate}}'>{{winsCount:2}}</font>/<font face='Consolas' color='{{g:avgWinRate}}'>{{battlesCount}}</font><tab><font face='Consolas' color='#FFFFFF'>{{avgDmg:6}}</font><tab><font face='Consolas' color='{{g:WN8}}'>{{WN8:6}}</font></b></font></textformat>",
+            "<textformat leading='-3' tabstops='[52,117]'> <tab><font size='10' color='#929292'><font size='9' color='#FFCC66'>CMD:</font> <b><font face='Consolas' color='#FFFFFF'>{{avgDmgMoe:6}}</font></b><tab><font size='9' color='#FFCC66'>MoE:</font> <b><font face='Consolas' color='{{g:moe}}'>{{moe:6.2f}}%</font> (<font face='Consolas' color='{{c:moeDifference}}'>{{moeDifference:+2f}}%</font>)</b></font></textformat>"
         ],
         "footer": [
             "\n\n<p align='left'>{{buttonStats}}{{buttonTanksOn}}{{buttonReset}}</p>"
@@ -118,29 +123,29 @@
         "<textformat tabstops='[90,110,165]'><font size='13' color='#AE6E2D'>{{l10n:Battle finances:}}</font>",
         "{{Line.png}}",
         "<font size='12' color='#CDC673'>{{l10n:Gross income:}}<tab>{{Credits.png}}<tab><font color='#FFFFFF'>{{grossCredits}}</font></font>",
-        "<font size='12' color='#CDC673'>{{l10n:Services:}}<tab>{{Credits.png}}<tab><font color='#FFFFFF'>{{service}}</font></font>",
+        "<font size='12' color='#CDC673'>{{l10n:Services:}}<tab>{{Credits.png}}<tab><font color='#FFFFFF'>{{totalService}}</font></font>",
         "<font size='12' color='#CDC673'><b>{{l10n:Net income:}}<tab>{{Credits.png}}<tab><font color='{{c:netCredits}}'>{{netCredits}}</font></b></font>\n",
         "<font size='13' color='#AE6E2D'>{{l10n:Session statistics:}}</font>",
         "{{Line.png}}",
         "<font size='12' color='#929292'>{{l10n:Wins/Battles:}}<tab>{{Battles.png}}<tab><b><font color='{{g:avgWinRate}}'>{{winsCount}}</font> (<font color='#FFFFFF'>{{battlesCount}}</font>)<tab>(<font color='{{g:avgWinRate}}'>{{avgWinRate:1f}}%</font>)</b></font>",
         "<font size='12' color='#929292'>{{l10n:Average Tier:}}<tab>{{Tier.png}}<tab><b><font color='#928A75'>{{avgTier:1f}}</font><tab>(<font color='#928A75'>{{avgBattleTier:1f}}</font>)</b></font>",
         "<font size='12' color='#929292'>{{l10n:Bonds:}}<tab>{{Crystal.png}}<tab><b><font color='#928A75'>{{totalCrystal}}</font><tab>(<font color='#928A75'>{{avgCrystal:1f}}</font>)</b></font>",
-        "<font size='12' color='#929292'>{{l10n:Exp x1:}}<tab>{{Xp.png}}<tab><b><font color='#928A75'>{{totalOriginPremXP}}</font><tab>(<font color='#928A75'>{{avgOriginalPremXP}}</font>)</b></font>",
+        "<font size='12' color='#929292'>{{l10n:Exp x1:}}<tab>{{Xp.png}}<tab><b><font color='#928A75'>{{totalOriginalPremXP}}</font><tab>(<font color='#928A75'>{{avgOriginalPremXP}}</font>)</b></font>",
         "<font size='12' color='#929292'>{{l10n:Exp:}}<tab>{{MultyXp.png}}<tab><b><font color='#928A75'>{{totalXP}}</font><tab>(<font color='#928A75'>{{avgXP}}</font>)</b></font>",
         "<font size='12' color='#929292'>{{l10n:Free Exp:}}<tab>{{FreeXp.png}}<tab><b><font color='#CD853F'>{{totalFreeXP}}</font></b></font>\n",
-        "<font size='12' color='#929292'>{{l10n:Kills:}}<tab><b>{{Kills.png}}<tab><font color='#FFFFFF'>{{totalFrag}}</font><tab>(<font color='#FFFFFF'>{{avgFrag:1f}}</font>)</b></font>",
+        "<font size='12' color='#929292'>{{l10n:Kills:}}<tab>{{Kills.png}}<tab><b><font color='#FFFFFF'>{{totalFrag}}</font><tab>(<font color='#FFFFFF'>{{avgFrag:1f}}</font>)</b></font>",
         "<font size='12' color='#929292'>{{l10n:Deaths:}}<tab>{{Deaths.png}}<tab><b><font color='#FFFFFF'>{{totalDeathsCount}}</font><tab>(<font color='#FFFFFF'>{{deathsRate:1f}}%</font>)</b></font>",
         "<font size='12' color='#929292'>{{l10n:Hits/Shots:}}<tab>{{Hits.png}}<tab><b><font color='#FFFFFF'>{{totalHits}}</font> / <font color='#FFFFFF'>{{totalShots}}</font><tab>(<font color='{{g:hitsRate}}'>{{hitsRate:1f}}%</font>)</b></font>",
         "<font size='12' color='#929292'>{{l10n:Penetrations:}}<tab>{{Penetrations.png}}<tab><b><font color='#FFFFFF'>{{totalPierced}}</font><tab>(<font color='{{g:effHitsRate}}'>{{effHitsRate:1f}}%</font>)</b></font>",
-        "<font size='12' color='#929292'>{{l10n:Damage Dealt:}}<tab>{{DamageD.png}}<tab><b><font color='#FFFFFF'>{{totalDmg}}</font><tab>(<font color='#FFFFFF'>{{avgDamage}}</font>)</b></font>",
-        "<font size='12' color='#929292'>{{l10n:Damage Received:}}<tab>{{DamageR.png}}<tab><b><font color='#FFFFFF'>{{totalDmgRec}}</font><tab>(<font color='#FFFFFF'>{{avgDamageRec}}</font>)</b></font>",
+        "<font size='12' color='#929292'>{{l10n:Damage Dealt:}}<tab>{{DamageD.png}}<tab><b><font color='#FFFFFF'>{{totalDmg}}</font><tab>(<font color='#FFFFFF'>{{avgDmg}}</font>)</b></font>",
+        "<font size='12' color='#929292'>{{l10n:Damage Received:}}<tab>{{DamageR.png}}<tab><b><font color='#FFFFFF'>{{totalDmgRec}}</font><tab>(<font color='#FFFFFF'>{{avgDmgRec}}</font>)</b></font>",
         "<font size='12' color='#929292'>{{l10n:Spotted:}}<tab>{{Spotted.png}}<tab><b><font color='#FFFFFF'>{{totalSpot}}</font><tab>(<font color='#FFFFFF'>{{avgSpot:1f}}</font>)</b></font>",
         "<font size='12' color='#929292'>{{l10n:Defence:}}<tab>{{Defence.png}}<tab><b><font color='#FFFFFF'>{{totalDef}}</font><tab>(<font color='#FFFFFF'>{{avgDef:1f}}</font>)</b></font>",
         "<font size='12' color='#929292'>{{l10n:Capture:}}<tab>{{Capture.png}}<tab><b><font color='#FFFFFF'>{{totalCap}}</font><tab>(<font color='#FFFFFF'>{{avgCap:1f}}</font>)</b></font>\n",
         "<font size='12' color='#929292'>{{l10n:Efficiency/WN8:}}<tab><b><font color='{{g:EFF}}'>{{EFF:d}}</font> (<font color='{{g:EFF}}'>{{XEFF}}</font>)<tab><tab><font color='{{g:WN8}}'>{{WN8:d}}</font> (<font color='{{g:WN8}}'>{{XWN8}}</font>)</b></font></textformat>",
         "\n<p align='left'>{{buttonStatsOn}}{{buttonTanks}}{{buttonReset}}</p>"
     ],
-    "useParametersPanel": false,
+    "useParametersPanel": true,
     "panelParameters": {
         "enable": true,
         "title": "{{l10n:Vehicle Parameters}}",
@@ -152,19 +157,19 @@
         "expand": true,
         "account": [
             "<font size='13' color='#FFCC66'>{{l10n:Account}}</font>\n{{Line3.png}}",
-            "<textformat tabstops='[90,110,165]'><font size='12' color='#929292'>{{l10n:Win rate:}}<tab>{{Battles.png}}<tab><b><font color='{{g:avgWinRate}}'>{{avgWinRate:1f}}%</font></b></font></textformat>",
+            "<textformat tabstops='[90,165]'><font size='12' color='#929292'>WGR/WR:<tab><b><font color='{{g:WGR}}'>{{WGR}}</font> (<font color='{{g:WGR}}'>{{XWGR}}</font>)<tab><font color='{{g:avgWinRate}}'>{{avgWinRate:1f}}%</font></b></font></textformat>",
             "<textformat tabstops='[90,165]'><font size='12' color='#929292'>EFF/WN8:<tab><b><font color='{{g:EFF}}'>{{EFF:d}}</font> (<font color='{{g:EFF}}'>{{XEFF}}</font>)<tab><font color='{{g:WN8}}'>{{WN8:d}}</font> (<font color='{{g:WN8}}'>{{XWN8}}</font>)</b></font></textformat>"
         ],
         "session": [
             "<font size='13' color='#FFCC66'>{{l10n:Session}}</font>\n{{Line3.png}}",
-            "<textformat tabstops='[90,110,165]'><font size='12' color='#929292'>{{l10n:Net income:}}<tab>{{Credits.png}}<tab><b><font color='{{c:netCredits}}'>{{netCredits:+d}}</font></b></font></textformat>",
+            "<textformat tabstops='[90,110]'><font size='12' color='#929292'>{{l10n:Net income:}}<tab>{{Credits.png}}<tab><b><font color='{{c:netCredits}}'>{{netCredits:+d}}</font></b></font></textformat>",
             "<textformat tabstops='[90,110,165]'><font size='12' color='#929292'>{{l10n:Average Tier:}}<tab>{{Tier.png}}<tab><b><font color='#928A75'>{{avgTier:1f}}</font><tab>(<font color='#928A75'>{{avgBattleTier:1f}}</font>)</b></font></textformat>",
             "<textformat tabstops='[90,110,165]'><font size='12' color='#929292'>{{l10n:Wins/Battles:}}<tab>{{Battles.png}}<tab><b><font color='{{g:avgWinRate}}'>{{winsCount}}</font> (<font color='#FFFFFF'>{{battlesCount}}</font>)<tab>(<font color='{{g:avgWinRate}}'>{{avgWinRate:1f}}%</font>)</b></font></textformat>",
             "<textformat tabstops='[90,165]'><font size='12' color='#929292'>EFF/WN8:<tab><b><font color='{{g:EFF}}'>{{EFF:d}}</font> (<font color='{{g:EFF}}'>{{XEFF}}</font>)<tab><font color='{{g:WN8}}'>{{WN8:d}}</font> (<font color='{{g:WN8}}'>{{XWN8}}</font>)</b></font></textformat>"
         ],
         "impact": [
             "<font size='13' color='#FFCC66'>{{l10n:Total}}</font>\n{{Line3.png}}",
-            "<textformat tabstops='[90,110,165]'><font size='12' color='#929292'>{{l10n:Win rate:}}<tab>{{Battles.png}}<tab><b><font color='{{g:avgWinRate}}'>{{avgWinRate:1f}}%</font><tab>(<font color='{{c:davgWinRate}}'>{{davgWinRate:+1f}}%</font>)</b></font></textformat>",
+            "<textformat tabstops='[90,165]'><font size='12' color='#929292'>WGR/WR:<tab><b><font color='{{g:WGR}}'>{{WGR}}</font> (<font color='{{c:wgrDifference}}'>{{wgrDifference:+d}}</font>)<tab><font color='{{g:avgWinRate}}'>{{avgWinRate:1f}}%</font> (<font color='{{c:davgWinRate}}'>{{davgWinRate:+1f}}%</font>)</b></font></textformat>",
             "<textformat tabstops='[90,165]'><font size='12' color='#929292'>EFF/WN8:<tab><b><font color='{{g:EFF}}'>{{EFF:d}}</font> (<font color='{{c:dEFF}}'>{{dEFF:+1f}}</font>)<tab><font color='{{g:WN8}}'>{{WN8:d}}</font> (<font color='{{c:dWN8}}'>{{dWN8:+1f}}</font>)</b></font></textformat>"
         ]
     },
@@ -175,12 +180,12 @@
         "sortByMacro": "WN8",
         "sortReverse": true,
         "header": [
-            "<textformat {{l10n:tabstops='[78,121,192]'}}><font size='12' color='#FFCC66'><b>{{l10n:Tank}}<tab>{{l10n:Wins}}<tab>{{l10n:AvgDmg}}<tab>WN8</b></font></textformat>",
+            "<textformat {{l10n:tabstops='[78,121,192]'}}><b><font size='12' color='#FFCC66'>{{l10n:Tank}}<tab>{{l10n:Wins}}<tab>{{l10n:AvgDmg}}<tab>WN8</font></b></textformat>",
             "{{Line3.png}}"
         ],
         "byTank": [
-            "<textformat tabstops='[76,122,177]'><font size='12' color='#929292'><font color='#FFE6B3'>{{vehicle-short}}</font><tab><b><font face='Consolas' color='{{g:avgWinRate}}'>{{winsCount:2}}</font>/<font face='Consolas' color='{{g:avgWinRate}}'>{{battlesCount}}</font><tab><font face='Consolas' color='#FFFFFF'>{{avgDamage:6}}</font><tab><font face='Consolas' color='{{g:WN8}}'>{{WN8:6}}</font></b></font></textformat>",
-            "<textformat tabstops='[51,116]'> <tab><font size='9'color='#FFCC66'>CMB: <b><font face='Consolas' size='10' color='#FFFFFF'>{{avgCombined:6}}</font></b><tab>MoE: <b><font face='Consolas' size='10' color='{{g:moe}}'>{{moe:6.2f}}%</font> <font size='10' color='#929292'>(<font face='Consolas' size='10' color='{{c:moeDifference}}'>{{moeDifference:+2f}}%</font>)</font></b></font></textformat>"
+            "<textformat tabstops='[76,122,177]'><font size='12' color='#929292'><font color='#FFE6B3'>{{vehicle-short}}</font><tab><b><font face='Consolas' color='{{g:avgWinRate}}'>{{winsCount:2}}</font>/<font face='Consolas' color='{{g:avgWinRate}}'>{{battlesCount}}</font><tab><font face='Consolas' color='#FFFFFF'>{{avgDmg:6}}</font><tab><font face='Consolas' color='{{g:WN8}}'>{{WN8:6}}</font></b></font></textformat>",
+            "<textformat tabstops='[51,116]'> <tab><font size='10' color='#929292'><font size='9' color='#FFCC66'>CMD:</font> <b><font face='Consolas' color='#FFFFFF'>{{avgDmgMoe:6}}</font></b><tab><font size='9' color='#FFCC66'>MoE:</font> <b><font face='Consolas' color='{{g:moe}}'>{{moe:6.2f}}%</font> (<font face='Consolas' color='{{c:moeDifference}}'>{{moeDifference:+2f}}%</font>)</b></font></textformat>"
         ]
     },
     "researchWatchdog": {
@@ -188,12 +193,21 @@
         "title": "{{l10n:Research}}",
         "expand": true,
         "useFreeXp": true,
-        "warnUsingAlertBox": false,
-        "notifyOfLockedModules": true,
-        "maxCharsPerItem": 140,
+        "crewAccWarning": {
+            "enable": true,
+            "format": "<font color='#F7BB0D'>{{l10n:Accelerate crew training!}}</font>"
+        },
+        "unlockedModules": {
+            "title": "<font size='13' color='#FFCC66'>{{l10n:Item(s) ready to be researched:}}</font>\n{{Line3.png}}",
+            "format": "<textformat tabstops='[165]'><font size='12' color='#FFFFFF'>%(item)s</font><tab>{{Done.png}}</textformat>"
+        },
+        "lockedModules": {
+            "enable": true,
+            "title": "<font size='13' color='#FFCC66'>{{l10n:Item(s) yet to be researched:}}</font>\n{{Line3.png}}",
+            "format": "<textformat tabstops='[165]'><font size='12' color='#929292'>%(item)s<tab><font color='#FFFFFF'>%(xp)s</font></font>{{Xp.png}}</textformat>"
+        },
+        "itemMaxChars": 139,
         "cutOffSymbol": "..",
-        "msgItem": "<textformat tabstops='[165]'><font size='12' color='#FFFFFF'>%(item)s</font><tab>{{Done.png}}</textformat>",
-        "notifyOfLockedModulesMsgItem": "<textformat tabstops='[160]'><font size='12' color='#929292'>%(item)s</font><tab><font size='12' color='#FFFFFF'>%(xp)s{{Xp.png}}</font></textformat>",
         "itemTypeNames": [
             "<img src='img://gui/maps/icons/library/YasenKrasen/item01.png' width='26' height='23' align='baseline' vspace='-12'>",
             "<img src='img://gui/maps/icons/library/YasenKrasen/item02.png' width='31' height='23' align='baseline' vspace='-12'>",
@@ -207,17 +221,14 @@
             "<img src='img://gui/maps/icons/library/YasenKrasen/item10.png' width='26' height='23' align='baseline' vspace='-12'>",
             "<img src='img://gui/maps/icons/library/YasenKrasen/item11.png' width='26' height='23' align='baseline' vspace='-12'>",
             "<img src='img://gui/maps/icons/library/YasenKrasen/item12.png' width='26' height='23' align='baseline' vspace='-12'>"
-        ],
-        "msg": "<textformat leading='1'><font size='13' color='#FFCC66'>{{l10n:Item(s) ready to be researched:}}</font></textformat>\n{{Line3.png}}",
-        "notifyOfLockedModulesMsg": "<textformat leading='1'><font size='13' color='#FFCC66'>{{l10n:Item(s) yet to be researched:}}</font></textformat>\n{{Line3.png}}",
-        "warnIfEliteAndNoCrewAcc": "<font color='#F7BB0D'>{{l10n:Accelerate crew training!}}</font>"
+        ]
     },
     "userMacros": {
-        "moeTrack": "<font size='12' color='#CDC673'><b>MoE: </b><font size='12' color='{{g:moe}}'>{{moe}}%</font><tab><font size='12' color='#929292'>(<font size='12' color='{{c:moeDifference}}'>{{moeDifference:+2f}}%</font>)</font><tab><b>CMB: </b><font size='12' color='#FFFFFF'>{{totalCombined}}</font></font>\n\n",
-        "autoRepair": "<font size='12' color='#CDC673'>{{l10n:Repairs:}}</font><tab><font size='12' color='#FFFFFF'>-{{autoRepairCost}}</font> <img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'>\n",
-        "autoLoad": "<font size='12' color='#CDC673'>{{l10n:Ammunition:}}</font><tab><font size='12' color='#FFFFFF'>-{{autoLoadCost}}</font> <img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'>\n",
-        "autoEquip": "<font size='12' color='#CDC673'>{{l10n:Consumables:}}</font><tab><font size='12' color='#FFFFFF'>-{{autoEquipCost}}</font> <img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'>\n",
-        "totalBattle": "<font size='12' color='#CDC673'><b>{{l10n:Total:}}<tab><font size='12' color='{{c:netCredits}}'>{{netCredits}}</font> <img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'><tab>WN8: <font size='12' color='{{g:WN8}}'>{{WN8:d}}</font> <font size='12' color='#929292'>(<font size='12' color='{{g:WN8}}'>{{XWN8}}</font>)</font></b></font>",
+        "moeTrack": "<font size='12' color='#929292'><b><font color='#CDC673'>MoE:</font></b> <font color='{{g:moe}}'>{{moe}}%</font><tab>(<font color='{{c:moeDifference}}'>{{moeDifference:+2f}}%</font>)<tab><b><font color='#CDC673'>CMD:</font></b> <font color='#FFFFFF'>{{totalDmgMoe}}</font></font>\n\n",
+        "autoRepair": "<font size='12' color='#CDC673'>{{l10n:Repairs:}}<tab><font color='#FFFFFF'>-{{autoRepairCost}}</font></font> <img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'>\n",
+        "autoLoad": "<font size='12' color='#CDC673'>{{l10n:Ammunition:}}<tab><font color='#FFFFFF'>-{{autoLoadCost}}</font></font> <img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'>\n",
+        "autoEquip": "<font size='12' color='#CDC673'>{{l10n:Consumables:}}<tab><font color='#FFFFFF'>-{{autoEquipCost}}</font></font> <img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'>\n",
+        "totalBattle": "<font size='12' color='#929292'><b><font color='#CDC673'>{{l10n:Total:}}</font><tab><font color='{{c:netCredits}}'>{{netCredits}}</font> <img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'><tab><font color='#CDC673'>WN8:</font> <font color='{{g:WN8}}'>{{WN8:d}}</font> (<font color='{{g:WN8}}'>{{XWN8}}</font>)</b></font>",
         "Line.png": "<img src='img://gui/maps/icons/library/YasenKrasen/line.png' width='220' height='3' align='baseline' vspace='4'>",
         "Line2.png": "<img src='img://gui/maps/icons/library/YasenKrasen/line2.png' width='220' height='3' align='baseline' vspace='4'>",
         "Line3.png": "<img src='img://gui/maps/icons/library/YasenKrasen/line3.png' width='220' height='6' align='baseline' vspace='4'>",
@@ -261,6 +272,14 @@
             {"value": 2225,  "color": "#00A0B8"},
             {"value": 2675,  "color": "#C64CFF"},
             {"value": 2900,  "color": "#8225AD"}
+        ],
+        "WGR": [
+            {"value": 1357,  "color": "#FE0E00"},
+            {"value": 3701,  "color": "#FE7903"},
+            {"value": 5736,  "color": "#F8F400"},
+            {"value": 7910,  "color": "#60FF00"},
+            {"value": 9761,  "color": "#02C9B3"},
+            {"value": 10486, "color": "#D042F3"}
         ],
         "moe": [
             {"value": 25,    "color": "#F11919"},
@@ -336,6 +355,11 @@
             {"value": -0.01, "color": "#FF1010"},
             {"value": 0.0,   "color": "#FFFFFF"},
             {"value": 0.01,  "color": "#66CC66"}
+        ],
+        "wgrDifference": [
+            {"value": -1,    "color": "#FF1010"},
+            {"value": 0,     "color": "#FFFFFF"},
+            {"value": 1,     "color": "#66CC66"}
         ],
         "avgWinRate": [
             {"value": 45,    "color": "#F02828"},
