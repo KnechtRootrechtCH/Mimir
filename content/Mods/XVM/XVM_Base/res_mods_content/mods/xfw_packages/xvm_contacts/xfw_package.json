@@ -3,7 +3,7 @@
     "name": "XVM Contacts",
     "description": "XVM Contacts",
 
-    "version": "7.7.1.8588",
+    "version": "7.7.0.8570",
     "dependencies": ["com.modxvm.xvm"],
 
     "url": "https://modxvm.com/",
