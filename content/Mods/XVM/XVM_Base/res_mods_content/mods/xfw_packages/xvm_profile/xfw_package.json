@@ -3,7 +3,7 @@
     "name": "XVM Profile",
     "description": "XVM Profile module",
 
-    "version": "7.7.0.8570",
+    "version": "7.7.1.8588",
     "dependencies": ["com.modxvm.xvm"],
 
     "url": "https://modxvm.com/",
