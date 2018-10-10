@@ -136,6 +136,7 @@
     crystal                  Bonds received from battle
     map                      Translated map name (Live Oaks)
     map-raw                  Original map system name (44_north_america)
+    netCredits               Credits received from battles (services deducted)
     vehicle-long             Translated long vehicle name (M18 Hellcat)
     vehicle-raw              Original vehicle system name (usa-M18_Hellcat)
     vehicle-short            Translated short vehicle name (Hellcat)
@@ -174,7 +175,7 @@
     26 EVENT_BATTLES_2       Event Battle (new)
     27 EPIC_BATTLE           Frontline
 
-   Decimal places and right alignment of macros
+  Decimal places and right alignment of macros
     :d                       Macro without decimal ({{deathsRate:d}} will be displayed '63')
     :1f                      Macro with one decimal ({{deathsRate:1f}} will be displayed '63.4')
     :2f                      Macro with two decimal ({{deathsRate:2f}} will be displayed '63.40')
