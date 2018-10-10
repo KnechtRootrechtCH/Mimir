@@ -19,6 +19,6 @@
     <add key="archiveConverteddMods" value="false" />
     <add key="quickInstallMods" value="XVM_Base;XVM_Mimir_Configuration" />
     <add key="quickInstallModsDebug" value="XVM_Base;XVM_Mimir_Configuration;XVM_Mimir_AutoReload" />
-    <add key="quickInstsallPreset" value="Mimir_ElPolloDiabloCH" />
+    <add key="quickInstsallPreset" value="Mimir_Advanced" />
   </appSettings>
 </configuration>
