@@ -113,7 +113,7 @@
         ],
         "byTank": [
             "<textformat leading='-6' tabstops='[76,122,177]'><font size='12' color='#929292'><font color='#FFE6B3'>{{vehicle-short}}</font><tab><b><font face='Consolas' color='{{g:avgWinRate}}'>{{winsCount:2}}</font>/<font face='Consolas' color='{{g:avgWinRate}}'>{{battlesCount}}</font><tab><font face='Consolas' color='#FFFFFF'>{{avgDmg:6}}</font><tab><font face='Consolas' color='{{g:WN8}}'>{{WN8:6}}</font></b></font></textformat>",
-            "<textformat leading='-3' tabstops='[52,117]'> <tab><font size='10' color='#929292'><font size='9' color='#FFCC66'>CMD:</font> <b><font face='Consolas' color='#FFFFFF'>{{avgDmgMoe:6}}</font></b><tab><font size='9' color='#FFCC66'>MoE:</font> <b><font face='Consolas' color='{{g:moe}}'>{{moe:6.2f}}%</font> (<font face='Consolas' color='{{c:moeDifference}}'>{{moeDifference:+2f}}%</font>)</b></font></textformat>"
+            "<textformat leading='-3' tabstops='[50,115]'> <tab><font size='10' color='#929292'><font size='9' color='#FFCC66'>CMD:</font> <b><font face='Consolas' color='#FFFFFF'>{{avgDmgMoe:6}}</font></b><tab><font size='9' color='#FFCC66'>MoE:</font> <b><font face='Consolas' color='{{g:moe}}'>{{moe:6.2f}}%</font> (<font face='Consolas' color='{{c:moeDifference}}'>{{moeDifference:+2f}}%</font>)</b></font></textformat>"
         ],
         "footer": [
             "\n\n<p align='left'>{{buttonStats}}{{buttonTanksOn}}{{buttonReset}}</p>"
