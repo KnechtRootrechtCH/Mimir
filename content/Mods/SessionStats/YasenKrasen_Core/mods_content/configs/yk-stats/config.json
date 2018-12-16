@@ -103,6 +103,7 @@
         "reset": "<img src='img://gui/maps/icons/library/YasenKrasen/btn_reset.png' width='71' height='30' align='baseline' vspace='0'>"
     },
     "useMessenger": true,
+    "notificationGroup": "info", // available groups: info, invite, offer
     "statsByTank": {
         "enable": true,
         "sortByMacro": "WN8",
