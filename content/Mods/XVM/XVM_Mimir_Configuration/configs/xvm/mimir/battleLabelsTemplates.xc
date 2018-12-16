@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Battle inteface text fields.
  * Текстовые поля боевого интерфейса.
  */
@@ -96,7 +96,8 @@
       "mouseEvents": {
         "mouseDown": "dLog_mouseDown",
         "mouseUp": "dLog_mouseUp",
-        "mouseMove": "dLog_mouseMove"
+        "mouseMove": "dLog_mouseMove",
+        "mouseWheel": "dLog_mouseWheel"
       }
     },
     // TODO (see damageLog.xc).
