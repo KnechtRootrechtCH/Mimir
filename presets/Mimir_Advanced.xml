@@ -15,11 +15,11 @@
     <mod>Custom_Sixth_Sense_Icon</mod>
 
     <!-- SKINS: REMOVING WGL AND PATRIOT PAINTJOBS -->
-    <mod>AMX_13_57_100_GF_Black_Edition</mod>
-    <mod>RazerTecks_LEKPZ_M_41_90_mm</mod>
+    <!-- <mod>AMX_13_57_100_GF_Black_Edition</mod> -->
+    <!-- <mod>RazerTecks_LEKPZ_M_41_90_mm</mod> -->
 
     <!-- SKINS: CUSTOM PAINTJOBS -->
-    <mod>Pz58_SwissCamo</mod>
+    <!-- <mod>Pz58_SwissCamo</mod> -->
     <!-- <mod>Pz58_Schwarzpanzer_with_Mutz</mod> -->
     <!-- <mod>Mirukii_RhmSkorpionG_Remodel</mod> -->
 </preset>

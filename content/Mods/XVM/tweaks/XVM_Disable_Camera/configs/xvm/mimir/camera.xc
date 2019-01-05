@@ -6,7 +6,7 @@
   "camera": {
     // false - disable camera settings.
     // false - отключить настройки камеры.
-    "enabled": false,
+    "enabled": true,
     // true - disable red flash when enemy hit your tank.
     // true - отключить красную вспышку когда враг попадает по вам.
     "noFlashBang": false,
@@ -59,7 +59,7 @@
       // Default: [ 2, 4, 8 ]. It's possible to use a greater number of values.
       // Список значений кратности для снайперского режима
       // По умолчанию: [ 2, 4, 8 ]. Можно использовать большее количество значений.
-      "zooms": [2, 4, 8, 16, 24, 32],
+      "zooms": [2, 4, 8, 16],
       // Start zoom value (null for default behavior - last used state)
       // Начальное значение кратности (null для поведения по умолчанию - последнее использовавшееся значение)
       "startZoom": null,
@@ -123,7 +123,7 @@
       // true - отключить затемнение и озеленение в снайперском прицеле
       "noBinoculars": false,
       // TODO: English comments
-      // Отключение предела вращения камеры в снайперском прицеле для техники с ограниченными УГН (углами горизонтальной наводки) орудия. 
+      // Отключение предела вращения камеры в снайперском прицеле для техники с ограниченными УГН (углами горизонтальной наводки) орудия.
       "noCameraLimit": {
         // true - enable.
         // true - включить.
