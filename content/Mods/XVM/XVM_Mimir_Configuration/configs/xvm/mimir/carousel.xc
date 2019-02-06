@@ -79,7 +79,7 @@
     // "nation", "type", "level", "-level", "maxBattleTier", "-maxBattleTier", "premium", "-premium",
     // "winRate", "-winRate", "markOfMastery", "-markOfMastery", "xtdb", "-xtdb", "xte", "-xte",
     // "wtr", "-wtr", "damageRating", "-damageRating", "marksOnGun", "-marksOnGun"
-    "sorting_criteria": ["level", "-premium", "nation", "type"],
+    "sorting_criteria": ["-premium", "level", "nation", "type"],
     // Suppress the tooltips for tanks in carousel
     // Убрать подсказки к танкам в карусели
     "suppressCarouselTooltips": false
