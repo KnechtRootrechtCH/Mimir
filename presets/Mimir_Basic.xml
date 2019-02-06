@@ -5,10 +5,10 @@
     <mod>XVM_Mimir_Configuration</mod>
 
     <!-- USER INTERFACE -->
-    <mod>YasenKrasen_Core</mod>
+    <!-- <mod>YasenKrasen_Core</mod> -->
     <!-- <mod>YasenKrasen_Beta</mod> -->
     <!-- <mod>TimeSpent_SessionStats</mod> -->
-    <mod>J1mB0s_icons</mod>
+    <mod>Grabaah_Contour_Icon</mod>
 
     <!-- FLUFF -->
     <mod>C-H-C_Clan_Icon</mod>

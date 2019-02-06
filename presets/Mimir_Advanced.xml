@@ -5,8 +5,8 @@
     <mod>XVM_Mimir_Configuration</mod>
 
     <!-- USER INTERFACE -->
-    <mod>YasenKrasen_Core</mod>
-    <mod>J1mB0s_icons</mod>
+    <!-- <mod>YasenKrasen_Core</mod> -->
+    <mod>Grabaah_Contour_Icon</mod>
     <mod>Gold_Ammo_Visibility</mod>
 
     <!-- FLUFF -->
