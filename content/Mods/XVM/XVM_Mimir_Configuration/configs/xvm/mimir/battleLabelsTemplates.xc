@@ -204,9 +204,9 @@
       "y": -30,
       "format": "<b>{{py:repairTimeTurret%0.1f}}</b>"
     },
-    // Repair timer for tracks
-    // Таймер ремонта сбитых гусениц
-    "repairTimeTracks": {
+    // Repair timer for complex-items (chassis\wheels)
+    // Таймер ремонта для гусениц\колёс
+    "repairTimeComplex": {
       "$ref": { "path":"def.repairTimeItem" },
       "enabled": true,
       "updateEvent": "PY(ON_TRACKS_UPDATE)",
