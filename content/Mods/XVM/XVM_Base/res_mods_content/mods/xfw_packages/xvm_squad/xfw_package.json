@@ -3,7 +3,7 @@
     "name": "XVM Squad",
     "description": "XVM Squad module",
 
-    "version": "7.8.0-dev.8765",
+    "version": "7.8.0.8766",
     "dependencies": ["com.modxvm.xvm"],
 
     "url": "https://modxvm.com/",

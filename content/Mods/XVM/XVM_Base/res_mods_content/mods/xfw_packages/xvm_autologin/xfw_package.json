@@ -3,7 +3,7 @@
     "name": "XVM Autologin",
     "description": "XVM Autologin module",
 
-    "version": "7.8.0-dev.8765",
+    "version": "7.8.0.8766",
     "dependencies": ["com.modxvm.xvm"],
 
     "url": "https://modxvm.com/",
