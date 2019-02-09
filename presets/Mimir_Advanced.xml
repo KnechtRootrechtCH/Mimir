@@ -5,14 +5,14 @@
     <mod>XVM_Mimir_Configuration</mod>
 
     <!-- USER INTERFACE -->
-    <!-- <mod>YasenKrasen_Core</mod> -->
+    <mod>YasenKrasen_Core</mod>
     <mod>Grabaah_Contour_Icon</mod>
     <mod>Gold_Ammo_Visibility</mod>
 
     <!-- FLUFF -->
-    <!-- <mod>British_Crew_Voices</mod> -->
     <mod>C-H-C_Clan_Icon</mod>
     <mod>Custom_Sixth_Sense_Icon</mod>
+    <!-- <mod>British_Crew_Voices</mod> -->
 
     <!-- SKINS: REMOVING WGL AND PATRIOT PAINTJOBS -->
     <!-- <mod>AMX_13_57_100_GF_Black_Edition</mod> -->
