@@ -1,10 +1,10 @@
 /**
- * Normal carousel cells settings
- * Настройки ячеек карусели обычного размера
+ * Normal carousel cells settings.
+ * Настройки ячеек карусели обычного размера.
  */
 {
-  // Definitions
-  // Шаблоны
+  // Definitions.
+  // Шаблоны.
   "def": {
     // Text fields shadow.
     // Тень текстовых полей.
@@ -41,38 +41,38 @@
       // Vehicle level.
       // Уровень техники
       "level":    { "enabled": false, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
-      // Double XP icon
+      // Double XP icon.
       // Иконка не сбитого опыта за первую победу в день.
-      "xp":       { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
+      "xp": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
       // Vehicle name.
       // Название танка.
       "tankName": { "enabled": false, "dx": 0, "dy": 0, "alpha": 100, "scale": 1, "textFormat": {}, "shadow": {} },
       // Vehicle rent info text.
       // Инфо текст аренды танка.
       "rentInfo": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1, "textFormat": {}, "shadow": {} },
-      // Info text (Crew incomplete, Repairs required)
+      // Info text (Crew incomplete, Repairs required).
       // Инфо текст (Неполный экипаж, Требуется ремонт).
-      "info":     { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1, "textFormat": {}, "shadow": {} },
-      // Info image
-      // Инфо иконка
-      "infoImg":  { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
+      "info": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1, "textFormat": {}, "shadow": {} },
+      // Info image.
+      // Инфо иконка.
+      "infoImg": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1 },
       // Info text for "Buy vehicle" and "Buy slot" slots.
       // Инфо текст для слотов "Купить машину" и "Купить слот".
-      "infoBuy":  { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1, "textFormat": {}, "shadow": {} },
-      // Clan lock timer
-      // Таймер блокировки танка
+      "infoBuy": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "scale": 1, "textFormat": {}, "shadow": {} },
+      // Clan lock timer.
+      // Таймер блокировки танка.
       "clanLock": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100 },
-      // Price
-      // Цена
-      "price":    { "enabled": true, "dx": 0, "dy": 0, "alpha": 100 },
-      // Action price
-      // Акционная цена
+      // Price.
+      // Цена.
+      "price": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100 },
+      // Action price.
+      // Акционная цена.
       "actionPrice": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100 },
-      // Favorite vehicle mark
-      // Маркер основной техники
+      // Favorite vehicle mark.
+      // Маркер основной техники.
       "favorite": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100 },
-      // Stats field that appears on the mouse hover
-      // Поле статистики, отображаемое при наведении мыши
+      // Stats field that appears on the mouse hover.
+      // Поле статистики, отображаемое при наведении мыши.
       "stats": { "enabled": true, "dx": 0, "dy": 0, "alpha": 100, "textFormat": {}, "shadow": {} }
     },
     // Extra cell fields (extended format supported, see extra-field.txt).

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * GUI elements settings (experts only)
  * Настройки графических элементов (только для экспертов!)
  * https://kr.cm/f/t/1761/
@@ -18,10 +18,10 @@
  *
  */
 {
-  // TODO: elements
+  // TODO: elements.
   //
-  // Interface elements
-  // Элементы интерфейса
+  // Interface elements.
+  // Элементы интерфейса.
   "elements": [
     // "x"     - положение по горизонтали / horizontal position
     // "y"     - положение по вертикали   / vertical position
