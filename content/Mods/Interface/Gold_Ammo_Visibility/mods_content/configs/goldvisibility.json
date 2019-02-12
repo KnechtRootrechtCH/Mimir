@@ -17,11 +17,11 @@
 	// If set to true, the mod will always show gold for that shell type, even though it might not be gold
 	// If set to false, the mod will never show gold for that shell type, even though it might be gold
 	// Default: false
-	"display_effect_if_ammo_type_ambiguous": false,
+	"display_effect_if_ammo_type_ambiguous": true,
 	
 	// Show the effect for allied shots
 	// Default: false
-	"display_effect_for_allied_shots": false,
+	"display_effect_for_allied_shots": true,
 	
 	// Show the effect for enemy shots
 	// Default: true
@@ -29,5 +29,5 @@
 	
 	// Show the effect for your own shots
 	// Default: false
-	"display_effect_for_own_shots": false
+	"display_effect_for_own_shots": true
 }
