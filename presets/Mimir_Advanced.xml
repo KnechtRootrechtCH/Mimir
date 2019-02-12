@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<preset name="Mimir_ElPolloDiabloCH" description="Mimir - Personal Setup for ElPolloDiabloCH">
+<preset name="Mimir_Advanced" description="Mimir - Personal Setup for ElPolloDiabloCH">
     <!-- XVM -->
     <mod>XVM_Base</mod>
     <mod>XVM_Mimir_Configuration</mod>
@@ -8,6 +8,7 @@
     <mod>YasenKrasen_Core</mod>
     <mod>Grabaah_Contour_Icon</mod>
     <mod>Gold_Ammo_Visibility</mod>
+    <mod>Battle_Assistant</mod>
 
     <!-- FLUFF -->
     <mod>C-H-C_Clan_Icon</mod>
