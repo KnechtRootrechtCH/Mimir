@@ -1,4 +1,8 @@
-﻿XVM-7.8.1:
+﻿XVM-7.8.2:
+  [GENERAL]
+  * bugfixes and optimization
+
+XVM-7.8.1:
   [GENERAL]
   * World of Tanks 1.4.0.1
 

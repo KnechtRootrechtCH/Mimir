@@ -3,7 +3,7 @@
     "name": "XVM Equip",
     "description": "XVM Equip Module",
 
-    "version": "7.8.1.8784",
+    "version": "7.8.2.8857",
     "dependencies": ["com.modxvm.xvm"],
 
     "url": "https://modxvm.com/",
