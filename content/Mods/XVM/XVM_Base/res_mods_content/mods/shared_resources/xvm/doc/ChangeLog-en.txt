@@ -1,4 +1,12 @@
-﻿XVM-7.8.2:
+﻿XVM-7.8.4
+  [GENERAL]
+  * World of Tanks 1.4.0.2
+
+XVM-7.8.3
+  [GENERAL]
+  * World of Tanks 1.4.0.1 micropatch 2019.03.06
+
+XVM-7.8.2:
   [GENERAL]
   * bugfixes and optimization
 
