@@ -1,4 +1,4 @@
-﻿/**
+/**
   * Log of applied damage.
   * For additional settings see battleLabelsTemplates.xc
   * Лог нанесенного урона.
@@ -6,7 +6,7 @@
 
   Macros used in hitLog:
   Макросы используемые в hitLog:
-
+   
     {{dmg}}                - last damage / последний нанесенный урон.
     {{dmg-kind}}           - type of damage / тип нанесенного урона (атака, пожар, таран, ...).
     {{c:dmg-kind}}         - color by damage kind / цвет по типу урона.
@@ -28,10 +28,10 @@
     {{squad-num}}          - number of squad (1,2,...), empty if not in squad / номер взвода (1,2,...), пусто - если игрок не во взводе.
     {{dmg-ratio}}          - last damage in percent / последний нанесенный урон в процентах.
     {{splash-hit}}         - value 'splash', if damage is caused by shell splinters (HE/HESH), empty if not / возвращает 'splash', если урон нанесен осколками снаряда (ОФ/ХФ), иначе пусто.
-    {{critical-hit}}       - value 'crit', if critical damage was done, empty if not / возвращает 'crit', если было нанесено критическое повреждение, иначе пусто.
+    {{critical-hit}}       - value 'crit', if critical damage was done, empty if not / возвращает 'crit', если было нанесено критическое повреждение, иначе пусто.    
     {{alive}}              - value 'al', if the vehicle after the attack is not destroyed, empty if destroyed / возвращает 'al', если техника после атаки не разрушена, пусто для разрушенной.
-    {{wn8}}, {{xwn8}}, {{wtr}}, {{xwtr}}, {{eff}}, {{xeff}}, {{wgr}}, {{xwgr}}, {{xte}}, {{r}}, {{xr}}                        - statistics macros (see macros.txt) / макросы статистики (смотрите macros_ru.txt).
-    {{c:wn8}}, {{c:xwn8}}, {{c:wtr}}, {{c:xwtr}}, {{c:eff}}, {{c:xeff}}, {{c:wgr}}, {{c:xwgr}}, {{c:xte}}, {{c:r}}, {{c:xr}}  - statistics macros (see macros.txt) / макросы статистики (смотрите macros_ru.txt).
+    {{wn8}}, {{xwn8}}, {{wtr}}, {{xwtr}}, {{eff}}, {{xeff}}, {{wgr}}, {{xwgr}}, {{xte}}, {{r}}, {{xr}} - statistics macros (see macros.txt) / макросы статистики (смотрите macros_ru.txt).
+    {{c:wn8}}, {{c:xwn8}}, {{c:wtr}}, {{c:xwtr}}, {{c:eff}}, {{c:xeff}}, {{c:wgr}}, {{c:xwgr}}, {{c:xte}}, {{c:r}}, {{c:xr}} - color according to the corresponding statistics macro (see macros.txt) / цвет по соответствующему макросу статистики (смотрите macros_ru.txt).
     {{diff-masses}}        - vehicles weights difference during collision / разность масс техники при столкновении.
     {{nation}}             - vehicle nation / нация техники.
     {{blownup}}            - value 'blownup', if target ammoBay is blown up, '' if not / возвращает 'blownup', если взорван боекомплект цели, иначе ''.
@@ -101,10 +101,10 @@
         "death_zone": "#CCCCCC",      // death zone / смертельная зона.
         "gas_attack": "#CCCCCC",      // gas attack / газовая атака.
         "art_attack": "#CCCCCC",      // art attack / артиллерийская поддержка.
-        "air_strike": "#CCCCCC"       // air strike / поддержка авиации.
+        "air_strike": "#CCCCCC"       // air strike / поддержка авиации.        
       },
-      // Type of damage (macro {{dmg-kind-player}}).
-      // Тип нанесенного урона (макрос {{dmg-kind-player}}).
+      // Type of damage (macro {{dmg-kind-player}}). 
+      // Тип нанесенного урона (макрос {{dmg-kind-player}}). 
       "dmg-kind-player": {
         "shot":            "<font size='6'> </font><font face='xvm'>&#x50;</font>",  // shot / попадание.
         "fire":            "<font size='6'> </font><font face='xvm'>&#x51;</font>",  // fire / пожар.
@@ -116,7 +116,7 @@
         "gas_attack":      "GA",                                                     // gas attack / газовая атака.
         "art_attack":      "<font face='xvm'>&#x110;</font>",                        // art attack / артиллерийская поддержка.
         "air_strike":      "<font face='xvm'>&#x111;</font>"                         // air strike / поддержка авиации.
-      },
+      },  
       // Shell kind (macro {{type-shell}}).
       // Тип снаряда (макрос {{type-shell}}).
       "type-shell": {
@@ -205,7 +205,8 @@
     // Лог нанесенного урона (альтернативный режим).
     "logAlt": {
       "$ref": { "path":"hitLog.log" },
-      "formatHistory": "<textformat leading='-4' tabstops='[20,50,90,190]'><font size='12'>\u00D7{{n-player}}:</font><tab><font color='{{c:dmg-kind}}'>{{dmg-ratio~%}}</font><tab>| {{dmg-ratio-player~%}}<tab>|<font color='{{c:vtype}}'>{{vehicle}}</font> <font face='xvm' size='15' color='#FF0000'>{{alive? |{{blownup?&#x7C;|<font size='19'>&#x77;</font>}}}}</font><tab>|{{name%.15s~..}} <font alpha='#A0'>{{clan}}</font></textformat>"
+      "formatHistory": ""
+      //"formatHistory": "<textformat leading='-4' tabstops='[20,50,90,190]'><font size='12'>\u00D7{{n-player}}:</font><tab><font color='{{c:dmg-kind}}'>{{dmg-ratio~%}}</font><tab>| {{dmg-ratio-player~%}}<tab>|<font color='{{c:vtype}}'>{{vehicle}}</font> <font face='xvm' size='15' color='#FF0000'>{{alive? |{{blownup?&#x7C;|<font size='19'>&#x77;</font>}}}}</font><tab>|{{name%.15s~..}} <font alpha='#A0'>{{clan}}</font></textformat>"
     },
     // Background of the log of applied damage.
     // Подложка лога нанесенного урона.
@@ -214,7 +215,7 @@
       "formatHistory": "<img height='17' width='310' src='xvm://res/icons/damageLog/{{alive?no_dmg|dmg}}.png'>"
     },
     // Background of the log of applied damage (alternative mode).
-    // Подложка лога полученного урона (альтернативный режим).
+    // Подложка лога нанесенного урона (альтернативный режим).
     "logAltBackground": {
       "$ref": { "path":"hitLog.log" },
       "formatHistory": ""
