@@ -154,7 +154,7 @@
     },
     "panelStatistics": {
         "enable": true,
-        "title": "{{l10n:Statistics}}",
+        "title": "Account statistics",
         "expand": true,
         "account": [
             "<font size='13' color='#FFCC66'>{{l10n:Account}}</font>\n{{Line3.png}}",
@@ -175,7 +175,7 @@
         ]
     },
     "panelByTank": {
-        "enable": true,
+        "enable": false,
         "title": "{{l10n:Statistics by Tank}}",
         "expand": false,
         "sortByMacro": "WN8",
@@ -187,6 +187,24 @@
         "byTank": [
             "<textformat tabstops='[76,122,177]'><font size='12' color='#929292'><font color='#FFE6B3'>{{vehicle-short}}</font>\t<b><font face='Consolas' color='{{g:avgWinRate}}'>{{winsCount:2}}</font>/<font face='Consolas' color='{{g:avgWinRate}}'>{{battlesCount}}</font>\t<font face='Consolas' color='#FFFFFF'>{{avgDmg:6}}</font>\t<font face='Consolas' color='{{g:WN8}}'>{{WN8:6}}</font></b></font></textformat>",
             "<textformat tabstops='[51,116]'> \t<font size='10' color='#929292'><font size='9' color='#FFCC66'>CMD:</font> <b><font face='Consolas' color='#FFFFFF'>{{avgDmgMoe:6}}</font></b>\t<font size='9' color='#FFCC66'>MoE:</font> <b><font face='Consolas' color='{{g:moe}}'>{{moe:6.2f}}%</font> (<font face='Consolas' color='{{c:moeDifference}}'>{{moeDifference:+2f}}%</font>)</b></font></textformat>"
+        ]
+    },
+    "panelCurrentVehicle": {
+        "enable": true,
+        "title": "Vehicle statistics",
+        "expand": true,
+        "general": [
+            "<font size='13' color='#FFCC66'>General</font>\n{{Line3.png}}",
+            "<textformat tabstops='[90,165]'><font size='12' color='#929292'>{{l10n:Wins/Battles:}}\t<b><font color='#FFFFFF'>{{battlesCount}}</font>\t(<font color='{{g:avgWinRate}}'>{{avgWinRate:1f}}%</font>)</b></font></textformat>",
+            "<textformat tabstops='[90,165]'><font size='12' color='#929292'>avgDmg/Assist:\t<b><font color='#FFFFFF'>{{avgDmg}}</font>\t<font color='#FFFFFF'>{{avgDmgAssist}}</font></b></font></textformat>",
+            "<textformat tabstops='[90,165]'><font size='12' color='#929292'>MoE/WN8:\t<b><font color='{{g:moe}}'>{{moe:2f}}%</font>\t<font color='{{g:WN8}}'>{{WN8:d}}</font></b></font></textformat>"
+        ],
+        "session": [
+            "<font size='13' color='#FFCC66'>Session</font>\n{{Line3.png}}",
+            "<textformat tabstops='[90,165]'><font size='12' color='#929292'>{{l10n:Wins/Battles:}}\t<b><font color='{{g:avgWinRate}}'>{{winsCount}}</font> (<font color='#FFFFFF'>{{battlesCount}}</font>)\t(<font color='{{g:avgWinRate}}'>{{avgWinRate:1f}}%</font>)</b></font></textformat>",
+            "<textformat tabstops='[90,165]'><font size='12' color='#929292'>MoE:\t<b><font color='{{g:moe}}'>{{moe:2f}}%</font>\t(<font color='{{c:moeDifference}}'>{{moeDifference:+2f}}%</font>)</b></font></textformat>",
+            "<textformat tabstops='[90,165]'><font size='12' color='#929292'>avgDmg/CMD:\t<b><font color='#FFFFFF'>{{avgDmg}}</font>\t<font color='#FFFFFF'>{{avgDmgMoe:d}}</font></b></font></textformat>",
+            "<textformat tabstops='[90,165]'><font size='12' color='#929292'>EFF/WN8:\t<b><font color='{{g:EFF}}'>{{EFF:d}}</font> (<font color='{{g:EFF}}'>{{XEFF}}</font>)\t<font color='{{g:WN8}}'>{{WN8:d}}</font> (<font color='{{g:WN8}}'>{{XWN8}}</font>)</b></font></textformat>"
         ]
     },
     "researchWatchdog": {
