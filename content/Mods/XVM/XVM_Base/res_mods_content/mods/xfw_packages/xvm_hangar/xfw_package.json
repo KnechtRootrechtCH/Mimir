@@ -3,7 +3,7 @@
     "name": "XVM Hangar",
     "description": "XVM Hangar Module",
 
-    "version": "7.8.5-dev.8944",
+    "version": "7.8.5.8952",
     "dependencies": ["com.modxvm.xvm"],
 
     "url": "https://modxvm.com/",
