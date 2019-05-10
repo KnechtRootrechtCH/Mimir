@@ -1,0 +1,85 @@
+{
+    //If you want to translate to your own language, contact me on: http://forum.worldoftanks.eu/index.php?/topic/583433-
+    //If it's possible translate directly from English words/phrases
+    "meta": {
+        "Author": "", //Author of translation
+        "Language": "", //language of translations, prefered in the language it self, example: English, Deutsch, Polski
+        "Version": "" //version of translation file
+    },
+    "locale": {
+
+        //default config using next translations at battleEndedMessage section
+        "Defeat!": "",
+        "Draw!": "",
+        "Victory!": "",
+
+        //default config using next translations to modify tab stops if necessary
+        "tabstops='[79,122,193]'": "tabstops='[79,122,193]'", //tabstops for statsByTank section
+        "tabstops='[78,121,192]'": "tabstops='[78,121,192]'", //tabstops for panelByTank section
+        "tabstops='[27,98,132,193]'": "tabstops='[27,98,132,193]'", //tabstops for statsByTank section Graphical messages
+        "tabstops='[27,98,131,193]'": "tabstops='[27,98,131,193]'", //tabstops for panelByTank section Graphical messages
+
+        //default config using next translations at statsByTank and panelByTank section
+        //it's necessary to keep the next translations approximately same lenght like in English (tabstops need to be modified)
+        "Tank": "",
+        "Wins": "",
+        "AvgDmg": "",
+
+        //default config using next translations at statsTemplate section approx max 17 characters
+        "Battle finances:": "",
+        "Gross income:": "",
+        "Services:": "",
+        "Net income:": "", //also used at statistics panel approx max 15 characters
+        "Session statistics:": "",
+        "Wins/Battles:": "", //also used at statistics panel approx max 15 characters
+        "Average Tier:": "", //also used at statistics panel approx max 15 characters
+        "Bonds:": "",
+        "Exp x1:": "",
+        "Exp:": "",
+        "Free Exp:": "",
+        "Kills:": "",
+        "Deaths:": "",
+        "Hits/Shots:": "",
+        "Penetrations:": "",
+        "Damage Dealt:": "",
+        "Damage Received:": "",
+        "Spotted:": "",
+        "Defence:": "",
+        "Capture:": "",
+        "Efficiency/WN8:": "",
+
+        //default config using next translations at battle results messages
+        //if its possible, keep consistent lenght of next 5 translations
+        "Crew Exp:": "", //used at graphical messages
+        "Repairs:": "",
+        "Ammunition:": "",
+        "Consumables:": "",
+        "Total:": "",
+
+        //default config using next translations for titles at parameters panel
+        "Vehicle Parameters": "",
+        "Research": "",
+        "Statistics": "",
+        "Account statistics": "",
+        "Statistics by Tank": "",
+        "Vehicle statistics": "",
+
+        //default config using next translations for titles at statistics panel approx max 15 characters
+        "Account": "",
+        "General": "",
+        "Session": "",
+        "Total": "",
+
+        //default config using next translations at statistics panel approx max 15 characters
+        "Win rate:": "",
+
+        //default config using next translations at research watchdog
+        "Item(s) ready to be researched:": "",
+        "Item(s) yet to be researched:": "",
+        "Accelerate crew training!": "",
+
+        //default config using next translations for confirmation window to reset session statistics
+        "Confirm": "", //title of confirmation window
+        "Are you sure you want to reset session statistics?": "" //confirmation message
+    }
+}
