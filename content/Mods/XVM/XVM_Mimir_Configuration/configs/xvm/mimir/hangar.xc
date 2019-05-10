@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Parameters for hangar.
  * Параметры ангара.
  */
@@ -134,13 +134,13 @@
     },
     // true - enable removable equipment auto return (Camouflage net, Stereoscope, Toolbox).
     // true - включить автовозврат съемного оборудования (Маскировочная сеть, Стереотруба, Ящик с инструментами).
-    "enableEquipAutoReturn": false,
+    "enableEquipAutoReturn": true,
     // true - make vehicle not ready for battle if low ammo.
     // true - сделать машину не готовой к битве если мало снарядов.
-    "blockVehicleIfLowAmmo": false,
+    "blockVehicleIfLowAmmo": true,
     // Below this percentage, ammo is low. (0 - 100)
     // Ниже этого процента, снарядов считается мало. (0 - 100)
-    "lowAmmoPercentage": 20,
+    "lowAmmoPercentage": 50,
     // Behavior of the system channel notifications button on new notifications:
     //   none  - do nothing;
     //   blink - blink button;

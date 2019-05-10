@@ -59,9 +59,9 @@
       "$ref": { "path":"def.defaultItem" },
       "x": 2,
       "y": -6,
-      "flags": [ "squadman" ],
-      "textFormat": { "size": 5 },
-      "format": "<font color='#DBDBDB'>{{name%.10s~..}}</font>"
+      "flags": [ "squadman", "spotted", "alive" ],
+      "textFormat": { "size": 8 },
+      "format": "<font color='{{.minimap.labelsData.colors.txt.{{sys-color-key}}}}'><i>{{name%.7s~..}}</i></font>"
     },
     // Player nickname, visible, alternative mode.
     // Ник игрока, видимый, альтернативный режим.
