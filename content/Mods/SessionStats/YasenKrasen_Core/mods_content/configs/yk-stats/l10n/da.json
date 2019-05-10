@@ -2,7 +2,7 @@
     "meta": {
         "Author": "Quaksen",
         "Language": "Dansk",
-        "Version": "1.1"
+        "Version": "1.2"
     },
     "locale": {
         "Defeat!": "Nederlag!",
@@ -44,8 +44,11 @@
         "Vehicle Parameters": "Køretøjs karakteristika",
         "Research": "Forskning",
         "Statistics": "Statistik",
+        "Account statistics": "Konto statistik",
         "Statistics by Tank": "Statistik pr. kampvogn",
+        "Vehicle statistics": "Køretøjsstatistik",
         "Account": "Konto",
+        "General": "Generel",
         "Session": "Session",
         "Total": "I alt",
         "Win rate:": "Sejrsrate:",

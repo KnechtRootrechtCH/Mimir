@@ -60,10 +60,13 @@
         "Vehicle Parameters": "",
         "Research": "",
         "Statistics": "",
+        "Account statistics": "",
         "Statistics by Tank": "",
+        "Vehicle statistics": "",
 
         //default config using next translations for titles at statistics panel approx max 15 characters
         "Account": "",
+        "General": "",
         "Session": "",
         "Total": "",
 

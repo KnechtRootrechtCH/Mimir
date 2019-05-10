@@ -2,7 +2,7 @@
     "meta": {
         "Author": "Aslain",
         "Language": "Polski",
-        "Version": "1.1"
+        "Version": "1.2"
     },
     "locale": {
         "Defeat!": "Przegrana!",
@@ -44,8 +44,11 @@
         "Vehicle Parameters": "Parametry czołgu",
         "Research": "Badania",
         "Statistics": "Statystyki",
+        "Account statistics": "Statystyki konta",
         "Statistics by Tank": "Statystyki czołgów",
+        "Vehicle statistics": "Statystyki pojazdu",
         "Account": "Konto",
+        "General": "Ogólny",
         "Session": "Sesja",
         "Total": "Ogółem",
         "Win rate:": "Wygrane:",

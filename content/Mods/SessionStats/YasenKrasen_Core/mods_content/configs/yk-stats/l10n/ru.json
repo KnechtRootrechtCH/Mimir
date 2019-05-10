@@ -2,7 +2,7 @@
     "meta": {
         "Author": "Draugd",
         "Language": "Pусский",
-        "Version": "1.1"
+        "Version": "1.2"
     },
     "locale": {
         "Defeat!": "Поражение!",
@@ -44,8 +44,11 @@
         "Vehicle Parameters": "Технические параметры",
         "Research": "Исследование",
         "Statistics": "Статистика",
+        "Account statistics": "Статистика аккаунта",
         "Statistics by Tank": "Статистика по танку",
+        "Vehicle statistics": "Статистика техники",
         "Account": "Аккаунт",
+        "General": "Основное",
         "Session": "Сессия",
         "Total": "Итого",
         "Win rate:": "Шанс на победу:",

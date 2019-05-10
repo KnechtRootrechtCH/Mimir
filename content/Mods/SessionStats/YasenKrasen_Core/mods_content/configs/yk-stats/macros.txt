@@ -29,7 +29,8 @@
     avgOriginalFreeXP        Average free xp received (premium excluded)                           totalOriginalFreeXP / battlesCount
     avgOriginalPremXP        Average original xp received (premium included)                       totalOriginalPremXP / battlesCount
     avgOriginalXP            Average original xp received (premium excluded)                       totalOriginalXP / battlesCount
-    avgPlace                 Average place in battles fought                                       totalPlace / battlesCount
+    avgPlace                 Average place by xp in battles fought                                 totalPlace / battlesCount
+    avgPlaceByDmg            Average place by damage in battles fought                             totalPlaceByDmg / battlesCount
     avgPotDmgRec             Average potential damage received                                     totalPotDmgRec / battlesCount
     avgService               Average service from battle                                           totalService / battlesCount
     avgShots                 Average number of shots                                               totalShots / battlesCount
@@ -57,11 +58,10 @@
     hitsRate                 Number of hits in percent                                             totalHits / totalShots * 100
     map                      Translated map name (Live Oaks)
     map-raw                  Original map system name (44_north_america)
-    moe                      Current Marks of Excellence percentage
-    moeDifference            Difference between MoE % before battle/session and current MoE %
     netCredits               Credits received from battles (services deducted)
     netGold                  Gold received from battles (ammunition & consumables deducted)
-    place                    Place in last battle
+    place                    Place in last battle by xp
+    placeByDmg               Place in last battle by damage
     rDAMAGE                  Average damage divided by expected damage (WN8)                       avgDmg / expDamage
     rDAMAGEc                 Sets the zero point for the damage (WN8)                              max(0,(rDAMAGE - 0.22) / (1 - 0.22))
     rDEF                     Average defence divided by expected defence (WN8)                     avgDef / expDef
@@ -108,28 +108,29 @@
     vehicle-long             Translated long vehicle name (M18 Hellcat)
     vehicle-raw              Original vehicle system name (usa-M18_Hellcat)
     vehicle-short            Translated short vehicle name (Hellcat)
-    wgrDifference            Difference between WGR before battle/session and current WGR
     winsCount                Number of wins
 
     BR                       vBAddict Battle Rating
+    MOE                      Current Marks of Excellence percentage
     EFF                      Efficiency rating
     XEFF                     Efficiency rating in XVM scale (0-100)
     WN8                      WN8 rating
     XWN8                     WN8 rating in XVM scale (0-100)
     WGR                      WG personal rating
     XWGR                     WG personal rating in XVM scale (0-100)
+    XTE                      Per-vehicle efficiency rating
 
     davgWinRate              Delta of average wins in percent
     dEFF                     Delta of Efficiency rating
+    dMOE                     Delta of current Marks of Excellence percentage
     dWN8                     Delta of WN8 rating
+    dWGR                     Delta of WG personal rating
+    dXTE                     Delta of per-vehicle efficiency rating
 
   Button macros for "statsTemplate" & "statsByTank" section:
     buttonStats              Button switch to general statistics
     buttonTanks              Button switch to by Tank statistics
     buttonReset              Button to reset statistics
-
-  Macros for "battleResultsWindow" section:
-    arenaStr                 Map and battle type
 
   Macros for "battleEndedMessage" section:
     credits                  Credits received from battle
@@ -182,6 +183,6 @@
     :1-20                    Align macro to the right with a fixed width 1-20 ({{netCredits:6}} will be displayed ' 1 540')
     :1-20.1f                 Align macro to the right with a fixed width 1-20 and one decimal ({{netCredits:10.1f}} will be displayed '   1 540.0')
     :1-20.2f                 Align macro to the right with a fixed width 1-20 and two decimal ({{netCredits:10.2f}} will be displayed '  1 540.00')
-    :+(format macro)         Used in front of above macros, adds + on positive value ({{moeDifference:+2f}} will be displayed '+1.00')
+    :+(format macro)         Used in front of above macros, adds + on positive value ({{dMOE:+2f}} will be displayed '+1.00')
     :-(format macro)         Used in front of above macros, adds - on positive value ({{autoEquipCost:-d}} will be displayed '-10 000')
                             *Note, for the alignment to work properly, you need to use a monospaced font with fixed width! (i.e. Courier New, Consolas or similar font)

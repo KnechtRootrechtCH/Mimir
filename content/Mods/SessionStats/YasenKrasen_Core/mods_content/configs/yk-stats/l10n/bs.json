@@ -2,7 +2,7 @@
     "meta": {
         "Author": "Dado_Ze",
         "Language": "Bosanski",
-        "Version": "1.1"
+        "Version": "1.2"
     },
     "locale": {
         "Defeat!": "Poraz!",
@@ -44,8 +44,11 @@
         "Vehicle Parameters": "Karakteristike Vozila",
         "Research": "Istraživanje",
         "Statistics": "Statistika",
+        "Account statistics": "Statistika naloga",
         "Statistics by Tank": "Statistika po Tenku",
+        "Vehicle statistics": "Statistika Vozila",
         "Account": "Nalog",
+        "General": "Generalno",
         "Session": "Sesija",
         "Total": "Ukupno",
         "Win rate:": "Stopa pobjeda:",
