@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Main configuration file (hereinafter - the configuration).
  *
  * Attention! Use \n as newline character instead of <br> tag
@@ -16,7 +16,7 @@
  * Для редактирования используйте Notepad++. https://kr.cm/f/t/1382/c/25815/
  * В случае блокнота Windows: Сохранить как -> Кодировка: UTF.
  */
- {
+{
   // Version of the config. Do not remove or change it unnecessarily.
   // Версия конфига. Не удаляйте и не изменяйте её без необходимости.
   "configVersion": "6.1.0",
@@ -58,15 +58,15 @@
 
     // Config last modified.
     // Дата последней модификации конфига.
-    "date": "06.05.2019",
+    "date": "23.05.2019",
 
     // Supported version of the game.
     // Поддерживаемая версия игры.
-    "gameVersion": "1.5.0.0",
+    "gameVersion": "1.5.0.4",
 
     // The minimum required version of the XVM mod.
     // Минимально необходимая версия мода XVM.
-    "modMinVersion": "7.9.0"
+    "modMinVersion": "7.9.3"
   },
 
   // Parameters for login screen.
