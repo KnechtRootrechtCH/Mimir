@@ -57,16 +57,17 @@
     // Ник игрока, видимый.
     "nickSquadman": {
       "$ref": { "path":"def.defaultItem" },
+      "textFormat": { "size": 6 },
       "x": 2,
       "y": -6,
       "flags": [ "squadman", "spotted", "alive" ],
-      "textFormat": { "size": 8 },
-      "format": "<font color='{{.minimap.labelsData.colors.txt.{{sys-color-key}}}}'><i>{{name%.7s~..}}</i></font>"
+      "format": "<font color='{{.minimap.labelsData.colors.txt.{{sys-color-key}}}}'><i>{{name%.10s~..}}</i></font>"
     },
     // Player nickname, visible, alternative mode.
     // Ник игрока, видимый, альтернативный режим.
     "nickAlternate": {
       "$ref": { "path": "def.nickSquadman" },
+      "textFormat": { "size": 6 },
       "flags": [ "ally", "enemy", "squadman", "teamKiller", "alive" ],
       "format": "<font color='{{c:r|#DBDBDB}}'>{{name%.10s~..}}</font>"
     },
