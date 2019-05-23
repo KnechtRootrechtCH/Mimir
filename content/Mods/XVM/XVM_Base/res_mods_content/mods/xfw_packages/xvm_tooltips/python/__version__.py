@@ -1,6 +1,6 @@
 # This file was created automatically from build script
 __xvm_version__ = '7.9.3-dev'
-__wot_version__ = '1.5.0.3'
-__revision__ = '9089'
+__wot_version__ = '1.5.0.4'
+__revision__ = '9100'
 __branch__ = 'default'
-__node__ = 'f2edd9b4d0c5bb1b7d308d3914043877e1b4d678'
+__node__ = 'b91985d562173f4a45ace8d42c222ca9c7d0ede8'
