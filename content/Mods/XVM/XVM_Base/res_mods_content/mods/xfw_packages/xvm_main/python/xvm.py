@@ -30,10 +30,10 @@ import dossier
 import minimap_circles
 import python_macro
 import reserve
-import test
 import topclans
 import wgutils
 import xvmapi
+import xvm_debug
 
 _LOG_COMMANDS = (
     XVM_COMMAND.LOAD_STAT_BATTLE,
@@ -190,7 +190,7 @@ class Xvm(object):
         BigWorld.callback(0, self.updateTankParams)
 
         if IS_DEVELOPMENT:
-            test.onHangarInit()
+            xvm_debug.onHangarInit()
 
     def hangarDispose(self):
         trace('hangarDispose')
@@ -340,7 +340,7 @@ class Xvm(object):
         config.token = config.XvmServicesToken.restore()
         config.token.updateTokenFromApi()
 
-        data = xvmapi.getVersionWithLimit(config.networkServicesSettings.topClansCountWgm, config.networkServicesSettings.topClansCountWsh)
+        data = xvmapi.getVersion(config.networkServicesSettings.topClansCountWgm, config.networkServicesSettings.topClansCountWsh)
         topclans.update(data)
         config.verinfo = config.XvmVersionInfo(data)
 
