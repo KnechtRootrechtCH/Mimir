@@ -175,6 +175,7 @@
     25 EPIC_RANDOM_TRAINING  Grand Battle Training
     26 EVENT_BATTLES_2       Event Battle (new)
     27 EPIC_BATTLE           Frontline
+    28 EPIC_BATTLE_TRAINING  Frontline Training
 
   Decimal places and right alignment of macros
     :d                       Macro without decimal ({{deathsRate:d}} will be displayed '63')

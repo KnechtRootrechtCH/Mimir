@@ -7,7 +7,7 @@
     "showPopUp": true,
     "battleType": [1],
     "clientReloadReset": false,
-    "dailyAutoReset": true,
+    "dailyAutoReset": false,
     "dailyAutoResetHour": 6,
     "showEachBattleResultsWindow": true,
     "statsIcon": "",
