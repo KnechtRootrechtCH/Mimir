@@ -216,9 +216,9 @@ def addHint(base, self):
         return
     base(self)
 
-@overrideMethod(SiegeIndicatorHintPlugin, '_SiegeIndicatorHintPlugin__updateHint')
-def updateHint(base, self):
-    if config.get('battle/battleHint/hideSiegeIndicator'):
+@overrideMethod(RadarHintPlugin, '_RadarHintPlugin__showHint')
+def showHint(base, self):
+    if config.get('battle/battleHint/hideRadarHint'):
         return
     base(self)
 
@@ -283,7 +283,8 @@ class Battle(object):
         if view and view.uniqueName in [VIEW_ALIAS.CLASSIC_BATTLE_PAGE,
                                         VIEW_ALIAS.EPIC_RANDOM_PAGE,
                                         VIEW_ALIAS.EPIC_BATTLE_PAGE,
-                                        VIEW_ALIAS.RANKED_BATTLE_PAGE]:
+                                        VIEW_ALIAS.RANKED_BATTLE_PAGE,
+                                        VIEW_ALIAS.BATTLE_ROYALE_PAGE]:
             self.battle_page = weakref.proxy(view)
 
     def onStartBattle(self):
