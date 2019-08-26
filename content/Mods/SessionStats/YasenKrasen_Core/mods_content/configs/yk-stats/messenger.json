@@ -1,0 +1,758 @@
+{
+    "htmlTemplatesSimple": {
+        "battleResultAchieves": {
+            "base": "<br/><font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/achieves): <font color='#D6D7D4'>%(achieves)s</font></font>",
+            "replace": "<br/><img src='img://gui/maps/icons/library/YasenKrasen/achievement.png' width='16' height='22' align='baseline' vspace='-8'/><font size='0' color='#929290'>_(#messenger:serviceChannelMessages/battleResults/achieves) </font><font color='#99CCFF'>%(achieves)s</font>"
+        },
+        "battleResultRankedProgress": {
+            "base": "<br/><font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/rankedProgress): <font color='#D6D7D4'>%(rankedProgress)s</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/rankedProgress): <font color='#D6D7D4'>%(rankedProgress)s</font></font>"
+        },
+        "battleResultRankedBonusBattles": {
+            "base": "<br/><font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/rankedBonusBattles): <font color='#D6D7D4'>%(rankedBonusBattles)s</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/rankedBonusBattles): <font color='#D6D7D4'>%(rankedBonusBattles)s</font></font>"
+        },
+        "battleResultCrystal": {
+            "base": "<br/><font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/crystal): <font color='#D6D7D4'>%(crystal)s</font></font>",
+            "replace": "<font color='#929290'> %(crystal)s</font>&nbsp;&nbsp;<img src='img://gui/maps/icons/library/YasenKrasen/crystal.png' width='16' height='16' align='baseline' vspace='-3'/>"
+        },
+        "piggyBank": {
+            "base": "<br/><font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/piggyBank): <font color='#D6D7D4'>%(credits)s</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/piggyBank): <font color='#D6D7D4'>%(credits)s</font></font>"
+        },
+        "battleResultLocks": {
+            "base": "<br/><font color='#8C8C7E'>_(#messenger:serviceChannelMessages/vehicleLock)</font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/vehicleLock)</font>"
+        },
+        "battleResultGold": {
+            "base": "<br/><font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/gold): <font color='#FFC363'>%(gold)s</font></font>",
+            "replace": "<br/><font color='#FFE769'>%(gold)s</font>&nbsp;&nbsp;<img src='img://gui/maps/icons/library/YasenKrasen/gold.png' width='16' height='16' align='baseline' vspace='-3'/>"
+        },
+        "battleQuests": {
+            "base": "<br/><font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/quests): </font>%(achieves)s",
+            "replace": "<br/><br/><font size='12' color='#D6D7D4'>_(#messenger:serviceChannelMessages/battleResults/quests): </font>%(achieves)s"
+        },
+        "battleQuestsSlots": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/quests/vehicleSlots): <font color='#D6D7D4'>%(slots)s</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/quests/vehicleSlots): <font color='#D6D7D4'>%(slots)s</font></font>"
+        },
+        "battleQuestsFreeXP": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/quests/freeXP): <font color='#D6D7D4'>%(freeXP)s</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/quests/freeXP): <font color='#D6D7D4'>%(freeXP)s</font></font>"
+        },
+        "battleQuestsCredits": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/quests/credits): <font color='#D6D7D4'>%(credits)s</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/quests/credits): <font color='#D6D7D4'>%(credits)s</font></font>"
+        },
+        "battleQuestsGold": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/quests/gold): <font color='#FFC363'>%(gold)s</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/quests/gold): <font color='#FFC363'>%(gold)s</font></font>"
+        },
+        "battleQuestsCrystal": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/quests/crystal): <font color='#C9C9B6'>%(crystal)s</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/quests/crystal): <font color='#C9C9B6'>%(crystal)s</font></font>"
+        },
+        "battleQuestsBerths": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/quests/berths): <font color='#D6D7D4'>%(berths)s</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/quests/berths): <font color='#D6D7D4'>%(berths)s</font></font>"
+        },
+        "battleQuestsPopUps": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/quests/achievements): <font color='#D6D7D4'>%(achievements)s</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/quests/achievements): <font color='#D6D7D4'>%(achievements)s</font></font>"
+        },
+        "battleQuestsPremium": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/quests/premium): <font color='#D6D7D4'>%(days)s</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/quests/premium): <font color='#FFE769'>%(days)s</font></font>"
+        },
+        "battleQuestsPremiumPlus": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/quests/premium_plus): <font color='#D6D7D4'>%(days)s</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/quests/premium_plus): <font color='#FFE769'>%(days)s</font></font>"
+        },
+        "battleQuestsItems": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/quests/items): <font color='#D6D7D4'>%(names)s</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/quests/items): <font color='#C5AB5D'>%(names)s</font></font>"
+        },
+        "battleQuestsFestivalTickets": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/quests/festivalTickets): <font color='#D6D7D4'>%(count)s</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/quests/festivalTickets): <font color='#D6D7D4'>%(count)s</font></font>"
+        },
+        "vehiclesAccruedQuestsReceived": {
+            "base": "<br/><font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/vehiclesAccrued): <font color='#D6D7D4'>%(vehicles)s</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/invoiceReceived/vehiclesAccrued): <font color='#C5AB5D'>%(vehicles)s</font></font>"
+        },
+        "vehiclesDebitedQuestsReceived": {
+            "base": "<br/><font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/vehiclesDebited): <font color='#D6D7D4'>%(vehicles)s</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/invoiceReceived/vehiclesDebited): <font color='#C5AB5D'>%(vehicles)s</font></font>"
+        },
+        "compensationForQuestsReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/compensation) %(items)s %(compensation)s</font>",
+            "replace": "<font color='#929290'>_(#messenger:serviceChannelMessages/invoiceReceived/compensation) %(items)s %(compensation)s</font>"
+        },
+        "goldCompensationQuestsReceived": {
+            "base": "<br/>_(#messenger:serviceChannelMessages/invoiceReceived/compensation/gold) <font color='#D6D7D4'>%(amount)s</font>",
+            "replace": "<br/>_(#messenger:serviceChannelMessages/invoiceReceived/compensation/gold) <font color='#FFE769'>%(amount)s</font>"
+        },
+        "creditsCompensationQuestsReceived": {
+            "base": "<br/>_(#messenger:serviceChannelMessages/invoiceReceived/compensation/credits) <font color='#D6D7D4'>%(amount)s</font>",
+            "replace": "<br/>_(#messenger:serviceChannelMessages/invoiceReceived/compensation/credits) <font color='#FFFFFF'>%(amount)s</font>"
+        },
+        "goldAccruedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/goldAccrued): <font color='#8C8C7E'><b>%(amount)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/goldAccrued): <font color='#FFE769'>%(amount)s</font></font>"
+        },
+        "goldDebitedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/goldDebited): <font color='#8C8C7E'><b>%(amount)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/goldDebited): <font color='#FFE769'>%(amount)s</font></font>"
+        },
+        "creditsAccruedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/creditsAccrued): <font color='#8C8C7E'><b>%(amount)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/creditsAccrued): <font color='#FFFFFF'>%(amount)s</font></font>"
+        },
+        "creditsDebitedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/creditsDebited): <font color='#8C8C7E'><b>%(amount)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/creditsDebited): <font color='#FFFFFF'>%(amount)s</font></font>"
+        },
+        "crystalAccruedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/crystalAccrued): <font color='#8C8C7E'><b>%(amount)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/crystalAccrued): <font color='#E2D2A2'>%(amount)s</font></font>"
+        },
+        "crystalDebitedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/crystalDebited): <font color='#8C8C7E'><b>%(amount)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/crystalDebited): <font color='#E2D2A2'>%(amount)s</font></font>"
+        },
+        "premiumAccruedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/premiumAccrued): <font color='#8C8C7E'><b>%(amount)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/premiumAccrued): <font color='#E2D2A2'><b>%(amount)s</b></font></font>"
+        },
+        "premiumDebitedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/premiumDebited): <font color='#8C8C7E'><b>%(amount)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/premiumDebited): <font color='#E2D2A2'><b>%(amount)s</b></font></font>"
+        },
+        "tankPremiumAccruedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/tankPremiumAccrued): <font color='#8C8C7E'><b>%(amount)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/tankPremiumAccrued): <font color='#E2D2A2'><b>%(amount)s</b></font></font>"
+        },
+        "tankPremiumDebitedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/tankPremiumDebited): <font color='#8C8C7E'><b>%(amount)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/tankPremiumDebited): <font color='#E2D2A2'><b>%(amount)s</b></font></font>"
+        },
+        "freeXpAccruedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/freeXpAccrued): <font color='#8C8C7E'><b>%(amount)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/freeXpAccrued): <font color='#ECBF7B'><b>%(amount)s</b></font></font>"
+        },
+        "freeXpDebitedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/freeXpDebited): <font color='#8C8C7E'><b>%(amount)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/freeXpDebited): <font color='#ECBF7B'><b>%(amount)s</b></font></font>"
+        },
+        "itemsAccruedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/itemsAccrued): <font color='#8C8C7E'><b>%(items)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/itemsAccrued): <font color='#E2D2A2'><b>%(items)s</b></font></font>"
+        },
+        "itemsDebitedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/itemsDebited): <font color='#8C8C7E'><b>%(items)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/itemsDebited): <font color='#E2D2A2'><b>%(items)s</b></font></font>"
+        },
+        "vehiclesAccruedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/vehiclesAccrued): <font color='#8C8C7E'><b>%(vehicles)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/vehiclesAccrued): <font color='#E2D2A2'><b>%(vehicles)s</b></font></font>"
+        },
+        "vehiclesDebitedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/vehiclesDebited): <font color='#8C8C7E'><b>%(vehicles)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/vehiclesDebited): <font color='#E2D2A2'><b>%(vehicles)s</b></font></font>"
+        },
+        "compensationForInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/compensation) <b>%(items)s</b> %(compensation)s</font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/compensation) <b>%(items)s</b> %(compensation)s</font>"
+        },
+        "tankmenInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/tankmen): <font color='#8C8C7E'><b>%(tankman)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/tankmen): <font color='#E2D2A2'><b>%(tankman)s</b></font></font>"
+        },
+        "boostersInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/boosters): <font color='#8C8C7E'><b>%(boosters)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/boosters): <font color='#E2D2A2'><b>%(boosters)s</b></font></font>"
+        },
+        "slotsAccruedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/slotsAccrued): <font color='#8C8C7E'><b>%(amount)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/slotsAccrued): <font color='#E2D2A2'><b>%(amount)s</b></font></font>"
+        },
+        "slotsDebitedInvoiceReceived": {
+            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/slotsDebited): <font color='#8C8C7E'><b>%(amount)s</b></font></font>",
+            "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/invoiceReceived/slotsDebited): <font color='#E2D2A2'><b>%(amount)s</b></font></font>"
+        },
+        "prebattleOpponents": {
+            "base": "<br/><font color='#8C8C7E'><font color='#8C8C7E'>%(first)s</font> vs. <font color='#8C8C7E'>%(second)s</font></font>",
+            "replace": "<br/><font color='#929290'><font color='#D6D7D4'>%(first)s</font> vs. <font color='#D6D7D4'>%(second)s</font></font>"
+        },
+        "prebattleSubtotal": {
+            "base": "<br/><font color='#8C8C7E'>_(#messenger:serviceChannelMessages/prebattle/subtotal): <font color='#8C8C7E'>%(first)d:%(second)d</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/prebattle/subtotal): <font color='#D6D7D4'>%(first)d:%(second)d</font></font>"
+        },
+        "prebattleTotal": {
+            "base": "<br/><font color='#8C8C7E'>_(#messenger:serviceChannelMessages/prebattle/total): <font color='#8C8C7E'>%(result)s (%(first)d:%(second)d)</font></font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/prebattle/total): <font color='#D6D7D4'>%(result)s (%(first)d:%(second)d)</font></font>"
+        }
+    },
+    "htmlTemplates": {
+        "serverReboot": {
+            "message": {
+                "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/serverReboot)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/serverReboot)</font>"
+            }
+        },
+        "serverRebootCancelled": {
+            "message": {
+                "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/serverRebootCancelled)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/serverRebootCancelled)</font>"
+            }
+        },
+        "adminMessage": {
+            "message": {
+                "base": "<font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#E2D2A2'>%(text)s</font>"
+            }
+        },
+        "battleVictoryResult": {
+            "type": {
+                "base": "battleResult",
+                "replace": "black"
+            },
+            "icon": {
+                "base": "BattleResultIcon",
+                "replace": "TournamentBattleResultIcon"
+            },
+            "message": {
+                "base": "<font face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/battleResults/victory)!</font>\n<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/battle): %(arenaName)s </font>\n<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/tanks): %(vehicleNames)s</font>\n<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/experience): <font color='#C8C8B5'>%(xp)s</font>%(xpEx)s</font>%(crystalStr)s%(gold)s\n<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/credits): <font color='#C5CFCF'>%(credits)s</font>%(creditsEx)s</font>%(rankedProgress)s%(rankedBonusBattles)s%(achieves)s%(lock)s%(quests)s",
+                "replace": "<font size='14' color='#66CC66'>_(#messenger:serviceChannelMessages/battleResults/victory)</font><br/><TEXTFORMAT INDENT='1'><font size='12' color='#A3966E'>%(arenaName)s</font> <br/><font size='12' color='#C5AB5D'>%(vehicleNames)s</font><img src='img://gui/maps/icons/library/YasenKrasen/Tanks/{{vehicle-raw}}.png' width='43' height='12' align='baseline' vspace='-3'/><br/><font size='12' color='#928A75'><b>%(xp)s</b></font>&nbsp;<img src='img://gui/maps/icons/library/YasenKrasen/xp.png' width='16' height='16' align='baseline' vspace='-3'/><font size='12'>%(xpEx)s </font><font size='12' color='#FFFFFF'><b> %(credits)s</b></font>&nbsp;<img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'/><font size='12' color='#929290'>%(creditsEx)s</font><font size='12'><b>%(crystalStr)s</b></font><font size='12'>%(gold)s</font><font size='12'>%(rankedProgress)s</font><font size='12'>%(rankedBonusBattles)s</font><font size='12'>%(achieves)s</font><font size='12'>%(lock)s</font><font size='12'>%(quests)s</font></TEXTFORMAT>"
+            }
+        },
+        "battleDrawGameResult": {
+            "type": {
+                "base": "battleResult",
+                "replace": "black"
+            },
+            "icon": {
+                "base": "BattleResultIcon",
+                "replace": "ClanBattleResultIcon"
+            },
+            "message": {
+                "base": "<font face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/battleResults/drawGame)</font>\n<font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/battle): %(arenaName)s </font>\n<font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/tanks): %(vehicleNames)s</font>\n<font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/experience): <font color='#C8C8B5'>%(xp)s</font>%(xpEx)s</font>%(crystalStr)s%(gold)s\n<font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/credits): <font color='#C5CFCF'>%(credits)s</font>%(creditsEx)s</font>%(rankedProgress)s%(rankedBonusBattles)s%(achieves)s%(lock)s%(quests)s",
+                "replace": "<font size='14' color='#FFCC00'>_(#messenger:serviceChannelMessages/battleResults/drawGame)</font><br/><TEXTFORMAT INDENT='1'><font size='12' color='#A3966E'>%(arenaName)s</font> <br/><font size='12' color='#C5AB5D'>%(vehicleNames)s</font><img src='img://gui/maps/icons/library/YasenKrasen/Tanks/{{vehicle-raw}}.png' width='43' height='12' align='baseline' vspace='-3'/><br/><font size='12' color='#928A75'><b>%(xp)s</b></font>&nbsp;<img src='img://gui/maps/icons/library/YasenKrasen/xp.png' width='16' height='16' align='baseline' vspace='-3'/><font size='12'>%(xpEx)s </font><font size='12' color='#FFFFFF'><b> %(credits)s</b></font>&nbsp;<img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'/><font size='12' color='#929290'>%(creditsEx)s</font><font size='12'><b>%(crystalStr)s</b></font><font size='12'>%(gold)s</font><font size='12'>%(rankedProgress)s</font><font size='12'>%(rankedBonusBattles)s</font><font size='12'>%(achieves)s</font><font size='12'>%(lock)s</font><font size='12'>%(quests)s</font></TEXTFORMAT>"
+            }
+        },
+        "battleDefeatResult": {
+            "type": {
+                "base": "battleResult",
+                "replace": "black"
+            },
+            "message": {
+                "base": "<font face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/battleResults/defeat)</font>\n<font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/battle): %(arenaName)s </font>\n<font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/tanks): %(vehicleNames)s</font>\n<font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/experience): <font color='#C8C8B5'>%(xp)s</font>%(xpEx)s</font>%(crystalStr)s%(gold)s\n<font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/credits): <font color='#C5CFCF'>%(credits)s</font>%(creditsEx)s</font>%(rankedProgress)s%(rankedBonusBattles)s%(achieves)s%(lock)s%(quests)s%(piggyBank)s",
+                "replace": "<font size='14' color='#F02828'>_(#messenger:serviceChannelMessages/battleResults/defeat)</font><br/><TEXTFORMAT INDENT='1'><font size='12' color='#A3966E'>%(arenaName)s</font> <br/><font size='12' color='#C5AB5D'>%(vehicleNames)s</font><img src='img://gui/maps/icons/library/YasenKrasen/Tanks/{{vehicle-raw}}.png' width='43' height='12' align='baseline' vspace='-3'/><br/><font size='12' color='#928A75'><b>%(xp)s</b></font>&nbsp;<img src='img://gui/maps/icons/library/YasenKrasen/xp.png' width='16' height='16' align='baseline' vspace='-3'/><font size='12'>%(xpEx)s </font><font size='12' color='#FFFFFF'><b> %(credits)s</b></font>&nbsp;<img src='img://gui/maps/icons/library/YasenKrasen/credits.png' width='16' height='16' align='baseline' vspace='-4'/><font size='12' color='#929290'>%(creditsEx)s</font><font size='12'><b>%(crystalStr)s</b></font><font size='12'>%(gold)s</font><font size='12'>%(rankedProgress)s</font><font size='12'>%(rankedBonusBattles)s</font><font size='12'>%(achieves)s</font><font size='12'>%(lock)s</font><font size='12'>%(quests)s</font><font size='12'>%(piggyBank)s</font></TEXTFORMAT>"
+            }
+        },
+        "battleTutorialResBonuses": {
+            "type": {
+                "base": "battleResult",
+                "replace": "grey"
+            }
+        },
+        "battleTutorialResWoBonuses": {
+            "type": {
+                "base": "battleResult",
+                "replace": "grey"
+            }
+        },
+        "currencyUpdate": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/currencyUpdate/financial_transaction).</font>\n<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/currencyUpdate/date):</font> <font color='#8C8C7E'>%(date)s</font>\n<font color='#8C8C7E'>%(currency)s:</font> %(amount)s",
+                "replace": "<font color='#E2D2A2'><b>_(#messenger:serviceChannelMessages/currencyUpdate/financial_transaction).</b></font>\n<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/currencyUpdate/date):</font> <font color='#E2D2A2'>%(date)s</font>\n<font color='#E2D2A2'>%(currency)s:</font> %(amount)s"
+            }
+        },
+        "achievementReceived": {
+            "message": {
+                "base": "<font face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/achievementReceived/message):</font>\n<font color='#8C8C7E'>%(achieves)s</font>.",
+                "replace": "<font color='#E2D2A2'><b>_(#messenger:serviceChannelMessages/achievementReceived/message):</b></font>\n<font color='#D6D7D4'>%(achieves)s</font>."
+            }
+        },
+        "goldInvoiceReceived": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            }
+        },
+        "crystalInvoiceReceived": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            }
+        },
+        "creditsInvoiceReceived": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            }
+        },
+        "premiumInvoiceReceived": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "icon": {
+                "base": "PremAccIcon",
+                "replace": "GoldIcon"
+            },
+            "message": {
+                "base": "<font face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/invoiceReceived/premium_account)</font>\n<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/currencyUpdate/date):</font> <font color='#8C8C7E'>%(at)s</font>%(desc)s\n%(op)s",
+                "replace": "<font color='#E2D2A2'><b>_(#messenger:serviceChannelMessages/invoiceReceived/premium_account)</b></font>\n<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/currencyUpdate/date):</font> <font color='#E2D2A2'>%(at)s</font>%(desc)s\n%(op)s"
+            }
+        },
+        "freeXpInvoiceReceived": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/invoiceReceived/freeXp).</font>\n<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/currencyUpdate/date):</font> <font color='#8C8C7E'>%(at)s</font>%(desc)s\n%(op)s",
+                "replace": "<font color='#E2D2A2'><b>_(#messenger:serviceChannelMessages/invoiceReceived/freeXp).</b></font>\n<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/currencyUpdate/date):</font> <font color='#E2D2A2'>%(at)s</font>%(desc)s\n%(op)s"
+            }
+        },
+        "dataInvoiceReceived": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\"'>_(#messenger:serviceChannelMessages/invoiceReceived/invoice)</font>\n<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/currencyUpdate/date):</font> <font color='#8C8C7E'>%(at)s</font>%(desc)s\n%(op)s",
+                "replace": "<font color='#E2D2A2'><b>_(#messenger:serviceChannelMessages/invoiceReceived/invoice).</b></font>\n<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/currencyUpdate/date):</font> <font color='#E2D2A2'>%(at)s</font>%(desc)s\n%(op)s"
+            }
+        },
+        "durationOfPremiumAccountExpires": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color=\"#8C8C7E\">_(#messenger:serviceChannelMessages/durationOfPremiumAccounExpires)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/durationOfPremiumAccounExpires)</font>"
+            }
+        },
+        "premiumBought": {
+            "icon": {
+                "base": "InformationIcon",
+                "replace": "MessageIcon"
+            },
+            "message": {
+                "base": "<font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#E2D2A2'>%(text)s</font>"
+            }
+        },
+        "premiumExtended": {
+            "message": {
+                "base": "<font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#E2D2A2'>%(text)s</font>"
+            }
+        },
+        "premiumExpired": {
+            "message": {
+                "base": "<font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#E2D2A2'>%(text)s</font>"
+            }
+        },
+        "accountTypeChanged": {
+            "message": {
+                "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/accountTypeChanged)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/accountTypeChanged)</font>"
+            }
+        },
+        "accountTypeChangedWithExpiration": {
+            "message": {
+                "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/accountTypeChangedWithExpiration)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/accountTypeChangedWithExpiration)</font>"
+            }
+        },
+        "creditsAndGoldReceivedAsGift": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/creditsAndGoldReceivedAsGift)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/creditsAndGoldReceivedAsGift)</font>"
+            }
+        },
+        "creditsReceivedAsGift": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/creditsReceivedAsGift)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/creditsReceivedAsGift)</font>"
+            }
+        },
+        "goldReceivedAsGift": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/goldReceivedAsGift)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/goldReceivedAsGift)</font>"
+            }
+        },
+        "xpReceivedAsGift": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/xpReceivedAsGift)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/xpReceivedAsGift)</font>"
+            }
+        },
+        "premiumReceivedAsGift": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/premiumReceivedAsGift)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/premiumReceivedAsGift)</font>"
+            }
+        },
+        "tankPremiumReceivedAsGift": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/tankPremiumReceivedAsGift)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/tankPremiumReceivedAsGift)</font>"
+            }
+        },
+        "itemReceivedAsGift": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/itemReceivedAsGift)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/itemReceivedAsGift)</font>"
+            }
+        },
+        "vehicleReceivedAsGift": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/vehicleReceivedAsGift)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/vehicleReceivedAsGift)</font>"
+            }
+        },
+        "waresBoughtAsGold": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/waresBoughtAsGold)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/waresBoughtAsGold)</font>"
+            }
+        },
+        "waresSoldAsGold": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/waresSoldAsGold)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/waresSoldAsGold)</font>"
+            }
+        },
+        "vehicleLockExpired": {
+            "type": {
+                "base": "red",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/vehicleLockExpired)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/vehicleLockExpired)</font>"
+            }
+        },
+        "vehiclesAllLockExpired": {
+            "type": {
+                "base": "red",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/vehiclesAllLockExpired)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/vehiclesAllLockExpired)</font>"
+            }
+        },
+        "prebattleKick": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color='#8C8C7E'>%(type)s %(reason)s</font>",
+                "replace": "<font color='#E2D2A2'>%(type)s %(reason)s</font>"
+            }
+        },
+        "vehCamouflageTimedOut": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color=\"#8C8C7E\">_(#messenger:serviceChannelMessages/vehCamouflageTimedOut)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/vehCamouflageTimedOut)</font>"
+            }
+        },
+        "vehEmblemTimedOut": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "icon": {
+                "base": "WarningIcon",
+                "replace": "ErrorIcon"
+            },
+            "message": {
+                "base": "<font color=\"#8C8C7E\">_(#messenger:serviceChannelMessages/vehEmblemTimedOut)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/vehEmblemTimedOut)</font>"
+            }
+        },
+        "vehInscriptionTimedOut": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color=\"#8C8C7E\">_(#messenger:serviceChannelMessages/vehInscriptionTimedOut)</font>",
+                "replace": "<font color='#E2D2A2'>_(#messenger:serviceChannelMessages/vehInscriptionTimedOut)</font>"
+            }
+        },
+        "ErrorSysMessage": {
+            "type": {
+                "base": "red",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/sysMsg/titles/error)</font><br/><font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#D13E3E'>_(#messenger:serviceChannelMessages/sysMsg/titles/error)</font><font color='#E2D2A2'>%(text)s</font>"
+            }
+        },
+        "WarningSysMessage": {
+            "message": {
+                "base": "<font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#E2D2A2'>%(text)s</font>"
+            }
+        },
+        "GameGreetingSysMessage": {
+            "type": {
+                "base": "lightGrey",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font size='13' color='#E2D2A2'>%(text)s</font>"
+            }
+        },
+        "PowerLevelSysMessage": {
+            "type": {
+                "base": "green",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/sysMsg/titles/powerlevel)</font><br/><font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#88994C'>_(#messenger:serviceChannelMessages/sysMsg/titles/powerlevel)</font><font color='#E2D2A2'>%(text)s</font>"
+            }
+        },
+        "PurchaseForCreditsSysMessage": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font  face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/sysMsg/titles/purchase)</font><br/><font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#929292'>_(#messenger:serviceChannelMessages/sysMsg/titles/purchase)</font><font color='#FFFFFF'> %(text)s</font>"
+            }
+        },
+        "PurchaseForFestTicketsSysMessage": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font  face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/sysMsg/titles/purchase)</font><br/><font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#929292'>_(#messenger:serviceChannelMessages/sysMsg/titles/purchase)</font><font color='#E2D2A2'> %(text)s</font>"
+            }
+        },
+        "PurchaseForGoldSysMessage": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font  face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/sysMsg/titles/purchase)</font><br/><font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#929292'>_(#messenger:serviceChannelMessages/sysMsg/titles/purchase)</font><font color='#FFE769'> %(text)s</font>"
+            }
+        },
+        "PurchaseForCrystalSysMessage": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font  face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/sysMsg/titles/purchase)</font><br/><font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#929292'>_(#messenger:serviceChannelMessages/sysMsg/titles/purchase)</font><font color='#E2D2A2'> %(text)s</font>"
+            }
+        },
+        "DismantlingForGoldSysMessage": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font  face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/sysMsg/titles/dismantling)</font><br/><font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#929292'>_(#messenger:serviceChannelMessages/sysMsg/titles/dismantling)</font><font color='#FFE769'> %(text)s</font>"
+            }
+        },
+        "DismantlingForCreditsSysMessage": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font  face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/sysMsg/titles/dismantling)</font><br/><font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#929292'>_(#messenger:serviceChannelMessages/sysMsg/titles/dismantling)</font><font color='#FFFFFF'> %(text)s</font>"
+            }
+        },
+        "DismantlingForCrystalSysMessage": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font  face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/sysMsg/titles/dismantling)</font><br/><font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#929292'>_(#messenger:serviceChannelMessages/sysMsg/titles/dismantling)</font><font color='#E2D2A2'> %(text)s</font>"
+            }
+        },
+        "SellingSysMessage": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font  face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/sysMsg/titles/selling)</font><br/><font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#929292'>_(#messenger:serviceChannelMessages/sysMsg/titles/selling)</font><font color='#FFFFFF'> %(text)s</font>"
+            }
+        },
+        "RepairSysMessage": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font  face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/sysMsg/titles/repair)</font><br/><font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#929292'>_(#messenger:serviceChannelMessages/sysMsg/titles/repair)</font><font color='#FFFFFF'> %(text)s</font>"
+            }
+        },
+        "FinancialTransactionWithCreditsSysMessage": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font  face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/sysMsg/titles/financialTransaction)</font><br/><font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#929292'>_(#messenger:serviceChannelMessages/sysMsg/titles/financialTransaction)</font><font color='#FFFFFF'> %(text)s</font>"
+            }
+        },
+        "FinancialTransactionWithGoldSysMessage": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/sysMsg/titles/financialTransaction)</font><br/><font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#929292'>_(#messenger:serviceChannelMessages/sysMsg/titles/financialTransaction)</font><font color='#FFE769'> %(text)s</font>"
+            }
+        },
+        "CustomizationForGoldSysMessage": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/sysMsg/titles/customization)</font><br/><font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#929292'>_(#messenger:serviceChannelMessages/sysMsg/titles/customization)</font><font color='#929290'> %(text)s </font>"
+            }
+        },
+        "CustomizationForCreditsSysMessage": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\"'>_(#messenger:serviceChannelMessages/sysMsg/titles/customization)</font><br/><font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#929292'>_(#messenger:serviceChannelMessages/sysMsg/titles/customization)</font><font color='#929290'> %(text)s </font>"
+            }
+        },
+        "PrimeTimeSysMessage": {
+            "message": {
+                "base": "<font face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\"'>_(#messenger:serviceChannelMessages/sysMsg/titles/primeTime)</font><br/><font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#929292'>_(#messenger:serviceChannelMessages/sysMsg/titles/primeTime)</font><font color='#929290'> %(text)s </font>"
+            }
+        },
+        "AOGASNotify": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#E2D2A2'>%(text)s</font>"
+            }
+        },
+        "ConverterNotify": {
+            "type": {
+                "base": "yellow",
+                "replace": "grey"
+            },
+            "message": {
+                "base": "<font face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/sysMsg/converter/title)</font><br/><font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#C5AB5D'>_(#messenger:serviceChannelMessages/sysMsg/converter/title)</font><br/><font color='#E2D2A2'>%(text)s</font>"
+            }
+        },
+        "actionBegin": {
+            "type": {
+                "base": "action",
+                "replace": "grey"
+            }
+        },
+        "actionEnd": {
+            "type": {
+                "base": "action",
+                "replace": "grey"
+            }
+        },
+        "serverDowntimeCompensation": {
+            "message": {
+                "base": "<font color='#8C8C7E'>%(text)s</font>",
+                "replace": "<font color='#E2D2A2'>%(text)s</font>"
+            }
+        },
+        "tokenQuests": {
+            "type": {
+                "base": "battleResult",
+                "replace": "grey"
+            }
+        }
+    }
+}

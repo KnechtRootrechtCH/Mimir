@@ -176,6 +176,8 @@
     26 EVENT_BATTLES_2       Event Battle (new)
     27 EPIC_BATTLE           Frontline
     28 EPIC_BATTLE_TRAINING  Frontline Training
+    29 BATTLE_ROYALE_SOLO    Steel Hunter Solo
+    30 BATTLE_ROYALE_SQUAD   Steel Hunter Platoon
 
   Decimal places and right alignment of macros
     :d                       Macro without decimal ({{deathsRate:d}} will be displayed '63')
