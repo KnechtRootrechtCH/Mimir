@@ -50,7 +50,8 @@ import xmqp_events
 
 NOT_SUPPORTED_BATTLE_TYPES = [constants.ARENA_GUI_TYPE.TUTORIAL,
                            constants.ARENA_GUI_TYPE.EVENT_BATTLES,
-                           constants.ARENA_GUI_TYPE.BOOTCAMP]
+                           constants.ARENA_GUI_TYPE.BOOTCAMP,
+                           constants.ARENA_GUI_TYPE.BATTLE_ROYALE]
 
 #####################################################################
 # initialization/finalization
@@ -216,9 +217,9 @@ def addHint(base, self):
         return
     base(self)
 
-@overrideMethod(RadarHintPlugin, '_RadarHintPlugin__showHint')
-def showHint(base, self):
-    if config.get('battle/battleHint/hideRadarHint'):
+@overrideMethod(SiegeIndicatorHintPlugin, '_SiegeIndicatorHintPlugin__updateHint')
+def updateHint(base, self):
+    if config.get('battle/battleHint/hideSiegeIndicator'):
         return
     base(self)
 
@@ -234,8 +235,8 @@ def canDisplayHelpHint(base, self, typeDescriptor):
         return False
     base(self, typeDescriptor)
 
-@overrideMethod(RadarHintPlugin, '_RadarHintPlugin__updateHint')
-def updateHint(base, self):
+@overrideMethod(RadarHintPlugin, '_RadarHintPlugin__showHint')
+def showHint(base, self):
     if config.get('battle/battleHint/hideRadarHint'):
         return
     base(self)
