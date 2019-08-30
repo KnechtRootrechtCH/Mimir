@@ -44,7 +44,7 @@
       "x": 2,
       "y": "{{squad?7|-1}}",
       "flags": [ "ally", "enemy", "squadman", "teamKiller", "spotted", "alive" ],
-      "textFormat": { "size": 8 },
+      "textFormat": { "size": 6 },
       "format": "<font color='{{.minimap.labelsData.colors.txt.{{sys-color-key}}}}'>{{vehicle}}</font>"
     },
     // Vehicle name, visible, alternative mode.
@@ -60,7 +60,7 @@
       "x": 2,
       "y": -1,
       "flags": [ "squadman", "spotted", "alive" ],
-      "textFormat": { "size": 8 },
+      "textFormat": { "size": 6 },
       "format": "<font color='{{.minimap.labelsData.colors.txt.{{sys-color-key}}}}'><i>{{name%.7s~..}}</i></font>"
     },
     // Player nickname, visible, alternative mode.
@@ -101,7 +101,7 @@
       "alpha": 85,
       "flags": [ "ally", "enemy", "squadman", "teamKiller", "lost", "alive" ],
       "layer": "bottom",
-      "textFormat": { "size": 8 },
+      "textFormat": { "size": 6 },
       "format": "<font color='{{.minimap.labelsData.colors.txt.{{sys-color-key}}}}'><i>{{vehicle}}</i></font>"
     },
     // Player nickname, missing.
@@ -113,7 +113,7 @@
       "alpha": 85,
       "flags": [ "squadman", "lost", "alive" ],
       "layer": "bottom",
-      "textFormat": { "size": 8 },
+      "textFormat": { "size": 6 },
       "format": "<font color='{{.minimap.labelsData.colors.txt.{{sys-color-key}}}}'><i>{{name%.7s~..}}</i></font>"
     },
     // Vehicle type, dead.
@@ -125,7 +125,7 @@
       "valign": "center",
       "flags": [ "ally", "enemy", "squadman", "teamKiller", "dead" ],
       "layer": "substrate",
-      "textFormat": { "font": "xvm", "size": 8, "align": "center", "valign": "center" },
+      "textFormat": { "font": "xvm", "size": 6, "align": "center", "valign": "center" },
       "format": "<font color='{{.minimap.labelsData.colors.lostDot.{{sys-color-key}}}}'>&#x44;</font>",
       "shadow": { "$ref": { "path":"def.defaultItem.shadow" }, "strength": 3 }
     },
@@ -138,7 +138,7 @@
       "alpha": 85,
       "flags": [ "squadman", "dead" ],
       "layer": "substrate",
-      "textFormat": { "size": 8 },
+      "textFormat": { "size": 6 },
       "format": "<font color='{{.minimap.labelsData.colors.txt.{{sys-color-key}}}}'>{{vehicle}}</font>"
     },
     // Player nickname, dead.
@@ -149,7 +149,7 @@
       "y": -9,
       "flags": [ "squadman", "dead" ],
       "layer": "substrate",
-      "textFormat": { "size": 8 },
+      "textFormat": { "size": 6 },
       "format": "<font color='{{.minimap.labelsData.colors.txt.{{sys-color-key}}}}'><i>{{name%.7s~..}}</i></font>",
       "shadow": { "$ref": { "path":"def.defaultItem.shadow" }, "strength": 3 }
     }
