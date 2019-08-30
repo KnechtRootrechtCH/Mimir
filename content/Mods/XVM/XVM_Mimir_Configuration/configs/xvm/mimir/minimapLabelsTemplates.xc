@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Minimap labels.
  * Надписи на миникарте.
  */
@@ -42,34 +42,33 @@
     "vehicleSpotted": {
       "$ref": { "path":"def.defaultItem" },
       "x": 2,
-      "y": "-1",
+      "y": "{{squad?7|-1}}",
       "flags": [ "ally", "enemy", "squadman", "teamKiller", "spotted", "alive" ],
-      "textFormat": { "size": 6 },
+      "textFormat": { "size": 8 },
       "format": "<font color='{{.minimap.labelsData.colors.txt.{{sys-color-key}}}}'>{{vehicle}}</font>"
     },
     // Vehicle name, visible, alternative mode.
     // Название техники, видимый, альтернативный режим.
-    "vehicleSpottedCompany": {
+    "vehicleSpottedAlt": {
       "$ref": { "path":"def.vehicleSpotted" },
       "y": "{{ally?{{battletype?7|{{squad?7|-1}}}}|-1}}"
     },
     // Player nickname, visible.
     // Ник игрока, видимый.
-    "nickSquadman": {
+    "nickSpotted": {
       "$ref": { "path":"def.defaultItem" },
-      "textFormat": { "size": 6 },
       "x": 2,
-      "y": -6,
+      "y": -1,
       "flags": [ "squadman", "spotted", "alive" ],
-      "format": "<font color='{{.minimap.labelsData.colors.txt.{{sys-color-key}}}}'><i>{{name%.10s~..}}</i></font>"
+      "textFormat": { "size": 8 },
+      "format": "<font color='{{.minimap.labelsData.colors.txt.{{sys-color-key}}}}'><i>{{name%.7s~..}}</i></font>"
     },
     // Player nickname, visible, alternative mode.
     // Ник игрока, видимый, альтернативный режим.
-    "nickAlternate": {
-      "$ref": { "path": "def.nickSquadman" },
-      "textFormat": { "size": 6 },
-      "flags": [ "ally", "enemy", "squadman", "teamKiller", "alive" ],
-      "format": "<font color='{{c:r|#DBDBDB}}'>{{name%.10s~..}}</font>"
+    "nickSpottedAlt": {
+      "$ref": { "path": "def.nickSpotted" },
+      "flags": [ "ally", "squadman", "teamKiller", "spotted", "alive" ],
+      "format": "<font size='{{battletype?8|{{squad?8|0}}}}' color='{{squad?{{.minimap.labelsData.colors.txt.{{sys-color-key}}}}|{{tk?{{.minimap.labelsData.colors.txt.{{sys-color-key}}}}|#BFBFBF}}}}'><i>{{name%.7s~..}}</i></font>"
     },
     // XMQP event marker.
     // Маркер события XMQP.
@@ -102,7 +101,7 @@
       "alpha": 85,
       "flags": [ "ally", "enemy", "squadman", "teamKiller", "lost", "alive" ],
       "layer": "bottom",
-      "textFormat": { "size": 6 },
+      "textFormat": { "size": 8 },
       "format": "<font color='{{.minimap.labelsData.colors.txt.{{sys-color-key}}}}'><i>{{vehicle}}</i></font>"
     },
     // Player nickname, missing.
@@ -153,17 +152,6 @@
       "textFormat": { "size": 8 },
       "format": "<font color='{{.minimap.labelsData.colors.txt.{{sys-color-key}}}}'><i>{{name%.7s~..}}</i></font>",
       "shadow": { "$ref": { "path":"def.defaultItem.shadow" }, "strength": 3 }
-    },
-    // Squad, visible
-    // Взвод, видимый
-    "squadSpotted": {
-      "$ref": { "path":"def.defaultItem" },
-      "flags": [ "ally", "enemy", "teamKiller", "spotted", "alive" ],
-      "x": 0,
-      "y": 0,
-      "align": "center",
-      "textFormat": { "align": "center" },
-      "format": "<img src='cfg://mimir/img/platoon/{{squad-num?{{tk?tk|{{ally?al|en}}}}{{squad-num}}|none}}.png' width='7' height='9'>"
     }
   }
 }
