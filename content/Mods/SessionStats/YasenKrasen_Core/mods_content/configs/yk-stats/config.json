@@ -58,7 +58,7 @@
                 "<textformat tabstops='[32,100,132]'><font size='13' color='#FFE6B3'>WGR:\t<font color='{{g:XWGR}}'>{{WGR}}</font> (<font color='{{g:XWGR}}'>{{XWGR}}</font>)\tDelta:\t<font color='{{c:dWGR}}'>{{dWGR:+d}}</font></font></textformat>",
                 "<textformat tabstops='[32,100]'><font size='13' color='#FFE6B3'>CMB:\t<font color='#FFFFFF'>{{totalDmgCombined}}</font>\t<font size='13' color='#FFE6B3'>{{l10n:Total:}}  <font color='{{c:netCredits}}'>{{netCredits}}</font>{{Credits.png}}</font></textformat>"
             ],
-            "0,2,4,5,9,13,14,15,20,21,22,24,25,26,27,28,29,30": [
+            "0,2,4,5,9,13,14,15,20,21,22,24,25,26,27,28,31": [
                 "<textformat tabstops='[100]'><font size='13' color='#FFE6B3'>Place {{Xp.png}}: <font color='{{g:avgPlace}}'>{{place:2}}</font>\tPlace {{DamageD.png}}: <font color='{{g:avgPlaceByDmg}}'>{{placeByDmg:2}}</font></font></textformat>",
                 "<textformat tabstops='[32,100]'><font size='13' color='#FFE6B3'>CMB:\t<font color='#FFFFFF'>{{totalDmgCombined}}</font>\t<font size='13' color='#FFE6B3'>{{l10n:Total:}}  <font color='{{c:netCredits}}'>{{netCredits}}</font>{{Credits.png}}</font></textformat>"
             ]
