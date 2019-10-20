@@ -1,5 +1,6 @@
 """ XVM (c) https://modxvm.com 2013-2019 """
 
+import compileall
 import traceback
 import ast
 import sys
@@ -10,8 +11,12 @@ from xfw.constants import PATH
 from consts import *
 from logger import *
 
+#Compile subdirectories
+for root, dirnames, filenames in os.walk("../res_mods/configs/xvm/py_macro/"):
+    for dirname in dirnames:
+        compileall.compile_dir(os.path.join(root, dirname), quiet = 1)
 
-sys.path.append("res_mods/configs/xvm/py_macro")
+sys.path.append("../res_mods/configs/xvm/py_macro")
 
 # Globals
 _container = {}

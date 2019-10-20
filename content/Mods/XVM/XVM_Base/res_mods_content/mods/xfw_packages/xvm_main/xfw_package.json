@@ -3,9 +3,8 @@
     "name": "XVM",
     "description": "XVM",
 
-    "version": "8.0.7.9372",
-
-    "dependencies": ["com.modxvm.xfw"],
+    "version": "8.1.1.31",
+    "dependencies": ["com.modxvm.xfw.libraries"],
     "dependencies_optional": [
         "com.modxvm.xfw.filewatcher", 
         "com.modxvm.xfw.mutex"
@@ -14,7 +13,7 @@
     "url": "https://modxvm.com/",
     "url_update": "https://modxvm.com/",
 
-    "wot_version_min": "1.6.0.8",
+    "wot_version_min": "1.6.1.1",
     "wot_version_exactmatch": false,
 
     "features": ["actionscript", "python"]

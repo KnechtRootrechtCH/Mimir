@@ -26,7 +26,7 @@ def checkNames(vehs):
 # PRIVATE
 
 _data = {
-    # Last update: 17.09.2019
+    # Last update: 08.10.2019
     "china:Ch01_Type59":                     'Typ59',
     "china:Ch01_Type59_Gold":                'Typ59g',
     "china:Ch02_Type62":                     'Typ62',
@@ -176,7 +176,6 @@ _data = {
     "france:F89_Canon_dassaut_de_105":       'amx·cda',
     "france:F97_ELC_EVEN_90":                'elcEv90',
     "germany:Env_Artillery":                 'E.Art',
-    "germany:G00_VK1602_race":               'Leo·sp',
     "germany:G02_Hummel":                    'Humml',
     "germany:G03_PzV_Panther":               'Pant',
     "germany:G03_PzV_Panther_IGR":           'Pant',
@@ -240,6 +239,7 @@ _data = {
     "germany:G141_VK7501K":                  '7501k',
     "germany:G142_M48RPz":                   '7501k',
     "germany:G143_E75_TS":                   '7501k',
+    "germany:G144_Kpz_50t":                  'Kpz50t',
     "germany:G15_VK3601H":                   '3601h',
     "germany:G16_PzVIB_Tiger_II":            'Tig2',
     "germany:G16_PzVIB_Tiger_II_F":          'Tig2·h',
@@ -389,6 +389,7 @@ _data = {
     "poland:Pl13_53TP_Markowskiego":         '53TP',
     "poland:Pl14_4TP":                       '4TP',
     "poland:Pl15_60TP_Lewandowskiego":       '60TP',
+    "poland:Pl16_T34_85_Rudy":               'Rudy',
     "sweden:S01_Strv_74_A2":                 'm42·57',
     "sweden:S02_Strv_M42":                   'm/42',
     "sweden:S03_Strv_M38":                   'm/38',
@@ -509,7 +510,7 @@ _data = {
     "uk:GB96_Excalibur":                     'Excalib',
     "uk:GB97_Chimera":                       'Chimera',
     "uk:GB98_T95_FV4201_Chieftain":          'T95/4201',
-    "usa:A00_M24_Chaffee_race":              'Chaff·sp',
+    "uk:GB99_Turtle_Mk1":                    'Tur.Mk1',
     "usa:A01_T1_Cunningham":                 'T1',
     "usa:A01_T1_Cunningham_bot":             'T1',
     "usa:A02_M2_lt":                         'M2lt',
@@ -627,7 +628,6 @@ _data = {
     "usa:A97_M41_Bulldog":                   'Buldog',
     "usa:A99_T92_LT":                        't92lt',
     "ussr:Observer":                         '',
-    "ussr:R00_T-50_race":                    't50·sp',
     "ussr:R01_IS":                           'Is',
     "ussr:R02_SU-85":                        'Su85',
     "ussr:R03_BT-7":                         'Bt7',
@@ -709,6 +709,8 @@ _data = {
     "ussr:R15_S-51":                         'S·51',
     "ussr:R160_T_50_2":                      't50·2',
     "ussr:R161_T_116":                       't116',
+    "ussr:R165_Object_703_II":               'obj703·2(122)',
+    "ussr:R165_Object_703_II_2":             'obj703·2(100)',
     "ussr:R16_SU-18":                        'Su·18',
     "ussr:R17_SU-100":                       'Su100',
     "ussr:R18_SU-152":                       'Su152',
