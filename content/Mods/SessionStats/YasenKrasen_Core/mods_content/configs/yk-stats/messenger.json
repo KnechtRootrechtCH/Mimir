@@ -9,8 +9,8 @@
             "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/rankedProgress): <font color='#D6D7D4'>%(rankedProgress)s</font></font>"
         },
         "battleResultRankedBonusBattles": {
-            "base": "<br/><font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/rankedBonusBattles): <font color='#D6D7D4'>%(rankedBonusBattles)s</font></font>",
-            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/rankedBonusBattles): <font color='#D6D7D4'>%(rankedBonusBattles)s</font></font>"
+            "base": "<br/><font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/rankedBonusBattles): %(rankedBonusBattles)s</font>",
+            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/rankedBonusBattles): %(rankedBonusBattles)s</font>"
         },
         "battleResultCrystal": {
             "base": "<br/><font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/crystal): <font color='#D6D7D4'>%(crystal)s</font></font>",
@@ -71,10 +71,6 @@
         "battleQuestsItems": {
             "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/quests/items): <font color='#D6D7D4'>%(names)s</font></font>",
             "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/quests/items): <font color='#C5AB5D'>%(names)s</font></font>"
-        },
-        "battleQuestsFestivalTickets": {
-            "base": "<font color='#8C8C7E'>_(#messenger:serviceChannelMessages/battleResults/quests/festivalTickets): <font color='#D6D7D4'>%(count)s</font></font>",
-            "replace": "<br/><font color='#929290'>_(#messenger:serviceChannelMessages/battleResults/quests/festivalTickets): <font color='#D6D7D4'>%(count)s</font></font>"
         },
         "vehiclesAccruedQuestsReceived": {
             "base": "<br/><font color='#8C8C7E'>_(#messenger:serviceChannelMessages/invoiceReceived/vehiclesAccrued): <font color='#D6D7D4'>%(vehicles)s</font></font>",
@@ -582,16 +578,6 @@
             "message": {
                 "base": "<font  face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/sysMsg/titles/purchase)</font><br/><font color='#8C8C7E'>%(text)s</font>",
                 "replace": "<font color='#929292'>_(#messenger:serviceChannelMessages/sysMsg/titles/purchase)</font><font color='#FFFFFF'> %(text)s</font>"
-            }
-        },
-        "PurchaseForFestTicketsSysMessage": {
-            "type": {
-                "base": "yellow",
-                "replace": "grey"
-            },
-            "message": {
-                "base": "<font  face=\"$TitleFont\" size=\"15\" color=\"#E9E2BF\">_(#messenger:serviceChannelMessages/sysMsg/titles/purchase)</font><br/><font color='#8C8C7E'>%(text)s</font>",
-                "replace": "<font color='#929292'>_(#messenger:serviceChannelMessages/sysMsg/titles/purchase)</font><font color='#E2D2A2'> %(text)s</font>"
             }
         },
         "PurchaseForGoldSysMessage": {
