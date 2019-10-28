@@ -1,9 +1,44 @@
-﻿XVM-8.1.1:
+﻿XVM-8.1.6:
+  [GENERAL]
+  * World of Tanks 1.6.1.3
+  * Improved support for WoT client installed in path with non-latin characters
+
+XVM-8.1.5:
+  [GENERAL]
+  * Fixed XVM loading if WoT path has non-latin characters
+  * Initial macOS Catalina support
+
+XVM-8.1.4:
+  [GENERAL]
+  * World of Tanks 1.6.1.2
+  * Added support for <WoT_DIR> working directory
+
+XVM-8.1.3:
+  [XFW.Native]
+  * Fixed loading error if vcomp140.dll is not present in the operating systems
+
+XVM-8.1.2:
+  [GENERAL]
+  * World of Tanks 1.6.1.1 nanopatch 1
+
+  [XFW.Native]
+  * Added initial support for 64-bit clients
+  * Reduced first start time on systems with a large number of processor cores
+
+  [BUGFIXES]
+  * Fixed crash to desktop in "Grand Battles"
+  * Fixed extrafields for timkillers
+  * Fixed {{pp.widthLeft}} and {{pp.widthRight}} macros
+  * Fixed display of vehicle name in tank carousel
+  * Fixed typpos in configuration files
+
+XVM-8.1.1:
   [GENERAL]
   * World of Tanks 1.6.1.1
 
   [XFW]
-  * Refactored XFW Loader. More info: https://gitlab.com/xvm/xvm/wikis
+  * Refactored XFW Loader.
+      More info: https://gitlab.com/xvm/xvm/wikis
   * Changes in `.wotmod` names:
       * `com.modxvm.xfw.loader` was added
       * `com.modxvm.xfw` was removed

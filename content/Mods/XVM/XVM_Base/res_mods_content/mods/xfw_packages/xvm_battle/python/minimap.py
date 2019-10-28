@@ -122,15 +122,17 @@ def _ArenaVehiclesPlugin__switchToVehicle(base, self, prevCtrlID):
                 if g_minimap.viewPointID:
                     self._invoke(g_minimap.viewPointID, 'xvm_setVehicleID', self._ctrlVehicleID)
 
-@registerEvent(PersonalEntriesPlugin, '_PersonalEntriesPlugin__updateViewPointEntry')
-def _PersonalEntriesPlugin__updateViewPointEntry(self, vehicleID=0):
-   g_minimap.viewPointID = self._getViewPointID()
+@overrideMethod(PersonalEntriesPlugin, '_PersonalEntriesPlugin__updateViewPointEntry')
+def _PersonalEntriesPlugin__updateViewPointEntry(base, self, vehicleID=0):
+    base(self, vehicleID)
+    g_minimap.viewPointID = self._getViewPointID()
 
 
 # Minimap dead switch
 
-@registerEvent(PostMortemControlMode, 'onMinimapClicked')
-def _PostMortemControlMode_onMinimapClicked(self, worldPos):
+@overrideMethod(PostMortemControlMode, 'onMinimapClicked')
+def _PostMortemControlMode_onMinimapClicked(base, self, worldPos):
+    base(self, worldPos)
     #log('_PostMortemControlMode_onMinimapClicked active=' + str(g_minimap.active))
     if g_minimap.active and g_minimap.opt_minimapDeadSwitch:
         try:
