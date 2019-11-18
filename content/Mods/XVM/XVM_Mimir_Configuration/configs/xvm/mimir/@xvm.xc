@@ -25,13 +25,17 @@
   // Автоматически перезагружать конфиг. Требует перезапуска клиента.
   "autoReloadConfig": false,
 
-  // Language used in mod
+  // Language used in mod:
   // "auto" - automatically detect language from game client,
   // or specify file name located in res_mods/mods/shared_resources/xvm/l10n/ (ex: "en").
-  // Используемый язык в моде
+  // Используемый язык в моде:
   // "auto" - автоматически определять язык клиента игры,
   // или укажите имя файла в папке res_mods/mods/shared_resources/xvm/l10n/ (например, "en").
   "language": "auto",
+
+  // The path to the folder with custom localization files, is set relative to the user config folder.
+  // Путь к папке с пользовательскими файлами локализации, задается относительно папки пользовательского конфига.
+  "userLanguageFolder": "lang",
 
   // Game Region:
   // "auto" - automatically detect game region from game client,
@@ -186,6 +190,6 @@
   "xmqp": ${"xmqp.xc":"xmqp"},
 
   // Various settings for advanced users.
-  // Различные настройки для продвинутых пользоватей.
+  // Различные настройки для продвинутых пользователей.
   "tweaks": ${"tweaks.xc":"tweaks"}
 }

@@ -10,7 +10,7 @@
     // true - hide simplified vehicle parameters.
     // true - спрятать упрощенные ТТХ.
     "hideSimplifiedVehParams": true,
-    // true - hide text at bottom of tooltip showing quantity of used eqipment, optional devices and crew.
+    // true - hide text at bottom of tooltip showing quantity of used equipment, optional devices and crew.
     // true - спрятать текст внизу подсказки показывающий количество используемого оборудования, доп. модулей и экипаж.
     "hideBottomText": true,
     // true - display of missing experience to unlock vehicles.
@@ -188,7 +188,7 @@
       "#tooltips:header/info/players_unavailable/header"
     ],
     // Log all localization keys to the xvm.log file, can be helpful to search required tooltipId.
-    // Логгировать все ключи локализации в файл xvm.log, может быть полезно для поиска необходимых tooltipId.
+    // Логировать все ключи локализации в файл xvm.log, может быть полезно для поиска необходимых tooltipId.
     "logLocalization": false
   }
 }
@@ -231,7 +231,7 @@
   "gravity",                              - Гравитация \ Gravity
   "shellSpeedSummary",                    - Сводка скоростей снарядов \ Summary of shell speeds
   "radioRange",                           - Дальность связи \ Range of radio signal
-  "rateOfFire",                           - Скорострельность оружия \ Rate of Fire 
+  "rateOfFire",                           - Скорострельность оружия \ Rate of Fire
   "battleTiers",                          - Уровни боев танка \ Battle tiers of vehicle
   "maxHealth",                            - ХП танка \ HP of vehicle
   "invisibilityStillFactor"               - Незаметность неподвижной машины (%) \ Concealment of Stationary Vehicle (%)

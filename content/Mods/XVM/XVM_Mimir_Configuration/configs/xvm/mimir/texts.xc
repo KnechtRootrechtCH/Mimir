@@ -77,7 +77,7 @@
       // Battle training.
       // Боевое обучение.
       "tutorial": "",
-      // Team battles.      
+      // Team battles.
       // Командный бой.
       "cybersport": "cybersport",
       // Special game mode (racing, football and other).
@@ -130,7 +130,10 @@
       "epic_battle": "",
       // Frontline (training).
       // Линия фронта (тренировка).
-      "epic_battle_training": ""
+      "epic_battle_training": "",
+      // Tournament (event).
+      // Турнир (ивент).
+      "tournament_event": ""
     },
     // Text for {{topclan}} macro.
     // Текст для макроса {{topclan}}.
