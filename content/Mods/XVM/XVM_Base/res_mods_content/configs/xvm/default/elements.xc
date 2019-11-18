@@ -10,7 +10,7 @@
  *   "$delay": 1,            // запуск сниппета с задержкой, число - задержка в мсек
  *   "$interval": 1,         // периодический запуск сниппета с интервалом, число - интервал в мсек
  *   "$textFormat": {        // подстановка для формата текста
- *     //"$log": 1,          // тоже можно логгировать
+ *     //"$log": 1,          // тоже можно логировать
  *     "size": 30,           // размер шрифта
  *     "font": "$TitleFont", // шрифт пожирнее
  *     "align": "center"     // выравнивание
@@ -63,7 +63,8 @@
     "damagePanel"                   - Панель повреждений                                     / Damage panel
     "debugPanel"                    - Панель пинга/лага/фпс                                  / Debug panel (ping/lag/fps)
     "destroyTimersPanel"            - Таймер до уничтожения (утопление, переворот)           / Destroy timers (drowning, overturned)
-    "endWarningPanel"               - Панель оповещяющая о конце боя                         / Panel informing about the imminent end of the battle
+    "dualGunPanel"                  - Панель для техники с двумя орудиями                    / Panel for vehicle with two guns
+    "endWarningPanel"               - Панель оповещающая о конце боя                         / Panel informing about the imminent end of the battle
     "fragCorrelationBar"            - Счёт боя                                               / Battle score
     "fullStats"                     - Окно статистики по клавише Tab                         / Battle Statistics form on the Tab key
     "gameMessagesPanel"             - Сообщение о результате боя (победа, поражение, ничья)  / Messages on the outcome of the battle (victory, defeat, draw)

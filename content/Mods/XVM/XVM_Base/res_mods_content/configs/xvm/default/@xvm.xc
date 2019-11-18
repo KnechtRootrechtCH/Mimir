@@ -25,13 +25,17 @@
   // Автоматически перезагружать конфиг. Требует перезапуска клиента.
   "autoReloadConfig": false,
 
-  // Language used in mod
+  // Language used in mod:
   // "auto" - automatically detect language from game client,
   // or specify file name located in res_mods/mods/shared_resources/xvm/l10n/ (ex: "en").
-  // Используемый язык в моде
+  // Используемый язык в моде:
   // "auto" - автоматически определять язык клиента игры,
   // или укажите имя файла в папке res_mods/mods/shared_resources/xvm/l10n/ (например, "en").
   "language": "auto",
+
+  // The path to the folder with custom localization files, is set relative to the user config folder.
+  // Путь к папке с пользовательскими файлами локализации, задается относительно папки пользовательского конфига.
+  "userLanguageFolder": "lang",
 
   // Game Region:
   // "auto" - automatically detect game region from game client,
@@ -46,7 +50,7 @@
   "definition": {
     // Config author.
     // Автор конфига.
-    "author": "XVM team",
+    "author": "XVM Team",
 
     // Config description.
     // Описание конфига.
@@ -58,15 +62,15 @@
 
     // Supported version of the game.
     // Поддерживаемая версия игры.
-    "gameVersion": "1.6.1.2",
+    "gameVersion": "1.6.1.3",
 
     // The minimum required version of the XVM mod.
     // Минимально необходимая версия мода XVM.
-    "modMinVersion": "8.1.4",
+    "modMinVersion": "8.1.8",
 
     // Config last modified.
     // Дата последней модификации конфига.
-    "date": "14.10.2019"
+    "date": "09.11.2019"
   },
 
   // Parameters for login screen.
@@ -186,6 +190,6 @@
   "xmqp": ${"xmqp.xc":"xmqp"},
 
   // Various settings for advanced users.
-  // Различные настройки для продвинутых пользоватей.
+  // Различные настройки для продвинутых пользователей.
   "tweaks": ${"tweaks.xc":"tweaks"}
 }

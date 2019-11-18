@@ -1,4 +1,49 @@
-﻿XVM-8.1.6:
+﻿XVM-8.1.8:
+  [GENERAL]
+  * World of Tanks 1.6.1.4
+
+  [HANGAR]
+  * Renamed options in the "hangar"/"equipmentPanel" section:
+      "showNumberEquipment"  -> "showConsumablesCount"
+      "showNumberDirectives" -> "showDirectivesCount"
+
+  [BARRACKS]
+  * Added new feature of sorting tankmen in barracks from config (hangar.xc)
+  * Added section:
+      "hangar"/"barracks"
+
+  [CAROUSEL]
+  * The functionality in the "carousel"/"filters" section has been restored
+  * Added options:
+      "carousel"/"filters"/"elite"/"enabled" - show/hide "Elite vehicle" filter
+      "carousel"/"filters"/"premium"/"enabled" - show/hide "Premium vehicle" filter
+
+  [HITLOG]
+  * Added macro:
+      {{number}} - line number
+
+XVM-8.1.7:
+  [GENERAL]
+  * Added option:
+      "userLanguageFolder" - the path to the folder containing custom localization files,
+                             set relative to the user config folder.
+  * Various bugs fixed
+
+  [XFW]
+  * Implemented sound banks loading on 64-bit clients
+
+  [BATTLE]
+  * Fixed {{pp.mode}} macro in battle mode "Ranked battle"
+  * Added the ability to scroll the contents of the hit log
+
+  [HANGAR]
+  * Added filter for vehicles that have crews with less than 100% training level
+  * Added option:
+      "hangar"/"showRankedBattleResults" - display info window with the battle results in the "Ranked battle"
+      "hangar"/"equipmentPanel"/"showNumberEquipment" - show the remaining quantity of consumables in depot
+      "hangar"/"equipmentPanel"/"showNumberDirectives" - show the remaining quantity of directives in depot
+
+XVM-8.1.6:
   [GENERAL]
   * World of Tanks 1.6.1.3
   * Improved support for WoT client installed in path with non-latin characters

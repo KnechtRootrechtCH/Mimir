@@ -59,7 +59,9 @@
       // false - скрыть фильтр.
       "params":   { "enabled": true }, // main params    / основные параметры
       "bonus":    { "enabled": true }, // x2 bonus       / x2 бонус
-      "favorite": { "enabled": true }  // favorite tanks / основные танки
+      "favorite": { "enabled": true }, // favorite tanks / основные танки
+      "elite":    { "enabled": true }, // elite tanks    / элитные танки
+      "premium":  { "enabled": true }  // premium tanks  / премиум танки
     },
     // Spacing between filters cells.
     // Отступ между ячейками фильтров.
@@ -73,7 +75,7 @@
     "nations_order": [],
     // Order of types of vehicles.
     // Порядок классов техники.
-    "types_order":   ["lightTank", "mediumTank", "heavyTank", "AT-SPG", "SPG"],
+    "types_order": ["lightTank", "mediumTank", "heavyTank", "AT-SPG", "SPG"],
     // Tank sorting criteria, available options: (minus = reverse order)
     // Критерии сортировки танков, доступные значения: (минус = в обратном порядке)
     // "nation", "type", "level", "-level", "maxBattleTier", "-maxBattleTier", "premium", "-premium",

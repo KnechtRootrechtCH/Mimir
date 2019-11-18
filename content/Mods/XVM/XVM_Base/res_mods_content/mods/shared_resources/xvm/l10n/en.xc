@@ -22,7 +22,7 @@
     "Ping": "Ping",
     "Online": "Online",
 
-    // Hitlog
+    // HitLog
     "shot": "shot",
     "fire": "fire",
     "ramming": "ramming",
@@ -62,22 +62,21 @@
     "gunner": "gunner",
     "loader": "loader",
 
-    // DamageLog:
+    // DamageLog
     "sec": "sec",
-    "reloaded": "reloaded",
     "drowning": "drowning",
-    // Shell kind (macro {{type-shell}})
+    // Shell kind, macro {{type-shell}}
     "armor_piercing": "AP",
     "high_explosive": "HE",
     "armor_piercing_cr": "APCR",
     "armor_piercing_he": "HESH",
     "hollow_charge": "HEAT",
-    // Text at hits no damage (ricochet, no penetration, no damage) (macro {{dmg}})
+    // Text at hits no damage (ricochet, no penetration, no damage), macro {{dmg}}
     "intermediate_ricochet": "ricochet",
     "final_ricochet": "ricochet",
     "armor_not_pierced": "bounce",
     "armor_pierced_no_damage": "blocked",
-    // Name part of vehicle (macro {{comp-name}})
+    // Name part of vehicle, macro {{comp-name}}
     "turret": "turret",
     "hull": "hull",
     "chassis": "chassis",
@@ -229,19 +228,22 @@
     // Carousel
     "Normal": "Normal",
     "NormalTooltipHeader": "Normal Vehicles",
-    "NormalTooltipBody": "Show/hide normal (non-premium) vehicles.",
+    "NormalTooltipBody": "Show only normal (non-premium) vehicles.",
     "NonElite": "Non elite",
     "NonEliteTooltipHeader": "Non Elite Vehicles",
-    "NonEliteTooltipBody": "Show/hide vehicles with not all modules and technical branches researched.",
+    "NonEliteTooltipBody": "Show only vehicles with not all modules and technical branches researched.",
     "CompleteCrew": "Complete crew",
     "CompleteCrewTooltipHeader": "Complete Crew",
-    "CompleteCrewTooltipBody": "Show/hide vehicles with complete crew.",
+    "CompleteCrewTooltipBody": "Show only vehicles with complete crew.",
+    "TrainingCrew": "Training crew",
+    "TrainingCrewTooltipHeader": "Training Crew",
+    "TrainingCrewTooltipBody": "Show only vehicles that have crews with less than 100% training level.",
     "NoMaster": "No master",
     "NoMasterTooltipHeader": "No Master",
-    "NoMasterTooltipBody": "Show/hide vehicles without \"Ace Tanker\" mastery badge.",
+    "NoMasterTooltipBody": "Show only vehicles without \"Ace Tanker\" mastery badge.",
     "ReserveFilter": "Reserve",
     "ReserveFilterTooltipHeader": "Reserve",
-    "ReserveFilterTooltipBody": "Show/hide reserved vehicles.",
+    "ReserveFilterTooltipBody": "Show only reserved vehicles.",
     "check_reserve_menu": "Set as reserve",
     "uncheck_reserve_menu": "Uncheck Reserve label",
     "reserve_confirm_title": "Hide tank",

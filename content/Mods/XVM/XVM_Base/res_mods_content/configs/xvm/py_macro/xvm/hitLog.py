@@ -44,12 +44,13 @@ BATTLE_TYPE = {ARENA_GUI_TYPE.UNKNOWN: "unknown",
                ARENA_GUI_TYPE.BOOTCAMP: "bootcamp",
                ARENA_GUI_TYPE.EPIC_RANDOM: "epic_random",
                ARENA_GUI_TYPE.EPIC_RANDOM_TRAINING: "epic_random_training",
-               ARENA_GUI_TYPE.EPIC_BATTLE:  "epic_battle",
-               ARENA_GUI_TYPE.EPIC_TRAINING:  "epic_battle"}
+               ARENA_GUI_TYPE.EPIC_BATTLE: "epic_battle",
+               ARENA_GUI_TYPE.EPIC_TRAINING: "epic_battle"}
 
 HIT_LOG = 'hitLog/'
 FORMAT_HISTORY = 'formatHistory'
 GROUP_HITS_PLAYER = 'groupHitsByPlayer'
+SCROLL_LOG = 'scrollLog'
 ADD_TO_END = 'addToEnd'
 LINES = 'lines'
 MOVE_IN_BATTLE = 'moveInBattle'
@@ -391,7 +392,8 @@ class GroupHit(object):
 
     def __init__(self, section):
         self.section = section
-        self.listLog = []
+        self._listLog = []
+        self.numberTopLine = 0
         self.players = {}
         self.countLines = 0
         self.maxCountLines = None
@@ -403,10 +405,19 @@ class GroupHit(object):
         self.ATTACK_REASON_RAM_ID = ATTACK_REASON.getIndex(ATTACK_REASON.RAM)
         self.attackReasonID = 0
         self.damage = 0
-        self.damageRatio = 0
-        self.isGroup = False
+        self.__damageRatio = 0
         self.vehID = 0
-        self.hitLogConfig = {}
+        self.__hitLogConfig = {}
+
+    def mouse_wheel(self, isScrollUp):
+        if isScrollUp:
+            if self.numberTopLine < len(self._listLog):
+                self.numberTopLine += 1
+                return True
+        else:
+            if self.numberTopLine > 0:
+                self.numberTopLine -= 1
+                return True
 
     def removePlayer(self, vehID):
         if vehID in self.players:
@@ -422,28 +433,28 @@ class GroupHit(object):
         player['dmg-ratio'] = (player['damage'] * 100 // maxHealth) if maxHealth != 0 else 0
 
     def readyConfig(self):
-        if config.config_autoreload or not self.hitLogConfig:
-            self.hitLogConfig = {
-                'vehicleClass': keyLower(config.get(self.section + 'vtype')),
-                'c_shell': keyLower(config.get(self.section + 'c:costShell')),
-                'costShell': keyLower(config.get(self.section + 'costShell')),
-                'c_dmg-kind': keyLower(config.get(self.section + 'c:dmg-kind')),
-                'c_vehicleClass': keyLower(config.get(self.section + 'c:vtype')),
-                'dmg-kind': keyLower(config.get(self.section + 'dmg-kind')),
-                'dmg-kind-player': keyLower(config.get(self.section + 'dmg-kind-player')),
-                'c_teamDmg': keyLower(config.get(self.section + 'c:team-dmg')),
-                'teamDmg': keyLower(config.get(self.section + 'team-dmg')),
-                'compNames': keyLower(config.get(self.section + 'comp-name')),
-                'typeShell': keyLower(config.get(self.section + 'type-shell')),
-                'c_typeShell': keyLower(config.get(self.section + 'c:type-shell'))
+        if config.config_autoreload or not self.__hitLogConfig:
+            self.__hitLogConfig = {
+                'vehicleClass': keyLower(_config.get(self.section + 'vtype')),
+                'c_shell': keyLower(_config.get(self.section + 'c:costShell')),
+                'costShell': keyLower(_config.get(self.section + 'costShell')),
+                'c_dmg-kind': keyLower(_config.get(self.section + 'c:dmg-kind')),
+                'c_vehicleClass': keyLower(_config.get(self.section + 'c:vtype')),
+                'dmg-kind': keyLower(_config.get(self.section + 'dmg-kind')),
+                'dmg-kind-player': keyLower(_config.get(self.section + 'dmg-kind-player')),
+                'c_teamDmg': keyLower(_config.get(self.section + 'c:team-dmg')),
+                'teamDmg': keyLower(_config.get(self.section + 'team-dmg')),
+                'compNames': keyLower(_config.get(self.section + 'comp-name')),
+                'typeShell': keyLower(_config.get(self.section + 'type-shell')),
+                'c_typeShell': keyLower(_config.get(self.section + 'c:type-shell'))
             }
-        return self.hitLogConfig
+        return self.__hitLogConfig
 
     def setParametrsHitLog(self):
-        self.countLines = len(self.listLog)
+        self.countLines = len(self._listLog)
         self.attackReasonID = g_dataHitLog.data['attackReasonID']
         self.damage = g_dataHitLog.data['damage']
-        self.damageRatio = g_dataHitLog.data['dmgRatio']
+        self.__damageRatio = g_dataHitLog.data['dmgRatio']
         self.vehID = g_dataHitLog.vehicleID
         try:
             macro = {'battletype-key': g_dataHitLog.battletypeKey}
@@ -481,7 +492,8 @@ class GroupHit(object):
 
     def reset(self):
         self.players.clear()
-        self.listLog[:] = []
+        self._listLog[:] = []
+        self.numberTopLine = 0
         self.countLines = 0
         self.maxCountLines = None
 
@@ -492,10 +504,10 @@ class GroupHit(object):
 
     def addPlayer(self):
         return {'dmg-player': self.damage,
-                'dmg-ratio-player': self.damageRatio,
+                'dmg-ratio-player': self.__damageRatio,
                 'n-player': 1,
                 'damage': self.damage,
-                'dmg-ratio': self.damageRatio,
+                'dmg-ratio': self.__damageRatio,
                 'numberLine': 0,
                 'dmg-kind-player': [self.attackReasonID]}
 
@@ -505,15 +517,26 @@ class GroupHitByPlayer(GroupHit):
     CHANGE = 1
     INSERT = 2
 
+    def __init__(self, section):
+        super(GroupHitByPlayer, self).__init__(section)
+        self._listLogNumber = []
+        self.prevLineNumber = 0
+
+    def reset(self):
+        super(GroupHitByPlayer, self).reset()
+        self._listLogNumber[:] = []
+
     def updateList(self, mode, numberLine=0):
         macros = self.udateMacros()
         formattedString = parser(_config.get(self.S_FORMAT_HISTORY, ''), macros)
         if mode == self.APPEND:
-            self.listLog.append(formattedString)
+            self._listLog.append(formattedString)
+            self._listLogNumber.append('')
         elif mode == self.INSERT:
-            self.listLog.insert(0, formattedString)
+            self._listLog.insert(0, formattedString)
+            self._listLogNumber.insert(0, '')
         else:
-            self.listLog[numberLine] = formattedString
+            self._listLog[numberLine] = formattedString
 
     def updateGroupFireRamming(self, vehicle):
         if self.attackReasonID in [1, 2]:
@@ -531,16 +554,15 @@ class GroupHitByPlayer(GroupHit):
 
     def updatePlayers(self):
         vehicle = self.players[self.vehID]
+        self.prevLineNumber = vehicle['numberLine']
         self.updateGroupFireRamming(vehicle)
         self.sumDmg()
-        if self.maxCountLines == 1:
-            vehicle['numberLine'] = 0
-            self.updateList(self.CHANGE if self.countLines else self.APPEND)
-        elif self.isAddToEnd:
+        if self.isAddToEnd:
             if vehicle['numberLine'] == self.countLines - 1:
                 self.updateList(self.CHANGE, vehicle['numberLine'])
             else:
-                self.listLog.pop(vehicle['numberLine'] if 0 <= vehicle['numberLine'] < self.countLines else 0)
+                self._listLog.pop(vehicle['numberLine'])
+                self._listLogNumber.pop(vehicle['numberLine'])
                 for v in self.players.itervalues():
                     if v['numberLine'] > vehicle['numberLine']:
                         v['numberLine'] -= 1
@@ -550,7 +572,8 @@ class GroupHitByPlayer(GroupHit):
             if vehicle['numberLine'] == 0:
                 self.updateList(self.CHANGE)
             else:
-                self.listLog.pop(vehicle['numberLine'] if 0 < vehicle['numberLine'] < self.countLines else (self.countLines - 1))
+                self._listLog.pop(vehicle['numberLine'])
+                self._listLogNumber.pop(vehicle['numberLine'])
                 for v in self.players.itervalues():
                     if v['numberLine'] < vehicle['numberLine']:
                         v['numberLine'] += 1
@@ -562,22 +585,25 @@ class GroupHitByPlayer(GroupHit):
         vehicle = self.players[self.vehID]
         if self.attackReasonID in [1, 2]:
             vehicle[self.attackReasonID] = self.addAttackReasonID()
-        if self.maxCountLines == 1:
-            self.updateList(self.CHANGE if self.countLines else self.APPEND)
-        elif self.isAddToEnd:
+        if self.isAddToEnd:
             if self.countLines >= self.maxCountLines:
-                self.listLog.pop(0)
-                for v in self.players.itervalues():
-                    v['numberLine'] -= 1
-            vehicle['numberLine'] = min(self.countLines, self.maxCountLines - 1)
+                self.numberTopLine += 1
+            vehicle['numberLine'] = self.countLines
             self.updateList(self.APPEND)
         else:
-            if self.countLines >= self.maxCountLines:
-                self.listLog.pop(self.countLines - 1)
             for v in self.players.itervalues():
                 v['numberLine'] += 1
             vehicle['numberLine'] = 0
             self.updateList(self.INSERT)
+        self.prevLineNumber = vehicle['numberLine']
+
+    def addLineNumber(self):
+        newLineNumber = self.players[self.vehID]['numberLine']
+        start, finish = (self.prevLineNumber, newLineNumber + 1) if self.prevLineNumber < newLineNumber else (newLineNumber, self.prevLineNumber + 1)
+        length = len(self._listLog)
+        for number in xrange(start, finish):
+            _number = number + 1 if self.isAddToEnd else length - number
+            self._listLogNumber[number] = parser(self._listLog[number], {'number': _number})
 
     def getListLog(self):
         self.setParametrsHitLog()
@@ -587,13 +613,18 @@ class GroupHitByPlayer(GroupHit):
             self.updatePlayers()
         else:
             self.addPlayers()
-        return self.listLog
+        self.addLineNumber()
+        return self._listLogNumber
 
 
 class GroupHitByFireRamming(GroupHit):
 
     DIRECTION_UP = -1
     DIRECTION_DOWN = 1
+
+    def __init__(self, section):
+        super(GroupHitByFireRamming, self).__init__(section)
+        self.isGroup = False
 
     def shiftsLines(self, direction):
         for v in self.players.itervalues():
@@ -604,25 +635,23 @@ class GroupHitByFireRamming(GroupHit):
 
     def udateListLog(self):
         macros = self.udateMacros()
-        formattedString = parser(_config.get(self.S_FORMAT_HISTORY, ''), macros)
         if self.isGroup:
             player = self.players[self.vehID]
-            self.listLog[player[self.attackReasonID]['numberLine']] = formattedString
-        elif self.maxCountLines == 1:
-            if self.listLog:
-                self.listLog[0] = formattedString
-            else:
-                self.listLog.append(formattedString)
+            lineNumber = player[self.attackReasonID]['numberLine']
+            macros['number'] = lineNumber + 1 if self.isAddToEnd else len(self._listLog) - lineNumber
+            formattedString = parser(_config.get(self.S_FORMAT_HISTORY, ''), macros)
+            self._listLog[lineNumber] = formattedString
         elif self.isAddToEnd:
             if self.maxCountLines <= self.countLines:
-                self.listLog.pop(0)
-                self.shiftsLines(self.DIRECTION_UP)
-            self.listLog.append(formattedString)
+                self.numberTopLine += 1
+            macros['number'] = self.countLines + 1
+            formattedString = parser(_config.get(self.S_FORMAT_HISTORY, ''), macros)
+            self._listLog.append(formattedString)
         else:
-            if self.maxCountLines <= self.countLines:
-                self.listLog.pop(self.countLines - 1)
             self.shiftsLines(self.DIRECTION_DOWN)
-            self.listLog.insert(0, formattedString)
+            macros['number'] = self.countLines + 1
+            formattedString = parser(_config.get(self.S_FORMAT_HISTORY, ''), macros)
+            self._listLog.insert(0, formattedString)
 
     def updateAttackReasonID(self):
         player = self.players[self.vehID]
@@ -656,7 +685,7 @@ class GroupHitByFireRamming(GroupHit):
             return []
         self.updatePlayer()
         self.udateListLog()
-        return self.listLog
+        return self._listLog
 
 
 class HitLog(object):
@@ -667,6 +696,7 @@ class HitLog(object):
         self.groupHitByPlayer = GroupHitByPlayer(section)
         self.groupHitByFireRamming = GroupHitByFireRamming(section)
         self.S_GROUP_HITS_PLAYER = section + GROUP_HITS_PLAYER
+        self.S_SCROLL_LOG = section + SCROLL_LOG
         self.S_MOVE_IN_BATTLE = HIT_LOG_SECTIONS.LOG + MOVE_IN_BATTLE
         self.DEFAULT_X = 320
         self.DEFAULT_Y = 0
@@ -693,8 +723,27 @@ class HitLog(object):
             userprefs.set(HIT_LOG_SECTIONS.LOG + '{}'.format(battleType), {'x': self.x, 'y': self.y})
 
     def reset(self):
+        self.listLog[:] = []
         self.groupHitByPlayer.reset()
         self.groupHitByFireRamming.reset()
+
+    def mouse_wheel(self, isScrollUp):
+        if not _config.get(self.S_SCROLL_LOG, True):
+            return False
+        if _config.get(self.S_GROUP_HITS_PLAYER, True):
+            return self.groupHitByPlayer.mouse_wheel(isScrollUp)
+        else:
+            return self.groupHitByFireRamming.mouse_wheel(isScrollUp)
+
+    def getLog(self):
+
+        if _config.get(self.S_GROUP_HITS_PLAYER, True):
+            numberTopLine = self.groupHitByPlayer.numberTopLine
+            maxCountLines = self.groupHitByPlayer.maxCountLines
+        else:
+            numberTopLine = self.groupHitByFireRamming.numberTopLine
+            maxCountLines = self.groupHitByFireRamming.maxCountLines
+        return [] if maxCountLines is None else self.listLog[numberTopLine:maxCountLines + numberTopLine]
 
     def mouse_down(self, _data):
         if _data['buttonIdx'] == 0:
@@ -739,6 +788,15 @@ class HitLogs(object):
         self.logAltBg = HitLog(HIT_LOG_SECTIONS.ALT_BACKGROUND)
         self.logs = [self.log, self.logAlt, self.logBg, self.logAltBg]
         self.isDownAlt = False
+        as_callback("hitLog_mouseWheel", self.mouse_wheel)
+
+    def mouse_wheel(self, _data):
+        isRefresh = False
+        isScrollUp = _data['delta'] < 0
+        for log in self.logs:
+            isRefresh = log.mouse_wheel(isScrollUp) or isRefresh
+        if isRefresh:
+            as_event(ON_HIT_LOG)
 
     def setPosition(self, battleType):
         self.log.setPosition(battleType)
@@ -764,15 +822,17 @@ class HitLogs(object):
 
     def getListLog(self):
         if self.isDownAlt:
-            return '\n'.join(self.logAlt.listLog) if self.logAlt.listLog else None
+            listLog = self.logAlt.getLog()
         else:
-            return '\n'.join(self.log.listLog) if self.log.listLog else None
+            listLog = self.log.getLog()
+        return '\n'.join(listLog) if listLog else None
 
     def getListLogBg(self):
         if self.isDownAlt:
-            return '\n'.join(self.logAltBg.listLog) if self.logAltBg.listLog else None
+            listLog = self.logAltBg.getLog()
         else:
-            return '\n'.join(self.logBg.listLog) if self.logBg.listLog else None
+            listLog = self.logBg.getLog()
+        return '\n'.join(listLog) if listLog else None
 
 
 g_hitLogs = HitLogs()

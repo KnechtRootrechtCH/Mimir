@@ -9,6 +9,7 @@
   Macros used in hitLog:
   Макросы используемые в hitLog:
 
+    {{number}}             - line number / номер строки.
     {{dmg}}                - last damage / последний нанесенный урон.
     {{dmg-kind}}           - type of damage / тип нанесенного урона (атака, пожар, таран, ...).
     {{c:dmg-kind}}         - color by damage kind / цвет по типу урона.
@@ -69,10 +70,13 @@
       "moveInBattle": false,
       "x": 50,
       "y": 60,
+      // true - allow scrolling of the contents of the log.
+      // true - разрешить прокрутку содержимого лога.
+      "scrollLog": true,
       // Group hits by players name.
       // Группировать попадания по имени игрока.
       "groupHitsByPlayer": true,
-      // Number of lines. //TO DO.
+      // Number of lines. It is possible to use the macro {{battle type-key}}.
       // Количество строк. Можно использовать макрос {{battletype-key}}.
       "lines": 15,
       // Insert order: false - insert new values to begin, true - add to end.

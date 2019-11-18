@@ -22,7 +22,7 @@
     "Ping": "Пинг",
     "Online": "Онлайн",
 
-    // Hitlog
+    // HitLog
     "shot": "атака",
     "fire": "пожар",
     "ramming": "таран",
@@ -62,22 +62,21 @@
     "gunner": "наводчик",
     "loader": "заряжающий",
 
-    // DamageLog:
+    // DamageLog
     "sec": "сек",
-    "reloaded": "перезарядился",
     "drowning": "затоплен",
-    // Shell kind (macro {{type-shell}})
+    // Shell kind, macro {{type-shell}}
     "armor_piercing": "ББ",
     "high_explosive": "ОФ",
     "armor_piercing_cr": "БП",
     "armor_piercing_he": "ХФ",
     "hollow_charge": "КС",
-    // Text at hits no damage (ricochet, no penetration, no damage) (macro {{dmg}})
+    // Text at hits no damage (ricochet, no penetration, no damage), macro {{dmg}}
     "intermediate_ricochet": "рикошет",
     "final_ricochet": "рикошет",
     "armor_not_pierced": "не пробито",
     "armor_pierced_no_damage": "без урона",
-    // Name part of vehicle (macro {{comp-name}})
+    // Name part of vehicle, macro {{comp-name}}
     "turret": "башня",
     "hull": "корпус",
     "chassis": "шасси",
@@ -225,19 +224,22 @@
     // Carousel
     "Normal": "Обычная",
     "NormalTooltipHeader": "Обычная техника",
-    "NormalTooltipBody": "Включить/отключить отображение обычной (не премиум) техники.",
+    "NormalTooltipBody": "Отображать только обычную (не премиумную) технику.",
     "NonElite": "Не элитная",
     "NonEliteTooltipHeader": "Не элитная техника",
-    "NonEliteTooltipBody": "Включить/отключить отображение техники, на которой исследованы не все модули и следующие в ветке развития машины.",
+    "NonEliteTooltipBody": "Отображать только технику, на которой исследованы не все модули и следующие в ветке развития машины.",
     "CompleteCrew": "Полный экипаж",
     "CompleteCrewTooltipHeader": "Полный экипаж",
-    "CompleteCrewTooltipBody": "Включить/отключить отображение техники с полным экипажем.",
+    "CompleteCrewTooltipBody": "Отображать только технику с полным экипажем.",
+    "TrainingCrew": "Обучаемый экипаж",
+    "TrainingCrewTooltipHeader": "Обучаемый экипаж",
+    "TrainingCrewTooltipBody": "Отображать только технику с экипажем, который обучен менее, чем на 100%.",
     "NoMaster": "Нет мастера",
     "NoMasterTooltipHeader": "Нет мастера",
-    "NoMasterTooltipBody": "Включить/отключить отображение техники без знаки классности «Мастер».",
+    "NoMasterTooltipBody": "Отображать только технику без знака классности «Мастер».",
     "ReserveFilter": "Резерв",
     "ReserveFilterTooltipHeader": "Резерв",
-    "ReserveFilterTooltipBody": "Включить/отключить отображение резервной техники.",
+    "ReserveFilterTooltipBody": "Отображать только резервную технику.",
     "check_reserve_menu": "Отметить как «резерв»",
     "uncheck_reserve_menu": "Снять отметку «резерв»",
     "reserve_confirm_title": "Спрятать танк",
