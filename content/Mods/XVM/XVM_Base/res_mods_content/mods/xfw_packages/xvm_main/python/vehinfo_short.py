@@ -1,7 +1,8 @@
 """ XVM (c) https://modxvm.com 2013-2019 """
-# This Python file uses the following encoding: utf-8
-from xfw import *
 
+# This Python file uses the following encoding: utf-8
+
+from xfw import *
 from logger import *
 
 
@@ -26,7 +27,7 @@ def checkNames(vehs):
 # PRIVATE
 
 _data = {
-    # Last update: 08.10.2019
+    # Last update: 10.12.2019
     "china:Ch01_Type59":                     'Typ59',
     "china:Ch01_Type59_Gold":                'Typ59g',
     "china:Ch02_Type62":                     'Typ62',
@@ -143,6 +144,7 @@ _data = {
     "france:F36_AMX_AC_Mle1948_IGR":         'amx48',
     "france:F37_AMX50_Foch":                 'Foch',
     "france:F38_Bat_Chatillon155_58":        '155·58',
+    "france:F42_AMR_35":                     'amr35',
     "france:F44_Somua_S35":                  'SomS35',
     "france:F49_RenaultR35":                 'R35',
     "france:F50_FCM36_20t":                  'fcm36',
@@ -555,6 +557,7 @@ _data = {
     "usa:A126_PzVI_Tiger_II_capt":           'K.TigrC',
     "usa:A127_TL_1_LPC":                     'TL1.lpc',
     "usa:A12_T32":                           'T32',
+    "usa:A130_Super_Hellcat":                'S.Hellc',
     "usa:A13_T34_hvy":                       'T34',
     "usa:A13_T34_hvy_BF":                    'T34bf',
     "usa:A13_T34_hvy_FL":                    'T34·fl',

@@ -20,7 +20,8 @@ from helpers import dependency
 from skeletons.gui.shared import IItemsCache
 from gui.Scaleform.daapi.view.meta.MessengerBarMeta import MessengerBarMeta
 from messenger.gui.Scaleform.lobby_entry import LobbyEntry
-from gui.game_control.hero_tank_controller import HeroTankController
+from HeroTank import HeroTank
+from vehicle_systems.tankStructure import ModelStates
 from gui.promo.hangar_teaser_widget import TeaserViewer
 from gui.game_control.PromoController import PromoController
 from gui.game_control.AwardController import ProgressiveRewardHandler
@@ -190,11 +191,11 @@ def handleLazyChannelCtlInited(base, self, event):
     return base(self, event)
 
 # hide premium vehicle on the background in the hangar
-@overrideMethod(HeroTankController, '_HeroTankController__updateSettings')
-def updateSettings(base, self):
+@overrideMethod(HeroTank, 'recreateVehicle')
+def recreateVehicle(base, self, typeDescriptor=None, state=ModelStates.UNDAMAGED, callback=None):
     if not config.get('hangar/showPromoPremVehicle', True):
         return
-    base(self)
+    base(self, typeDescriptor, state, callback)
 
 # hide display pop-up messages in the hangar
 @overrideMethod(TeaserViewer, 'show')

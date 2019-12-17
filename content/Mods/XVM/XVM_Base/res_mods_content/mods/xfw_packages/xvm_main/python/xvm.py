@@ -178,6 +178,13 @@ class Xvm(object):
                 self.xvmServicesInitialized = False
                 self.initializeXvmServices()
             reserve.init(self.currentAccountDBID)
+
+            if config.networkServicesSettings.statBattle:
+                data = xvmapi.getServerMessage()
+                if data:
+                    serverMessage = data.get('msg', None)
+                    if serverMessage:
+                        svcmsg.sendXvmSystemMessage(SystemMessages.SM_TYPE.Warning, serverMessage)
         except Exception, ex:
             err(traceback.format_exc())
 
@@ -308,7 +315,7 @@ class Xvm(object):
                 return (None, True)
 
             if cmd == XVM_COMMAND.LOAD_STAT_BATTLE_RESULTS:
-                stats.getBattleResultsStat(args)
+                stats.getBattleResultsStat(args, as_xfw_cmd)
                 return (None, True)
 
             if cmd == XVM_COMMAND.LOAD_STAT_USER:

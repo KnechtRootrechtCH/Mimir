@@ -1,7 +1,7 @@
 # This file was created automatically from build script
-__xvm_version__ = '8.1.8'
-__wot_version__ = '1.6.1.4'
-__revision__ = '42'
+__xvm_version__ = '8.2.0'
+__wot_version__ = '1.7.0.1'
+__revision__ = '43'
 __branch__ = 'master'
-__node__ = '1d7cebc9bbbece2423448d2c28619aec0162b9b2'
+__node__ = '3edea2cee5e13ac4787e3de3b04b891576ff489c'
 __development__ = 'False'
