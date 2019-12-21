@@ -34,7 +34,7 @@ def getClanIcon(vehicleID):
 # Private
 
 import os
-from pprint import pprint
+import pprint
 import datetime
 import traceback
 import time
@@ -44,6 +44,7 @@ import uuid
 import imghdr
 
 import BigWorld
+import AccountCommands
 from helpers import dependency
 from skeletons.gui.battle_session import IBattleSessionProvider
 from gui.battle_control import avatar_getter
@@ -135,32 +136,35 @@ class _Stat(object):
         self.thread = threading.Thread(target=self.req['func'])
         self.thread.daemon = False
         self.thread.start()
-        # self.req['func']()
         #debug('start')
-        # self._checkResult()
         BigWorld.callback(0, self._checkResult)
 
     def _checkResult(self):
         with self.lock:
-            debug("checkResult: " + ("no" if self.resp is None else "yes"))
+            debug('checkResult: {} => {}'.format(self.req['cmd'], 'no' if self.resp is None else 'yes'))
             if self.thread is not None:
                 self.thread.join(0.01)  # 10 ms
             if self.resp is None:
                 BigWorld.callback(0.1, self._checkResult)
                 return
-            try:
+        try:
+            with self.lock:
                 self._respond()
-            except Exception:
-                err(traceback.format_exc())
-            finally:
-                #debug('done')
-                if self.thread:
-                    #debug('join')
-                    self.thread.join()
-                    #debug('thread deleted')
+        except Exception:
+            err(traceback.format_exc())
+        finally:
+            #debug('done')
+            with self.lock:
+                if not self.resp:
+                    self.resp = {}
+            if self.thread:
+                #debug('join')
+                self.thread.join()
+                #debug('thread deleted')
+                with self.lock:
                     self.thread = None
-                    # self.processQueue()
-                    BigWorld.callback(0, self.processQueue)
+            # self.processQueue()
+            BigWorld.callback(0, self.processQueue)
 
     def _respond(self):
         debug("respond: " + self.req['cmd'])
@@ -251,23 +255,38 @@ class _Stat(object):
             stat = self.cacheBattle[cacheKey]
             self._fix(stat)
             players[pl.name] = stat
-        # pprint(players)
+        # pprint.pprint(players)
 
         with self.lock:
             self.resp = {'players': players}
 
     def _get_battleresults(self):
         (arenaUniqueID,) = self.req['args']
-        BigWorld.player().battleResultsCache.get(int(arenaUniqueID), self._battleResultsCallback)
+        try:
+            #log('BigWorld.player().battleResultsCache.get(): start')
+            while True:
+                BigWorld.player().battleResultsCache.get(int(arenaUniqueID), self._battleResultsCallback)
+                if self.resp is not None:
+                    return
+                time.sleep(0.5) # 500 ms
+        except Exception:
+            err(traceback.format_exc())
+        finally:
+            pass
+            #log('BigWorld.player().battleResultsCache.get(): end')
 
     def _battleResultsCallback(self, responseCode, value=None, revision=0):
         try:
-            if responseCode < 0:
+            #log('_Stat._battleResultsCallback({})'.format(responseCode))
+            if responseCode == AccountCommands.RES_COOLDOWN:
+                BigWorld.callback(0.3, self._get_battleresults)
+                return
+            elif responseCode not in [AccountCommands.RES_STREAM, AccountCommands.RES_CACHE]:
                 with self.lock:
                     self.resp = {}
                 return
 
-            # pprint(value)
+            # pprint.pprint(value)
 
             self.players = {}
 
@@ -295,7 +314,7 @@ class _Stat(object):
                 stat = self.cacheBattle[cacheKey]
                 self._fix(stat)
                 players[pl.name] = stat
-            # pprint(players)
+            # pprint.pprint(players)
 
             with self.lock:
                 self.resp = {'arenaUniqueID': str(value['arenaUniqueID']), 'players': players}
@@ -304,7 +323,7 @@ class _Stat(object):
             err(traceback.format_exc())
             print('=================================')
             print('_battleResultsCallback() exception: ' + traceback.format_exc())
-            pprint(value)
+            pprint.pprint(value)
             print('=================================')
             with self.lock:
                 self.resp = {}
@@ -363,8 +382,7 @@ class _Stat(object):
             if cacheKey not in self.cacheBattle:
                 all_cached = False
 
-            if pl.vehCD != 65281:
-                requestList.append("{}={}".format(pl.accountDBID, pl.vehCD))
+            requestList.append("{}={}".format(pl.accountDBID, pl.vehCD))
 
         if all_cached or not requestList:
             return

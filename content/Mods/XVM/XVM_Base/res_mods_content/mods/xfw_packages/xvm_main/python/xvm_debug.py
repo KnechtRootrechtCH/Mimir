@@ -75,6 +75,12 @@ def _showBattleResults(arenaUniqueID):
 #    if not result:
 #        self._updateNotification(notification)
 
+if IS_DEVELOPMENT:
+    try:
+        import gui.mods.mod_battle_results_fix
+    except:
+        pass
+
 @overrideMethod(BattleResultsCache.BattleResultsCache, 'get')
 def BattleResultsCache_get(base, self, arenaUniqueID, callback):
     if not IS_DEVELOPMENT:
