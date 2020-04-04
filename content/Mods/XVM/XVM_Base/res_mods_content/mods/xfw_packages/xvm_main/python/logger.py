@@ -1,8 +1,8 @@
-""" XVM (c) https://modxvm.com 2013-2019 """
+""" XVM (c) https://modxvm.com 2013-2020 """
 
 import pprint
 
-from xfw import *
+from xfw import Logger, IS_DEVELOPMENT
 from xfw_actionscript.python import swf
 from xfw.constants import PATH
 

@@ -1,4 +1,4 @@
-""" XVM (c) https://modxvm.com 2013-2019 """
+""" XVM (c) https://modxvm.com 2013-2020 """
 
 from gui.battle_control import avatar_getter
 
@@ -16,11 +16,13 @@ def getGlobalBattleData():
     arenaVehicle = arena.vehicles.get(vehicleID)
     vehCD = getVehCD(vehicleID)
     clan = arenaVehicle['clanAbbrev']
+    vInfoVO = utils.getVehicleInfo(vehicleID)
     if not clan:
         clan = None
     return (
         vehicleID,                                  # playerVehicleID
         arenaVehicle['name'],                       # playerName
+        vInfoVO.player.fakeName,                    # playerFakeName
         clan,                                       # playerClan
         vehCD,                                      # playerVehCD
         arena.extraData.get('battleLevel', 0),      # battleLevel

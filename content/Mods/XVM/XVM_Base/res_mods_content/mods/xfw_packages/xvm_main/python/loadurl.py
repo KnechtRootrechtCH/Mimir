@@ -1,4 +1,4 @@
-""" XVM (c) https://modxvm.com 2013-2019 """
+""" XVM (c) https://modxvm.com 2013-2020 """
 
 import base64
 import datetime
@@ -25,12 +25,7 @@ except Exception, ex:
     _proxy = None
     err(traceback.format_exc())
 
-_USER_AGENT = 'xvm'
-try:
-    from __version__ import __branch__, __revision__
-    _USER_AGENT += '-{0}/{1}'.format(__branch__, __revision__)
-except Exception, ex:
-    pass
+_USER_AGENT = 'xvm-{0}#{1}'.format(XVM.XVM_VERSION,XVM.XVM_REVISION)
 
 # result: (response, duration)
 def loadUrl(url, req=None, body=None, content_type='text/plain; charset=utf-8', showLog=True, api=XVM.API_VERSION):

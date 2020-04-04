@@ -1,4 +1,4 @@
-""" XVM (c) https://modxvm.com 2013-2019 """
+""" XVM (c) https://modxvm.com 2013-2020 """
 
 #############################
 # Command
@@ -186,7 +186,6 @@ class _Stat(object):
                 #self.getBattleStat(tries+1)
             else:
                 self._get_battle()
-                return  # required to prevent deadlock
         except Exception:
             err(traceback.format_exc())
         with self.lock:
@@ -198,7 +197,6 @@ class _Stat(object):
             player = BigWorld.player()
             if player.__class__.__name__ == 'PlayerAccount':
                 self._get_battleresults()
-                return  # required to prevent deadlock
         except Exception:
             err(traceback.format_exc())
         with self.lock:
@@ -208,7 +206,6 @@ class _Stat(object):
     def getUserData(self):
         try:
             self._get_user()
-            return  # required to prevent deadlock
         except Exception:
             err(traceback.format_exc())
         with self.lock:
@@ -690,9 +687,9 @@ class _Player(object):
         self.name = vData['name']
         self.clan = vData['clanAbbrev']
         self.badgeId = None
-        ranked = vData.get('ranked', None)
-        if ranked and ranked[1]:
-            self.badgeId = str(ranked[1][0])
+        badges = vData.get('badges', None)
+        if badges:
+            self.badgeId = str(badges[0])
         self.clanInfo = topclans.getClanInfo(self.clan)
         self.vehCD = None
         if 'typeCompDescr' in vData:

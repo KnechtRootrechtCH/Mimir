@@ -1,4 +1,4 @@
-""" XVM (c) https://modxvm.com 2013-2019 """
+""" XVM (c) https://modxvm.com 2013-2020 """
 
 import traceback
 import simplejson
@@ -87,6 +87,8 @@ class Xvm(object):
 
     def __init__(self):
         self.xvmServicesInitialized = False
+        self.xvmFirstTimeLobbyLoaded = True
+        self.xvmServerMessageLastInfo = None
         self.currentAccountDBID = None
 
     # CONFIG
@@ -116,6 +118,8 @@ class Xvm(object):
         #trace('onSystemMessage')
         msg = e.ctx.get('msg', '')
         type = e.ctx.get('type', SystemMessages.SM_TYPE.Information)
+        if type not in [SystemMessages.SM_TYPE.Information, SystemMessages.SM_TYPE.GameGreeting]:
+            log('SystemMessage: [{}] {}'.format(type, utils.hide_guid(msg)))
         SystemMessages.pushMessage(msg, type)
 
     # state handler
@@ -176,15 +180,26 @@ class Xvm(object):
                 config.token = config.XvmServicesToken({'accountDBID':accountDBID})
                 config.token.saveLastAccountDBID()
                 self.xvmServicesInitialized = False
+                self.xvmFirstTimeLobbyLoaded = True
+                self.xvmServerMessageLastInfo = None
                 self.initializeXvmServices()
             reserve.init(self.currentAccountDBID)
 
             if config.networkServicesSettings.statBattle:
                 data = xvmapi.getServerMessage()
                 if data:
-                    serverMessage = data.get('msg', None)
-                    if serverMessage:
-                        svcmsg.sendXvmSystemMessage(SystemMessages.SM_TYPE.Warning, serverMessage)
+                    msg = data.get('msg', None)
+                    if msg:
+                        svcmsg.sendXvmSystemMessage(SystemMessages.SM_TYPE.Warning, msg)
+                    elif not self.xvmFirstTimeLobbyLoaded:
+                        msg = data.get('info', None)
+                        if msg != self.xvmServerMessageLastInfo:
+                            self.xvmServerMessageLastInfo = msg
+                            if msg:
+                                svcmsg.sendXvmSystemMessage(SystemMessages.SM_TYPE.Information, msg)
+
+            self.xvmFirstTimeLobbyLoaded = False
+
         except Exception, ex:
             err(traceback.format_exc())
 
@@ -343,6 +358,8 @@ class Xvm(object):
             return
 
         self.xvmServicesInitialized = True
+        self.xvmFirstTimeLobbyLoaded = True
+        self.xvmServerMessageLastInfo = None
 
         config.token = config.XvmServicesToken.restore()
         config.token.updateTokenFromApi()

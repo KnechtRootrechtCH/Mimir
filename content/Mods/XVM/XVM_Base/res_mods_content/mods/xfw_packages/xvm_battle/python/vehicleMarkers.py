@@ -1,4 +1,4 @@
-""" XVM (c) https://modxvm.com 2013-2019 """
+""" XVM (c) https://modxvm.com 2013-2020 """
 
 #####################################################################
 # imports
@@ -11,12 +11,15 @@ import BigWorld
 import constants
 import game
 from Avatar import PlayerAvatar
+from Vehicle import Vehicle
 from messenger import MessengerEntry
 from helpers import dependency
+from BattleReplay import g_replayCtrl
 from skeletons.gui.battle_session import IBattleSessionProvider
 from gui.battle_control import avatar_getter
 from gui.shared import g_eventBus, events
 from gui.Scaleform.daapi.view.battle.shared.markers2d.manager import MarkersManager
+from gui.Scaleform.daapi.view.battle.shared.markers2d.plugins import VehicleMarkerPlugin
 
 from xfw import *
 from xvm_main.python.consts import *
@@ -73,6 +76,9 @@ def _PlayerAvatar_onBecomeNonPlayer(base, self):
 def _PlayerAvatar_vehicle_onEnterWorld(self, vehicle):
     g_markers.updatePlayerState(vehicle.id, INV.ALL)
 
+@registerEvent(Vehicle, 'set_isCrewActive')
+def set_isCrewActive(self, prev):
+    g_markers.updatePlayerState(self.id, INV.CREW_ACTIVE)
 
 #####################################################################
 # handlers
@@ -134,6 +140,20 @@ def _MarkersManager_as_setShowExInfoFlagS(base, self, flag):
             base(self, _exInfo)
     else:
         base(self, flag)
+
+# add attackerID if XVM markers are active
+@overrideMethod(VehicleMarkerPlugin, '_VehicleMarkerPlugin__updateVehicleHealth')
+def _VehicleMarkerPlugin__updateVehicleHealth(base, self, handle, newHealth, aInfo, attackReasonID):
+    if g_markers.active:
+        if not (g_replayCtrl.isPlaying and g_replayCtrl.isTimeWarpInProgress):
+            attackerID = aInfo.vehicleID if aInfo else 0
+            self._invokeMarker(handle,
+                               'updateHealth',
+                               newHealth,
+                               self._VehicleMarkerPlugin__getVehicleDamageType(aInfo),
+                               '{},{}'.format(constants.ATTACK_REASONS[attackReasonID], str(attackerID)))
+            return
+    base(self, handle, newHealth, aInfo, attackReasonID)
 
 def as_xvm_cmdS(self, *args):
     if self._isDAAPIInited():
@@ -307,13 +327,17 @@ class VehicleMarkers(object):
                         if entity and hasattr(entity, 'publicInfo'):
                             data['marksOnGun'] = entity.publicInfo.marksOnGun
 
+                    if targets & INV.CREW_ACTIVE:
+                        if entity and hasattr(entity, 'isCrewActive'):
+                            data['isCrewActive'] = bool(entity.isCrewActive)
+
                 if targets & (INV.ALL_VINFO | INV.ALL_VSTATS):
                     arenaDP = self.sessionProvider.getArenaDP()
                     if targets & INV.ALL_VSTATS:
                         vStatsVO = arenaDP.getVehicleStats(vehicleID)
 
-                    if targets & INV.FRAGS:
-                        data['frags'] = vStatsVO.frags
+                        if targets & INV.FRAGS:
+                            data['frags'] = vStatsVO.frags
 
                 if data:
                     self.call(XVM_BATTLE_COMMAND.AS_UPDATE_PLAYER_STATE, vehicleID, data)

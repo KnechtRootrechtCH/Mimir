@@ -1,4 +1,50 @@
-﻿XVM-8.2.3:
+﻿XVM-8.3.5:
+  [GENERAL]
+  * Temporarily disable crashreporting tool
+
+XVM-8.3.4:
+  [GENERAL]
+  * Fix compatibility with Windows 7
+
+XVM-8.3.3:
+  [GENERAL]
+  * World of Tanks 1.8.0.1
+
+XVM-8.3.2:
+  [GENERAL]
+  * World of Tanks 1.8.0.0
+
+  [HANGAR]
+  * added option:
+      "hangar"/"showDailyQuestWidget" - show widget "Daily Quests" in the hangar
+  * removed option:
+      "hangar"/"showRewardWindow"
+
+  [PYTHON MACROS]
+  * damageLog: in the “dmg-kind” and “c:dmg-kind” sections, the “recovery” parameter has been added
+
+XVM-8.3.1:
+  [GENERAL]
+  * World of Tanks 1.7.1.2
+
+  [MARKERS]
+  * Added macro:
+      {{dmg-kind-key}} - damage kind table key value (attack, fire, ramming, ...)
+
+XVM-8.3.0:
+  [GENERAL]
+  * World of Tanks 1.7.1.1
+
+  [BATTLE]
+  * The macro {{my-anonym}} has been renamed to {{anonym}}, the description in the documentation has been updated
+
+  [MARKERS]
+  * The macro {{dmg}} sums the value, in a time span of less than 400 ms
+
+  [PLAYERS PANEL]
+  * Fixed macros {{nick}}, {{name}}, {{clan}}, {{clannb}} for platoon with an anonymous player
+
+XVM-8.2.3:
   [GENERAL]
   * Fix fonts loading
 
