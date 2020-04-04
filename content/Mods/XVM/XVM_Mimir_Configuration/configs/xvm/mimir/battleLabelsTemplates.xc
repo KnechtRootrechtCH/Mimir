@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Battle interface text fields.
  * Текстовые поля боевого интерфейса.
  */
@@ -97,7 +97,7 @@
     // Log of the received damage (see damageLog.xc).
     // Лог полученного урона (см. damageLog.xc).
     "damageLog": {
-      "enabled": false,
+      "enabled": true,
       "updateEvent": "PY(ON_HIT)",
       "x": "{{py:xvm.damageLog.log.x}}",
       "y": "{{py:xvm.damageLog.log.y}}",
